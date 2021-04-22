@@ -16,8 +16,8 @@ class OauthClientsSeeder extends Seeder
         //
         $clients = [
             [
-                'Telemedicine Personal Access Client',
-                'fKmBNegeKG6QetoRnN77Rug8vK27VDQ7RUwwev8a',
+                'SiBunda Personal Access Client',
+                '7nEZQGGMBLLf1WdsziFJqMuw5hEGu5ypZeyfTh9D',
                 'http://localhost',
                 1,
                 0,
@@ -25,8 +25,8 @@ class OauthClientsSeeder extends Seeder
                 '2021-03-27 20:41:30',
                 '2021-03-27 20:41:30'],
             [
-                'Telemedicine Password Grant Client',
-                'QpvfwPCku3ffIwzhdsptZYY3bbklC9LaMch2gFnu',
+                'SiBunda Password Grant Client',
+                '5xnEHfLiRiyyRGrez97iEmqzTB4h48IWr5DnHEuO',
                 'http://localhost',
                 0,
                 1,

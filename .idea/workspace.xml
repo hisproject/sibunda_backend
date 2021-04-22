@@ -3086,20 +3086,18 @@
       <change afterPath="$PROJECT_DIR$/../telemedicine/webpack.mix.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webInfraDarurat/.idea/webInfraDarurat.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webInfraDarurat/database/migrations/2021_01_19_153633_create_weather_area_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sibunda_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sibunda_backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/OauthClientsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/OauthClientsSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -3265,7 +3263,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618418335550</updated>
-      <workItem from="1618418337563" duration="2719000" />
+      <workItem from="1618418337563" duration="2788000" />
+      <workItem from="1619015550238" duration="9597000" />
     </task>
     <servers />
   </component>

@@ -18,6 +18,12 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        'Laravel\Passport\Events\AccessTokenCreated' => [
+            'App\Utils\Revocation\RevokeOldTokens',
+        ],
+        'Laravel\Passport\Events\RefreshTokenCreated' => [
+            'App\Utils\Revocation\PruneOldTokens',
+        ]
     ];
 
     /**

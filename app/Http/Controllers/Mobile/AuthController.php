@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Mobile;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Utils\Constants;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -28,14 +30,25 @@ class AuthController extends Controller
             'scope' => '*'
         ];
         $nRequest = Request::create('/oauth/token', 'POST', $params);
+        $nRequest->headers->set('Accept', 'application/json');
         $response = app()->handle($nRequest);
 
         if($response->getStatusCode() == Constants::RESPONSE_SUCCESS) {
             $loginResponse = $response->getContent();
-            return Constants::successResponseWithNewValue('data', $loginResponse);
+            $user = User::where('email', $request->email)->first();
+            $user->fcm_token = $request->fcm_token;
+            $user->save();
+
+            return Constants::successResponseWithNewValue('data', json_decode($loginResponse), 'user successfully logged in');
         }
 
         return Constants::errorResponse();
+    }
+
+    public function logout(Authenticatable $user) {
+        $user->revokeFCM();
+        $user->revokeApiToken();
+        return Constants::successResponse('user has logged out');
     }
 
     public function register(Request $request) {
@@ -47,15 +60,16 @@ class AuthController extends Controller
         ]);
 
         $user = User::create([
-            'nama',
-            'email',
-            'password'
+            'name' => $request->nama,
+            'email'=> $request->email,
+            'password' => Hash::make($request->password),
+            'user_group_id' => Constants::USER_GROUP_BIDAN
         ]);
 
         if(!empty($request->img)) {
             $user->saveImg($request->img);
         }
 
-        return Constants::successResponse();
+        return Constants::successResponseWithNewValue('data', $user, 'user successfully registered');
     }
 }

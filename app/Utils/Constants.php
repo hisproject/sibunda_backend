@@ -23,8 +23,8 @@ class Constants
     const RESPONSE_DATA_EMPTY = 106;
 
     const USER_GROUP_ADMIN = 1;
-    const USER_GROUP_DOKTER = 2;
-    const USER_GROUP_PASIEN = 3;
+    const USER_GROUP_BUNDA = 2;
+    const USER_GROUP_BIDAN = 3;
 
     public static function successResponse($message = 'response success') {
         return Response::json(['message' => $message, 'status' => 'success', 'code' => self::RESPONSE_SUCCESS], self::RESPONSE_SUCCESS);

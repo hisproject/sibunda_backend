@@ -3087,10 +3087,7 @@
       <change afterPath="$PROJECT_DIR$/../webInfraDarurat/.idea/webInfraDarurat.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../webInfraDarurat/database/migrations/2021_01_19_153633_create_weather_area_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/OauthClientsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/OauthClientsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3264,7 +3261,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618418335550</updated>
       <workItem from="1618418337563" duration="2788000" />
-      <workItem from="1619015550238" duration="9597000" />
+      <workItem from="1619015550238" duration="10385000" />
     </task>
     <servers />
   </component>

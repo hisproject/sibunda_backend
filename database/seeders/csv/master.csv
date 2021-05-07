@@ -1,0 +1,323 @@
+﻿kategori,kelengkapan,jumlah,instansi,standar,pj,penempatan
+Pos Operasi Darurat,Pos pengungsian,,,1 pos,,
+Pos Operasi Darurat,RS darurat,,,1 pos,,
+Pos Operasi Darurat,Pos komando gabungan,,,1 pos,,
+Pos Operasi Darurat,Pos utama,,,1 pos,,
+Pos Operasi Darurat,Pos lapangan,,,1 pos,,
+Pos Operasi Darurat,Tenda,,,1 buah/pos,,
+Pos Operasi Darurat,Meubeler,,,1 buah/pos,,
+Pos Operasi Darurat,Meja dan Kursi,,,10 buah/pos,,
+Pos Operasi Darurat,Papan Pengumuman,,BPBL Kota Surabaya,1 buah/pos,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Pos Operasi Darurat,Logistik,,,10 buah/pos,,
+Pos Operasi Darurat,Kantong Mayat,,,10 buah/pos,,
+Pos Operasi Darurat,Alat penjernih air,,BPBL Kota Surabaya,1 buah/pos,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Pos Operasi Darurat,Back Up Power Supply,,,1 buah/pos,,
+Pos Operasi Darurat,Kotak P3K,,,1 buah/pos,,
+Pos Operasi Darurat,Peta Rawan Bencana,,,1 buah/pos,,
+Pos Operasi Darurat,Peta Administrasi,,,1 buah/pos,,
+Pos Operasi Darurat,Tim Pencatat,,,1 tim/pos,,
+Pos Operasi Darurat,Logistik,,,,,
+Pos Operasi Darurat,Unit Komputer,,,3 buah/pos,,
+Pos Operasi Darurat,Mesin FC,,,1 buah/pos,,
+Pos Operasi Darurat,Printer,,,1 buah/pos,,
+Pos Operasi Darurat,HT,,,,,
+Pos Operasi Darurat,Kantung mayat,,,,,
+Pos Operasi Darurat,Tenda,,,,,
+Pos Operasi Darurat,Drone,,,1 buah/pos,,
+Pos Operasi Darurat,GPS,,,1 buah/pos,,
+Pos Operasi Darurat,Papan Informasi,,,1 buah/pos,,
+Pos Operasi Darurat,ATK,,,1 set/pos,,
+Pos Operasi Darurat,Whiteboard,,,1 buah/pos,,
+Pos Operasi Darurat,Alat penjernih air,,BPBL Kota Surabaya,1 buah/pos,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Pos Operasi Darurat,Megaphone,,,1 buah/pos,,
+Pos Operasi Darurat,Peralatan Survey,,,1 unit/pos,,
+Pos Operasi Darurat,Data Base yang berisi Informasi Kebencanaan,,,1 unit/pos,,
+Pos Operasi Darurat,Set lampu sorot dan papan identitas,,,1 buah/pos,,
+Kesehatan,Ambulance,6 unit,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Obat,Tentatif,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Tandu,10 buah,BASARNAS Kota Surabaya,Sesuai hasl assessment Tim RHA,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+Kesehatan,Tandu,20 buah,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Tempat tidur,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Tenda kesehatan,4 unit,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Dapur umum,1 set,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Truk,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Mobil Rescue,9 unit,BPBL Kota Surabaya,Sesuai hasl assessment Tim RHA,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Kesehatan,Mobil Rescue,1 unit,DKRTH Kota Surabaya,Sesuai hasl assessment Tim RHA,Kepala DKRTH,Kantor DKRTH
+Kesehatan,Peralatan kesehatan,5 set,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Bidan,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Perawat,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Dokter,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Dokter Spesialis Ortopedi,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Dokter Spesialis Anestesi,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Sanitarian,1 orang,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Psikolog,2 orang,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Petugas surveilens (epidemilog),,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Kesmas,20 orang,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Administrasi (data dan informasi),Relawan,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Administrasi (data dan informasi),3 orang,PPNI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Farmasi,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,DVI (inafis dan dokkes POLDA),,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Relawan Kesehatan,500 orang,PMI Kota Surabaya,Sesuai hasl assessment Tim RHA,Ibu Dasa,Markas PMI
+Kesehatan,Rumah Sakit Darurat/Rumah Sakit Lapangan,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Dokter spesialis Bedah,,,Sesuai hasl assessment Tim RHA,,
+Kesehatan,Dokter spesialis Kejiwaan,,,Sesuai hasl assessment Tim RHA,,
+Logistik,Logistik Sandang,,,,,
+Logistik,Logistik Pangan,,,,,
+Logistik,Logistik Kesehatan,,,,,
+Logistik,Pergudangan,1 unit Gudang Peralatan,Dinas PMK Kota Surabaya,,Pengurus Barang Pengguna,Kantor Dinas PMK Kota Surabaya
+Logistik,Pergudangan,1 unit Gudang Material,PT PLN UPT Surabaya,,Supervisor Gudang : Pak Warnoto,Kantor PLN UPT Surabaya
+Logistik,Data Base Logistic,,,,,
+Logistik,Pencatat Data,,,,,
+Logistik,Quality Checker,,,,,
+Sanitasi,Water supply,,,Rumah sakit lapangan = 40-60 liter per orang,,
+Sanitasi,Water supply,,,Pusat pemberian makan massal = 20-30 liter per orang,,
+Sanitasi,Water supply,,,Pusat penampungan sementara = 15-20 liter per orang,,
+Sanitasi,,,,Instalasi cuci = 35 liter per orang,,
+Sanitasi,Tangki Air,40 unit,DKRTH Kota Surabaya,1 unit per pos,Kepala DKRTH Kota Surabaya,Kantor DKRTH Kota Surabaya
+Sanitasi,Tangki Air,1 unit,PMI Kota Surabaya,1 unit per pos,Ibu Dasa,Markas PMI
+Sanitasi,Tempat Cuci Tangan Portabel,10 unit,PMI Kota Surabaya,1 unit tempat cuci tangan portabel per 10 orang,Ibu Dasa,Markas PMI
+Sanitasi,Toilet Portabel,2 unit,DKRTH Kota Surabaya,1 toilet duduk per 25 wanita,Kepala DKRTH Kota Surabaya,Kantor DKRTH Kota Surabaya
+Sanitasi,,,,1 toilet duduk dan 1 urinal per 35 laki-laki,,
+Sanitasi,,,,Jarak maksimum toilet ke tempat evakuasi 50 meter,,
+Sanitasi,Septic Tank,,,"Sumur resapan septic tank (Min. 1,5 dari bangunan, Min. 10 m dari sumur air bersih, Min. 5 m dari sumur air hujan)",,
+Sanitasi,Septic Tank,,,"Upflow filter septic tank (Min. 1,5 dari bangunan, Min. 1,5 m dari sumur air bersih, Min. 1,5 m dari sumur air hujan)",,
+Sanitasi,Septic Tank,,,"Taman sanita septic tank (Min. 1,5 dari bangunan, Min. 1,5 m dari sumur air bersih, Min. 1,5 m dari sumur air hujan)",,
+Sanitasi,Mobil Penyedot Tinja,3 unit,DKRTH Kota Surabaya,1 unit per pos,Kepala DKRTH Kota Surabaya,Kantor DKRTH Kota Surabaya
+Sanitasi,Pengolah Limbah Portabel,1 unit,DKRTH Kota Surabaya,1 unit per 20 KK,Kepala DKRTH Kota Surabaya,Kantor DKRTH Kota Surabaya
+Sanitasi,Tempat Pembuangan Sampah Sementara,78 titik,DKRTH Kota Surabaya,Kapasitas 50-100 liter per 4-8 tenda atau 25-50 orang,Kepala DKRTH Kota Surabaya,Kantor DKRTH Kota Surabaya
+Sanitasi,Arm Roll (Mobil Pengangkut Sampah),,,1 unit per pos,,
+Dapur Umum,Tenda dapur umum,,,Tipe I: 1 tenda dapur mampu menyediakan ≥ 20000 porsi per hari,,
+Dapur Umum,Tenda dapur umum,,,Tipe II: 1 tenda dapur mampu menyediakan ≤ 20000 porsi per hari,,
+Dapur Umum,Tenda dapur umum,,,Tipe III: 1 tenda dapur mampu menyediakan ≤ 10000 porsi per hari,,
+Dapur Umum,Tenda dapur umum,,,Tipe IV: 1 tenda dapur mampu menyediakan ≤ 5000 porsi per hari,,
+Dapur Umum,Food truck atau mobil dapur umum,,,Tipe I: 1 food truck mampu menyediakan 1500 porsi per hari,,
+Dapur Umum,Food truck atau mobil dapur umum,,,Tipe II: 1 food truck mampu menyediakan 1000 porsi per hari,,
+Dapur Umum,Food truck atau mobil dapur umum,,,Tipe III: 1 food truck mampu menyediakan 750 porsi per hari,,
+Dapur Umum,Food truck atau mobil dapur umum,,,Tipe IV: 1 food truck mampu menyediakan 500 porsi per hari,,
+Dapur Umum,Peralatan Dapur,,,1 set per dapur umum,,
+Dapur Umum,Makanan Harian,,,1 paket per pengungsi,,
+Dapur Umum,Makanan Khusus Lansia,,,1 paket per pengungsi lansia,,
+Dapur Umum,Makanan Khusus Bayi,,,1 paket per pengungsi bayi,,
+Dapur Umum,Makanan Khusus Balita,,,1 paket per pengungsi balita,,
+Dapur Umum,Makanan Khusus Ibu Hamil,,,1 paket per pengungsi ibu hamil,,
+Dapur Umum,Makanan Kaleng,,,1 set per dapur umum,,
+Dapur Umum,Relawan Memasak,,,1 tim per dapur umum,,
+Penampungan Darurat,Tenda ,,,,,
+Penampungan Darurat,Pakaian ,,,,,
+Penampungan Darurat,Tikar,,,,,
+Penampungan Darurat,Matras ,,,,,
+Penampungan Darurat,Pengeras suara ,,,,,
+Penampungan Darurat,Tenda ibadah,,BPBL Kota Surabaya,,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Penampungan Darurat,Pembalut/ diapers,,,,,
+Penampungan Darurat,Alat kebersihan,,,,,
+Penampungan Darurat,Pos kesehatan ,,,,,
+Penampungan Darurat,Trash bag ,,,,,
+Penampungan Darurat,Penampungan air ,,,,,
+Penampungan Darurat,Tempat bermain anak,,,,,
+Penampungan Darurat,Genset ,31unit,DKRTH Kota Surabaya,,Kepala DKRTH,Tersebar
+Penampungan Darurat,Genset ,5 unit,Dinas Komunikasi Kota Surabaya,,Kepala Diskominfo,Kantor Diskominfo
+Penampungan Darurat,Genset ,48 unit,Dinas Pekerjaan Umum Bina Marga dan Pematusan Kota Surabaya,,Kepala Dinas PU Bina Marga,Kantor Dinas PU Bina Marga
+Penampungan Darurat,Genset ,2 unit,Dinas Pendidikan,,Sekertaris Dinas Pendidikan Kota Surabaya,Kantor Dinas Pendidikan Kota Surabaya
+Penampungan Darurat,Genset ,32 unit,BPBL Kota Surabaya,,Kepala BPBL,Kantor BPBL
+Penampungan Darurat,Genset ,2 unit,PDAM Kota Surabaya,,Layanan Internal dan IT,Kantor Pusat PDAM
+Penampungan Darurat,Genset ,1 unit,PMI Kota Surabaya,,Ibu Dasa,Markas PMI Kota Surabaya
+Penampungan Darurat,Genset ,5 unit,BASARNAS Kota Surabaya,,KaSi Sumber Daya,Kantor BASARNAS
+Keamanan,Helm ,697 unit,Dinas PMK Kota Surabaya,1 helm per orang,Anggota pengguna APD sepengetahuan Komandan Lapangan (Ka. Rayon/ Koordinator Pos Pembantu/ Dan Ton Tim Orong-orong),Melekat sebagai APD Perorangan/personil Pasukan Pemadam Kebakaran
+Keamanan,Shield ,100 buah,Satpol PP Kota Surabaya,1 shield per orang,Bapak Imam Basuki - Bag. Penyimpanan,"Lantai 3, Kantor Satpol PP."
+Keamanan,Shield ,6 buah,Polres Pelabuhan Tanjung Perak,1 shield per orang,Kasatgasres 2 Pencegahan (Sabhara),Mess Patria Tama
+Keamanan,Polisi ,30 orang,Polres Pelabuhan Tanjung Perak,3 orang per pos,Kasatgasres 2 Pencegahan (Sabhara),Mess Patria Tama
+Keamanan,,,,,,
+Keamanan,TNI ,192 orang,TNI 0832,3 orang per pos,Perwira Seksi Personel,Koramil dan Makodim
+Keamanan,Satpol PP ,100 orang,Satpol PP Kota Surabaya,1 orang per pos,Bapak Imam Basuki - Bag. Penyimpanan,"Lantai 3, Kantor Satpol PP."
+Keamanan,Relawan ,,,,,
+Keamanan,SOP Keamanan,1 buah,TNI 0832,,Perwira Seksi Operasi,Markas
+Keamanan,SOP Keamanan,1 buah,Polres Pelabuhan Tanjung Perak,,Kasatgasres 2 Pencegahan (Sabhara),Mess Patria Tama
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Pelindung diri ,8 set,BASARNAS Kota Surabaya,1 paket per orang,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Sepatu Safety,135 pasang,DKRTH Kota Surabaya,1 paket per orang,Kepala DKRTH,Kantor DKRTH Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Kantong jenazah ,100 buah,BASARNAS Kota Surabaya,1 unit per jenazah,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Tandu ,10 buah,BASARNAS Kota Surabaya,1 unit per regu pencari,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Tandu ,20 buah,PMI Kota Surabaya,1 unit per regu pencari,Ibu Dasa,Markas PMI Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Kain kafan ,,,1 paket per jenazah,,
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Veltbed ,30 buah,BASARNAS Kota Surabaya,1 unit per orang,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Regu pencari ,6 tim,BASARNAS Kota Surabaya,3 regu per kelurahan,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Alat SAR,5 set alat SAR laut,BASARNAS Kota Surabaya,,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Alat SAR,10 set alat SAR darat,BASARNAS Kota Surabaya,,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+"Evakuasi, Pencarian, dan Penyelamatan Korban",Alat SAR,6 set alat SAR selam,BASARNAS Kota Surabaya,,KaSi Sumber Daya,Kantor BASARNAS Kota Surabaya
+Pemadam Kebakaran,Sumur pompa ,4 buah,Dinas PMK Kota Surabaya,1 Buah/Kantor,Bidang Sarana dan Prasarana Dinas Pemadam Kebakaran,"Jalan Kapasan Dalam (Area Klenteng Boen Bio), RSUD Bhakti Darma Husada, SWK Dupak, Tandon Kebakaran SWK Kapasari"
+Pemadam Kebakaran,Garasi mobil ,22 unit,Dinas PMK Kota Surabaya,1 Buah/Kantor,,
+Pemadam Kebakaran,Ruang administrasi ,40 ruang,Dinas PMK Kota Surabaya,1 Buah/Kantor,Pejabat pengguna ruangan/ Ka. Rayon/ Koordinator Pos Pembantu,"19 Ruangan administrasi di Kantor Pusat Dinas PMK Kota Surabaya, 1 ruangan administrasi di 5 rayon, 1 ruangan administrasi di 16 pos pembantu"
+Pemadam Kebakaran,Ruang tunggu ,20 ruang,Dinas PMK Kota Surabaya,1 Buah/Kantor,Pejabat pengguna ruangan/ Ka. Rayon/ Koordinator Pos Pembantu,"1 ruangan tunggu di Kantor Pusat Dinas PMK Kota Surabaya termasuk Rayon I, 1 ruangan tunggu di 4 rayon lain, 1 ruang tunggu di 16 pos pembantu"
+Pemadam Kebakaran,Ruang ganti pakaian ,37 ruang,Dinas PMK Kota Surabaya,1 Buah/Kantor,Pejabat pengguna ruangan/ Ka. Rayon/ Koordinator Pos Pembantu,"5 rayon (4 ruangan), 16 pos pembantu (masing2 1 ruangan) dan 1 ruangan di kantor pusat Dinas PMK"
+Pemadam Kebakaran,Gudang peralatan ,1 unit,Dinas PMK Kota Surabaya,1 Buah/Kantor,Pengurus Barang Pengguna,Kantor Pusat Dinas PMK Kota Surabaya
+Pemadam Kebakaran,Hidrant ,2 buah,Dinas PMK Kota Surabaya,1 Paket/Kantor,Bidang Sarana dan Prasarana Dinas Pemadam Kebakaran,Jalan Kupang Krajan Gang IV (Gang Masjid) Surabaya dan Jalan Kupang Krajan Gang III Surabaya
+Pemadam Kebakaran,Loker,,,1 Paket/Kantor,,
+Pemadam Kebakaran,Tandon air ,384 buah,Dinas PMK Kota Surabaya,1 Buah/Pos,Bidang Sarana dan Prasarana Dinas Pemadam Kebakaran,Wilayah Kota Surabaya
+Pemadam Kebakaran,Sprinker/ smoke detector ,,,1 Buah/Pos,,
+Pemadam Kebakaran,Sumber air ,,,1 Sumber Air,,
+Pemadam Kebakaran,Kapak ,50 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,Tangga ,50 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,Linggis ,50 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,Gergaji ,34 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong"
+Pemadam Kebakaran,Dongkrak ,31 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Ka. Sie Pemeliharaan Sarpras,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Bengkel Bidang Sarpras"
+Pemadam Kebakaran,Spreader ,4 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Dan Ton Tim Orong-orong,Ruang Tim Orong-Orong
+Pemadam Kebakaran,Pompa jinjing  ,45 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,Blower jinjing  ,1 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Dan Ton Tim Orong-orong,Ruang Tim Orong-Orong
+Pemadam Kebakaran,Sliding roll ,1 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Dan Ton Tim Orong-orong,Ruang Tim Orong-Orong
+Pemadam Kebakaran,Davy escape  ,1 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Dan Ton Tim Orong-orong,Ruang Tim Orong-Orong
+Pemadam Kebakaran,Fire blanket  ,,,1 Buah /Pos,,
+Pemadam Kebakaran,Alat pernapasan buatan ,70 buah,Dinas PMK Kota Surabaya,1 Buah /Pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,Pakaian dan sepatu tahan panas ,697 buah,Dinas PMK Kota Surabaya,1 unit per orang,Anggota pengguna APD sepengetahuan Komandan Lapangan (Ka. Rayon/ Koordinator Pos Pembantu/ Dan Ton Tim Orong-orong),Melekat sebagai APD Perorangan/personil Pasukan Pemadam Kebakaran
+Pemadam Kebakaran,Topi / helm ,697 buah,Dinas PMK Kota Surabaya,1 unit per orang,Anggota pengguna APD sepengetahuan Komandan Lapangan (Ka. Rayon/ Koordinator Pos Pembantu/ Dan Ton Tim Orong-orong),Melekat sebagai APD Perorangan/personil Pasukan Pemadam Kebakaran
+Pemadam Kebakaran,Portable pump,,,1 Buah/pos,,
+Pemadam Kebakaran,Mobil pompa pengangkut air,50 unit,Dinas PMK Kota Surabaya,2 mobil/pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,,,,,,
+Pemadam Kebakaran,,,,,,
+Pemadam Kebakaran,Mobil tangki  ,43 unit,Dinas PMK Kota Surabaya,2 mobil/pos,Ka. Rayon/ Koordinator pos pembantu/ Dan Ton Tim Orong-orong/ Sekretaris,"Unit Pemadam Kebakaran, Ruang rayon/ Pos pembantu/ Tim orong-orong/ Sekretariat"
+Pemadam Kebakaran,Snorkel  ,,,1 mobil/pos,,
+Pemadam Kebakaran,Mobil BA ,,,1 mobil/pos,,
+Pemadam Kebakaran,Mobil tangga,,,1 mobil/pos,,
+Pemadam Kebakaran,Mobil rescue  ,1 unit,DKRTH Kota Surabaya,1 mobil/pos,Kepala DKRTH Kota Surabaya,Kantor DKRTH Kota Surabaya
+Pemadam Kebakaran,Mobil rescue  ,9 unit,BPBL Kota Surabaya,1 mobil/pos,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Pemadam Kebakaran,Mobil pendobrak  ,,,1 mobil/pos,,
+Pemadam Kebakaran,Mobil angkut pasukan  ,,,1 mobil/pos,,
+Pemadam Kebakaran,Juru pemadam utama,,,1 orang/kelompok/pos,,
+Pemadam Kebakaran,Operator mobil kebakaran,,,1 orang/kelompok/pos,,
+Pemadam Kebakaran,Tenaga pemadam,,,2 orang/kelompok/pos,,
+Pemadam Kebakaran,Tenaga penyelamat,,,2 orang/kelompok/pos,,
+Kelistrikan,Pembangkit listrik,,,Mengikuti Standar PLN,,
+Kelistrikan,Gardu induk,24 unit,PT PLN UPT Surabaya,Mengikuti Standar PLN,,
+Kelistrikan,Tower,,,Mengikuti Standar PLN,,
+Kelistrikan,Trafo Step Up,,,Mengikuti Standar PLN,,
+Kelistrikan,Trafo Step Down,,,Mengikuti Standar PLN,,
+Kelistrikan,Tiang,,,Mengikuti Standar PLN,,
+Kelistrikan,Kabel,,,Mengikuti Standar PLN,,
+Kelistrikan,Trafo,,,Mengikuti Standar PLN,,
+Kelistrikan,Teknisi,,PT PLN UPT Surabaya,Mengikuti Standar PLN,,
+Kelistrikan,APD,,,Mengikuti Standar PLN,,
+Kelistrikan,Pengamanan,,,Mengikuti Standar PLN,,
+Kelistrikan,Transportasi ,5 unit,PT PLN UPT Surabaya,Mengikuti Standar PLN,,
+Kelistrikan,BBM,,,Mengikuti Standar PLN,,
+Kelistrikan,Genset,31unit,DKRTH Kota Surabaya,1 set per lokasi,Kepala DKRTH,Tersebar
+Kelistrikan,Genset,5 unit,Dinas Komunikasi Kota Surabaya,1 set per lokasi,Kepala Diskominfo,Kantor Diskominfo
+Kelistrikan,Genset,48 unit,Dinas Pekerjaan Umum Bina Marga dan Pematusan Kota Surabaya,1 set per lokasi,Kepala Dinas PU Bina Marga,Kantor Dinas PU Bina Marga
+Kelistrikan,Genset,2 unit,Dinas Pendidikan,1 set per lokasi,Sekertaris Dinas Pendidikan Kota Surabaya,Kantor Dinas Pendidikan Kota Surabaya
+Kelistrikan,Genset,32 unit,BPBL Kota Surabaya,1 set per lokasi,Kepala BPBL,Kantor BPBL
+Kelistrikan,Genset,2 unit,PDAM Kota Surabaya,1 set per lokasi,Layanan Internal dan IT,Kantor Pusat PDAM
+Kelistrikan,Genset,1 unit,PMI Kota Surabaya,1 set per lokasi,Ibu Dasa,Markas PMI Kota Surabaya
+Kelistrikan,Genset,5 unit,BASARNAS Kota Surabaya,1 set per lokasi,KaSi Sumber Daya,Kantor BASARNAS
+Kelistrikan,Panel Surya,,,1 set per lokasi,,
+Air Bersih,"Air bersih untuk masak, MCK, bersih-bersih dan kegiatan lainnya : air permukaan/air tanah/Air Sumur PMK",,,30 L/Orang/Hari,,
+Air Bersih,Air bersih untuk konsumsi langsung : air dalam kemasan,,,"2,7 – 3,7 L/Orang/Hari",,
+Air Bersih,Pipa,,,"Permukaan tanah : Pipa PVC/PE diameter 12,5 mmDalam tanah : Pipa besi diameter 12,5 mm atau pipa PVC, GIP atau fiber glass",,
+Air Bersih,Alat bor,2 unit,PDAM Kota Surabaya,1 Unit/Lokasi/Kegiatan,Layanan Internal,Kantor PDAM Pusat
+Air Bersih,Pompa sumur dalam,,,1 Unit/Lokasi/Kegiatan,Transmisi dan Distribusi PW Timur dan PW Barat,Jalur Perpipaan
+Air Bersih,Mesin pompa air,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Tangki air,1 unit,PMI Kota Surabaya,1 unit /Lokasi/Kegiatan dengan kapasitas 2200 L,Ibu Dasa,Markas PMI Kota Surabaya
+Air Bersih,Genset,31unit,DKRTH Kota Surabaya,1 set per lokasi,Kepala DKRTH,Tersebar
+Air Bersih,Genset,5 unit,Dinas Komunikasi Kota Surabaya,1 set per lokasi,Kepala Diskominfo,Kantor Diskominfo
+Air Bersih,Genset,48 unit,Dinas Pekerjaan Umum Bina Marga dan Pematusan Kota Surabaya,1 set per lokasi,Kepala Dinas PU Bina Marga,Kantor Dinas PU Bina Marga
+Air Bersih,Genset,2 unit,Dinas Pendidikan,1 set per lokasi,Sekertaris Dinas Pendidikan Kota Surabaya,Kantor Dinas Pendidikan Kota Surabaya
+Air Bersih,Genset,32 unit,BPBL Kota Surabaya,1 set per lokasi,Kepala BPBL,Kantor BPBL
+Air Bersih,Genset,2 unit,PDAM Kota Surabaya,1 set per lokasi,Layanan Internal dan IT,Kantor Pusat PDAM
+Air Bersih,Genset,1 unit,PMI Kota Surabaya,1 set per lokasi,Ibu Dasa,Markas PMI Kota Surabaya
+Air Bersih,Genset,5 unit,BASARNAS Kota Surabaya,1 set per lokasi,KaSi Sumber Daya,Kantor BASARNAS
+Air Bersih,Selang,,PDAM Kota Surabaya,1 Unit/Lokasi/Kegiatan,Layanan Internal,Kantor PDAM Pusat
+Air Bersih,Keran,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Mobil tangki air,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Alat penjernih air/ water treatment,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Tempat penampungan air,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,water hauling,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,bom sumur (kaporit atau tawas),,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Pipa,,,"Permukaan tanah : Pipa PVC/PE diameter 12,5 mmDalam tanah : Pipa besi diameter 12,5 mm atau pipa PVC, GIP atau fiber glass",,
+Air Bersih,Pompa,,,1 Unit/Lokasi/Kegiatan,Transmisi dan Distribusi PW Timur dan PW Barat,Jalur Perpipaan
+Air Bersih,Selang,,,1 Unit/Lokasi/Kegiatan Distribusi,,
+Air Bersih,Tandon/kontainer/ Tangki air,1 unit,PMI Kota Surabaya,1 unit /Lokasi/Kegiatan dengan kapasitas 2200 L,Ibu Dasa,Markas PMI Kota Surabaya
+Air Bersih,Keran,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Mobil water treatment/ Reservoir portabel,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Mobil tangki air,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Mobil kaisar,,,1 Unit/Lokasi/Kegiatan,,
+Air Bersih,Galon,,,1 unit/orang,,
+Air Bersih,Ember,,,1 unit/orang,,
+Pemulihan Ekonomi,Pelayanan Bank,,,Satu per tenda komunal/ minggu,,
+Pemulihan Ekonomi,ATM mobile,,,Satu per tenda komunal/ minggu,,
+Pemulihan Ekonomi,Pasar,11 Pasar,Dinas Koperasi dan UMKM Kota Surabaya,SNI 03-1733-2004 tentang Tata Cara Perencanaan Lingkungan Perumahan di Perkotaan,Kepala Bidang Usaha Mikro,Tersebar di Seluruh Wilayah Kota Surabaya
+Pemulihan Ekonomi,Toko/kios/warung,,,SNI 03-1733-2004 tentang Tata Cara Perencanaan Lingkungan Perumahan di Perkotaan,,
+Pemulihan Ekonomi,Program pembangunan padat karya,,,Mengikuti kebutuhan,,
+Pemulihan Ekonomi,Pelatihan kewirausahaan UMKM/IKM,124 Pelatihan ,Dinas Koperasi dan UMKM Kota Surabaya,Mengikuti kebutuhan,Kepala Bidang Usaha Mikro Tersebar di Seluruh Wilayah Kota Surabaya,Tersebar di Seluruh Wilayah Kota Surabaya
+Pemulihan Ekonomi,Pelatihan keterampilan,,,Mengikuti kebutuhan,,
+Pemulihan Ekonomi,Bantuan modal (uang/barang),,,Mengikuti kebutuhan,,
+Pemulihan Ekonomi,Kebijakan keringanan kredit,,,Mengikuti kebutuhan,,
+Bahan Bakar,Bensin,,,3 Liter/Orang/Hari,,
+Bahan Bakar,Solar,,,3 Liter/Orang/Hari,,
+Bahan Bakar,LPG,,,,,
+Bahan Bakar,Tangki BBM,,,Mengikuti standar PT. Pertamina,,
+Bahan Bakar,SPBU,,,Mengikuti standar PT. Pertamina,,
+Bahan Bakar,Kendaraan dan kapal pengangkut BBM,,,Mengikuti standar PT. Pertamina,,
+Bahan Bakar,Pengamanan,,,1 kelompok pengamanan bersenjata/kegiatan distribusi,,
+Bahan Bakar,Pembatasan pembelian BBM,,,(pembelian sesuai ktp) 3 liter/kendaraan,,
+Bahan Bakar,"Log book Pembelian (nama, ttd, id)",,,1 Buah/pangkalan,,
+Bahan Bakar,Pembatasan pembelian LPG,,,Kegiatan pembelian/orang/minggu,,
+Bahan Bakar,Kupon,,,1 Buah/Orang,,
+Telekomunikasi,Telephone satelit,,,1 unit/posko,,
+Telekomunikasi,HT,,,25 unit/posko,,
+Telekomunikasi,Genset,31unit,DKRTH Kota Surabaya,1 set/pos,Kepala DKRTH,Tersebar
+Telekomunikasi,Genset,5 unit,Dinas Komunikasi Kota Surabaya,1 set/pos,Kepala Diskominfo,Kantor Diskominfo
+Telekomunikasi,Genset,48 unit,Dinas Pekerjaan Umum Bina Marga dan Pematusan Kota Surabaya,1 set/pos,Kepala Dinas PU Bina Marga,Kantor Dinas PU Bina Marga
+Telekomunikasi,Genset,2 unit,Dinas Pendidikan,1 set/pos,Sekertaris Dinas Pendidikan Kota Surabaya,Kantor Dinas Pendidikan Kota Surabaya
+Telekomunikasi,Genset,32 unit,BPBL Kota Surabaya,1 set/pos,Kepala BPBL,Kantor BPBL
+Telekomunikasi,Genset,2 unit,PDAM Kota Surabaya,1 set/pos,Layanan Internal dan IT,Kantor Pusat PDAM
+Telekomunikasi,Genset,1 unit,PMI Kota Surabaya,1 set/pos,Ibu Dasa,Markas PMI Kota Surabaya
+Telekomunikasi,Genset,5 unit,BASARNAS Kota Surabaya,1 set/pos,KaSi Sumber Daya,Kantor BASARNAS
+Telekomunikasi,Kombet,,,1 unit/posko,,
+Telekomunikasi,,,,,,
+Telekomunikasi,Radio,,,20 unit/posko,,
+Telekomunikasi,,,,,,
+Telekomunikasi,Early Warning System,,,1 unit/posko,,
+Telekomunikasi,"Alat pendukung telekomuniasi portabel (berisi daya, penangkap sinyal)",,,1 unit/pos,,
+Telekomunikasi,,,,,,
+Telekomunikasi,,,,,,
+Telekomunikasi,Repeater,,,1 unit/pos,,
+Telekomunikasi,Baterai,,,50 unit/pos,,
+Telekomunikasi,Kentongan,,,1 unit/KK,,
+Pendidikan,Ruang belajar mengajar,,,,,
+Pendidikan,Buku,,,,,
+Pendidikan,Alat tulis,,,,,
+Pendidikan,Peralatan belajar mengajar,,,,,
+Pendidikan,Generator,,,,,
+Pendidikan,bahan bakar,,,,,
+Pendidikan,Guru/ tenaga pendidik,29.058 orang,Dinas Pendidikan Kota Surabaya,,Kepala Bidang Guru dan Tenaga Kependidikan,"Tersebar di seluruh PAUD, SD, dan SMP di Kota Surabaya"
+Transportasi,Ambulance,6 unit,PMI Kota Surabaya,1 unit,,
+Transportasi,Mobil Jenazah,,,1 unit,,
+Transportasi,Jalur alternatif,,,1 jalan,,
+Transportasi,Jalur evakuasi,,,1 jalur,,
+Transportasi,Pengendali lalu lintas portabel,3 unit,Dinas Perhubungan Kota Surabaya,,"Mas Tomy Bidialin, Staff Sarpras",Terminal Bratang
+Transportasi,Perlengkapan safety kendaraan,,,,,
+Transportasi,Mobil operasional,87 unit,Dinas Perhubungan Kota Surabaya,32 unit/kabupaten/kota,"87 Bidang yang mengurusi mobil operasional, namun dibawah Mbak Mita Spv. Sarpras",Tersebar di Titik Penyimpanan Dishub
+Transportasi,Mobil rescue,9 unit,BPBL Kota Surabaya,32 unit/kabupaten/kota,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Transportasi,Mobil rescue,1 unit,DKRTH Kota Surabaya,32 unit/kabupaten/kota,Kepala DKRTH,Kantor DKRTH
+Transportasi,Truk High Light,28 unit,DKRTH Kota Surabaya,15 unit/kabupaten/kota,Kepala DKRTH,Kantor DKRTH
+Transportasi,Truk High Light,,BPBL Kota Surabaya,15 unit/kabupaten/kota,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Transportasi,Motor Trail,49 unit,Dinas Perhubungan Kota Surabaya,15 unit/kabupaten/kota,"Mbak Mita, Spv Sarpras.",Tersebar di titik penyimpanan Dishub
+Transportasi,Motor Trail,48 unit,Dinas PU Bina Marga Kota Surabaya,15 unit/kabupaten/kota,Kepala Dinas PU Bina Marga Kota Surabaya,Kantor Dinas PU Bina Marga Kota Surabaya
+Transportasi,Motor Trail,16 unit,BPBL Kota Surabaya,15 unit/kabupaten/kota,Kepala BPBL Kota Surabaya,Kantor BPBL Kota Surabaya
+Transportasi,Motor Trail,2 unit,DKRTH Kota Surabaya,15 unit/kabupaten/kota,Kepala DKRTH,Kantor DKRTH
+Transportasi,Eskavator,11 unit,DKRTH Kota Surabaya,,Kepala DKRTH,Kantor DKRTH
+Transportasi,Eskavator,2-3 unit,Dinas Perhubungan Kota Surabaya,,"Mbak Mita, Spv Sarpras.",Kantor Dinas Perhubungan
+Transportasi,Eskavator,68 unit,Dinas PU Bina Marga Kota Surabaya,,Kepala Dinas PU Bina Marga Kota Surabaya,Kantor Dinas PU Bina Marga Kota Surabaya
+Transportasi,Holder,6 unit,Dinas Perhubungan Kota Surabaya,,"Mbak Mita, Spv Sarpras.",Tersebar di titik penyimpanan Dishub
+Transportasi,Dam truk,27 unit,DKRTH Kota Surabaya,15 unit/kabupaten/kota,Kepala DKRTH,Kantor DKRTH
+Transportasi,Dam truk,87 unit,Dinas PU Bina Marga Kota Surabaya,15 unit/kabupaten/kota,Kepala PU Bina Marga,Kantor Dinas PU Bina Marga
+Transportasi,Mobil Pick Up,5 unit,Dinas Perhubungan Kota Surabaya,32 unit/kabupaten/kota,"Mbak Mita, Spv Sarpras.","Teriminal Purabaya, TOW Mayjend Sungkono, Dishub Dukuh Menanggal"
+Transportasi,Mobil Pick Up,24 unit,Dinas PU Bina Marga Kota Surabaya,32 unit/kabupaten/kota,Kepala PU Bina Marga,Kantor Dinas PU Bina Marga
+Transportasi,Mobil Pick Up,,PMI Kota Surabaya,32 unit/kabupaten/kota,,
+Transportasi,Mobil Pick Up,98 unit,DKRTH Kota Surabaya,32 unit/kabupaten/kota,Kepala DKRTH,Kantor DKRTH
+Transportasi,Truk Logistik,,,32 unit/kabupaten/kota,,
+Transportasi,Truk BBM,,,3 unit/kabupaten/kota,,
+Transportasi,Pesawat,,,2 unit/pos,,
+Transportasi,Helikopter,,,2 unit/pos,,
+Transportasi,Kapal Laut,,,2 unit/pos,,
+Transportasi,Kereta api,,,2 unit/pos,,
+Transportasi,Angkutan Umum,,,1 unit/ masyarakat yang memiliki angkutan umum,,
+Transportasi,Kendaraan Masyarakat,,,1 unit/ masyarakat,,
+Transportasi,Armada Tangki Air,40 unit,DKRTH Kota Surabaya,3 unit/kabupaten/kota,Kepala DKRTH,Kantor DKRTH
+Transportasi,Kendaraan roda 3,,,3 unit/tenda komunal,,

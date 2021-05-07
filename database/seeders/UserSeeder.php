@@ -1,5 +1,6 @@
 <?php
 namespace Database\Seeders;
+use App\Models\Kia;
 use App\Models\User;
 use App\Models\UserGroup;
 use App\Models\UserGroupRole;
@@ -96,13 +97,17 @@ class UserSeeder extends Seeder
         }
 
         foreach($users as $u) {
-            $users = User::create([
+            $user = User::create([
                 'name' => $u['name'],
                 'email' => $u['email'],
                 'password' => $u['password'],
                 'user_group_id' => $u['user_group_id']
             ]);
-            echo 'user : ' . $users->id . PHP_EOL;
+
+            Kia::create([
+                'user_id' => $user->id
+            ]);
+            echo 'user : ' . $user->id . PHP_EOL;
         }
     }
 }

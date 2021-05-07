@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Mobile\AuthController;
+use App\Http\Controllers\Mobile\DataController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,5 +27,18 @@ Route::prefix('auth')->group(function (){
     // with auth
     Route::middleware('auth:api')->group(function () {
         Route::get('logout', [AuthController::class, 'logout']);
+    });
+});
+
+Route::prefix('data')->group(function() {
+    // with auth
+    Route::middleware('auth:api')->group(function () {
+        Route::get('kota', [DataController::class, 'getKota']);
+        Route::post('identitas-anak', [DataController::class, 'createDataAnak']);
+        Route::post('identitas-ibu', [DataController::class, 'createDataIbu']);
+        Route::post('identitas-ayah', [DataController::class, 'createDataAyah']);
+        Route::put('identitas-anak', [DataController::class, 'updateDataAnak']);
+        Route::put('identitas-ibu', [DataController::class, 'updateDataIbu']);
+        Route::put('identitas-ayah', [DataController::class, 'updateDataAyah']);
     });
 });

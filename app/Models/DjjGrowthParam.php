@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kia extends Model
+class DjjGrowthParam extends Model
 {
     use HasFactory;
-
-    protected $table = 'kia';
+    protected $primaryKey = 'week';
+    protected $table = 'djj_growths';
     protected $fillable = [
-        'kia_anak_id',
-        'kia_ibu_id',
-        'kia_ayah_id'
+        'week',
+        'bottom_threshold',
+        'top_threshold'
     ];
 }

@@ -18,7 +18,7 @@ class WilayahSeeder extends Seeder
     public function run()
     {
         //
-        $basePath = 'seeders/csv/';
+            $basePath = 'seeders/csv/';
 
         Provinsi::query()->truncate();
         Kota::query()->truncate();

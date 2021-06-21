@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(OauthClientsSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(WilayahSeeder::class);
+        $this->call(ParameterSeeder::class);
     }
 }

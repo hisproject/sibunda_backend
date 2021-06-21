@@ -3,22 +3,146 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kia;
 use App\Models\KiaIdentitasAnak;
 use App\Models\KiaIdentitasAyah;
 use App\Models\KiaIdentitasIbu;
-use App\Models\Kota;
+use App\Models\User;
 use App\Utils\Constants;
 use App\Utils\Traits\Util;
 use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DataController extends Controller
 {
     //
     use Util;
+
+    public function createBundaUser(Request $request) {
+        // validasi
+        $userValidation = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed'
+        ]);
+        $userValidation['user_group_id'] = Constants::USER_GROUP_BUNDA;
+        // validasi data ibu
+        $bundaValidation = $request->validate([
+            'bunda_nama' => 'required',
+            'bunda_nik' => 'required',
+            'bunda_pembiayaan' => 'string',
+            'bunda_no_jkn' => 'string',
+            'bunda_faskes_tk1' => 'string',
+            'bunda_faskes_rujukan' => 'string',
+            'bunda_gol_darah' => 'string|max:2',
+            'bunda_tempat_lahir' => 'integer',
+            'bunda_tanggal_lahir' => 'date',
+            'bunda_pendidikan' => 'string',
+            'bunda_pekerjaan' => 'string',
+            'bunda_alamat_rumah' => 'string',
+            'bunda_telp' => 'string',
+            'bunda_puskesmas_domisili' => 'string',
+            'bunda_nomor_register_kohort_ibu' => 'string'
+        ]);
+        // validaasi data ayah
+        $ayahValidation = $request->validate([
+            'ayah_nama' => 'required',
+            'ayah_nik' => 'required',
+            'ayah_pembiayaan' => 'string',
+            'ayah_no_jkn' => 'string',
+            'ayah_faskes_tk1' => 'string',
+            'ayah_faskes_rujukan' => 'string',
+            'ayah_gol_darah' => 'string|max:2',
+            'ayah_tempat_lahir' => 'integer',
+            'ayah_tanggal_lahir' => 'date',
+            'ayah_pendidikan' => 'string',
+            'ayah_pekerjaan' => 'string',
+            'ayah_alamat_rumah' => 'string',
+            'ayah_telp' => 'string',
+        ]);
+        // validasi data anak
+        $request->validate([
+            'anak' => 'array|required',
+            'anak.*.nama' => 'string',
+            'anak.*.anak_ke' => 'integer',
+            'anak.*.no_akte_kelahiran' => 'string',
+            'anak.*.nik' => 'string',
+            'anak.*.gol_darah' => 'string|max:2',
+            'anak.*.tempat_lahir' => 'integer|required',
+            'anak.*.tanggal_lahir' => 'date',
+            'anak.*.no_jkn' => 'string',
+            'anak.*.tanggal_berlaku_jkn' => 'date',
+            'anak.*.no_kohort' => 'string',
+            'anak.*.no_catatan_medik' => 'string'
+        ]);
+
+        DB::beginTransaction();
+        try {
+            $userValidation['password'] = Hash::make($userValidation['password']);
+            $user = User::create($userValidation);
+            $bundaValidation['user_id'] = $user->id;
+            $bundaData = KiaIdentitasIbu::create([
+                'nama' => $request->bunda_nama,
+                'nik' => $request->bunda_nik,
+                'pembiayaan' => $request->bunda_pembiayaan,
+                'no_jkn' => $request->bunda_no_jkn,
+                'faskes_tk1' => $request->bunda_faskes_tk1,
+                'faskes_rujukan' => $request->bunda_faskes_rujukan,
+                'gol_darah' => $request->bunda_gol_darah,
+                'tempat_lahir' => $request->bunda_tempat_lahir,
+                'tanggal_lahir' => $request->bunda_tanggal_lahir,
+                'pendidikan' => $request->bunda_pendidikan,
+                'pekerjaan' => $request->bunda_pekerjaan,
+                'alamat_rumah' => $request->bunda_alamat_rumah,
+                'telp' => $request->bunda_telp,
+                'puskesmas_domisili' => $request->bunda_puskesmas_domisili,
+                'nomor_register_kohort_ibu' => $request->bunda_nomor_register_kohort_ibu,
+                'user_id' => $user->id
+            ]);
+            $bundaData->init_immunization();
+            $ayahValidation['kia_ibu_id'] = $bundaData->id;
+            KiaIdentitasAyah::create([
+                'nama' => $request->ayah_nama,
+                'nik' => $request->ayah_nik,
+                'pembiayaan' => $request->ayah_pembiayaan,
+                'no_jkn' => $request->ayah_no_jkn,
+                'faskes_tk1' => $request->ayah_faskes_tk1,
+                'faskes_rujukan' => $request->ayah_faskes_rujukan,
+                'gol_darah' => $request->ayah_gol_darah,
+                'tempat_lahir' => $request->ayah_tempat_lahir,
+                'tanggal_lahir' => $request->ayah_tanggal_lahir,
+                'pendidikan' => $request->ayah_pendidikan,
+                'pekerjaan' => $request->ayah_pekerjaan,
+                'alamat_rumah' => $request->ayah_alamat_rumah,
+                'telp' => $request->ayah_telp,
+                'kia_ibu_id' => $bundaData->id
+            ]);
+            foreach($request->anak as $anak) {
+                $anakData = new KiaIdentitasAnak();
+                $anakData->nama = $this->nullableVal($anak['nama']);
+                $anakData->anak_ke = $this->nullableVal($anak['anak_ke']);
+                $anakData->no_akte_kelahiran = $this->nullableVal($anak['no_akte_kelahiran']);
+                $anakData->nik = $this->nullableVal($anak['nik']);
+                $anakData->gol_darah = $this->nullableVal($anak['gol_darah']);
+                $anakData->tempat_lahir = $this->nullableVal($anak['tempat_lahir']);
+                $anakData->tanggal_lahir = $this->nullableVal($anak['tanggal_lahir']);
+                $anakData->no_jkn = $this->nullableVal($anak['no_jkn']);
+                $anakData->tanggal_berlaku_jkn = $this->nullableVal($anak['tanggal_berlaku_jkn']);
+                $anakData->no_kohort = $this->nullableVal($anak['no_kohort']);
+                $anakData->no_catatan_medik = $this->nullableVal($anak['no_catatan_medik']);
+                $anakData->kia_ibu_id = $bundaData->id;
+                $anakData->save();
+            }
+            DB::commit();
+            return Constants::successResponseWithNewValue('user', $user);
+        } catch (Exception $e) {
+            DB::rollBack();
+            return Constants::errorResponse();
+        }
+    }
+
 
     public function createDataIbu(Request $request) {
         $validation = $this->validate($request, [

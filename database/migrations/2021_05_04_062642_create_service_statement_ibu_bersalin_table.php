@@ -18,9 +18,9 @@ class CreateServiceStatementIbuBersalinTable extends Migration
             $table->string('tp');
             $table->string('fasilitas_kesehatan');
             $table->string('rujukan');
-            $table->unsignedBigInteger('kia_ibu_id');
+            $table->unsignedBigInteger('kia_anak_id');
             $table->timestamps();
-            $table->foreign('kia_ibu_id')->references('id')->on('kia_identitas_ibu');
+            $table->foreign('kia_anak_id')->references('id')->on('kia_identitas_anak');
         });
     }
 

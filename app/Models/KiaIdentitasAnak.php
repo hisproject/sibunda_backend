@@ -21,6 +21,9 @@ class KiaIdentitasAnak extends Model
         'no_jkn',
         'tanggal_berlaku_jkn',
         'no_kohort',
-        'no_catatan_medik'
+        'no_catatan_medik',
+        'kia_ibu_id',
+        'hpl',
+        'hpht',
     ];
 }

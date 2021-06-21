@@ -24,5 +24,6 @@ class KiaIdentitasAyah extends Model
         'pekerjaan',
         'alamat_rumah',
         'telp',
+        'kia_ibu_id'
     ];
 }

@@ -46,8 +46,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function kia() {
-        return $this->hasOne(Kia::class, 'user_id');
+    public function kia_ibu(){
+        return $this->hasOne(KiaIdentitasIbu::class, 'user_id');
     }
 
     public function saveImg($img) {

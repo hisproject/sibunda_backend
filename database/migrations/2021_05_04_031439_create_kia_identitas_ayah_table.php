@@ -28,8 +28,10 @@ class CreateKiaIdentitasAyahTable extends Migration
             $table->string('pekerjaan')->nullable();
             $table->string('alamat_rumah')->nullable();
             $table->string('telp')->nullable();
+            $table->unsignedBigInteger('kia_ibu_id');
             $table->timestamps();
             $table->foreign('tempat_lahir')->references('id')->on('kota');
+            $table->foreign('kia_ibu_id')->references('id')->on('kia_identitas_ibu');
         });
     }
 

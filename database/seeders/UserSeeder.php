@@ -104,9 +104,9 @@ class UserSeeder extends Seeder
                 'user_group_id' => $u['user_group_id']
             ]);
 
-            Kia::create([
-                'user_id' => $user->id
-            ]);
+            /*Kia::create([
+                'us er_id' => $user->id
+            ]);*/
             echo 'user : ' . $user->id . PHP_EOL;
         }
     }

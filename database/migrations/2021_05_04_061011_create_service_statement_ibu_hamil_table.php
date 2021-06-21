@@ -19,9 +19,9 @@ class CreateServiceStatementIbuHamilTable extends Migration
             $table->string('tb');
             $table->string('imt');
             $table->unsignedSmallInteger('trisemester');
-            $table->unsignedBigInteger('kia_ibu_id');
+            $table->unsignedBigInteger('kia_anak_id');
             $table->timestamps();
-            $table->foreign('kia_ibu_id')->references('id')->on('kia_identitas_ibu');
+            $table->foreign('kia_anak_id')->references('id')->on('kia_identitas_anak');
         });
     }
 

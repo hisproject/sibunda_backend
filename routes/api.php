@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Mobile\AuthController;
 use App\Http\Controllers\Mobile\DataController;
+use App\Http\Controllers\Mobile\KehamilankuController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('auth')->group(function (){
     // without auth
     Route::post('login', [AuthController::class, 'login']);
-    Route::post('register', [AuthController::class, 'register']);
+    /*Route::post('register', [AuthController::class, 'register']);*/
+    Route::post('register', [DataController::class, 'createBundaUser']);
     // with auth
     Route::middleware('auth:api')->group(function () {
         Route::get('logout', [AuthController::class, 'logout']);
@@ -41,4 +43,10 @@ Route::prefix('data')->group(function() {
         Route::put('identitas-ibu', [DataController::class, 'updateDataIbu']);
         Route::put('identitas-ayah', [DataController::class, 'updateDataAyah']);
     });
+});
+
+Route::prefix('kehamilanku')->group(function() {
+   Route::middleware('auth:api')->group(function() {
+       Route::get('overview', [KehamilankuController::class, 'getOverview']);
+   }) ;
 });

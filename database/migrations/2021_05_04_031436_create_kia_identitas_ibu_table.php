@@ -30,8 +30,10 @@ class CreateKiaIdentitasIbuTable extends Migration
             $table->string('telp')->nullable();
             $table->string('puskesmas_domisili')->nullable();
             $table->string('nomor_register_kohort_ibu')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->foreign('tempat_lahir')->references('id')->on('kota');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

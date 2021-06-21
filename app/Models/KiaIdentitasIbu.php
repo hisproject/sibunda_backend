@@ -26,5 +26,29 @@ class KiaIdentitasIbu extends Model
         'telp',
         'puskesmas_domisili',
         'nomor_register_kohort_ibu',
+        'user_id'
     ];
+
+    public function kia_anak() {
+        return $this->hasMany(KiaIdentitasAnak::class, 'kia_ibu_id');
+    }
+
+    public function immunization() {
+        return $this->hasMany(Immunization::class);
+    }
+
+    public function init_fundamental_data() {
+        $this->init_immunization();
+    }
+
+    public function init_immunization() {
+        for($i = 1; $i <= 3; $i ++) {
+            for($j = 0; $j < 2; $j ++)
+                ServiceStatementIbuImmunization::create([
+                    'immunization_id' => Immunization::TETANUS,
+                    'trisemester' => $i,
+                    'kia_ibu_id' => $this->id
+                ]);
+        }
+    }
 }

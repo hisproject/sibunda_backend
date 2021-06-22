@@ -31,6 +31,7 @@ class CreateKiaIdentitasAnakTable extends Migration
             // jika bayi
             $table->date('hpl')->nullable();
             $table->date('hpht')->nullable();
+            $table->boolean('is_janin')->default(true);
             $table->timestamps();
             $table->foreign('tempat_lahir')->references('id')->on('kota');
             $table->foreign('kia_ibu_id')->references('id')->on('kia_identitas_ibu');

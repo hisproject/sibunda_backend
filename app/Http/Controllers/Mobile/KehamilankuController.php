@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\BabyMovementGrowthParam;
 use App\Models\DjjGrowthParam;
 use App\Models\FetusGrowthParam;
+use App\Models\KiaIdentitasAnak;
 use App\Models\KiaIdentitasIbu;
 use App\Models\MomPulseGrowthParam;
 use App\Models\ServiceStatementIbuHamilPeriksa;
@@ -24,32 +25,32 @@ class KehamilankuController extends Controller
     public function getAnak() {
 
     }
+
     public function getOverview() {
-        $res = new stdClass();
-        $kiaAnak = Auth::user()->kia_ibu->kia_anak;
-        foreach($kiaAnak as $ka) {
-            $ka->week = $this->getPregnancyAgeInWeek($ka->hpl);
-            $ka->remaining_days = $this->getRemainingPregnancyDays($ka->hpl);
+        $kiaIbu = Auth::user()->kia_ibu;
+        $janin = KiaIdentitasAnak::select('id', 'nama', 'anak_ke')->with('trisemesters')
+                            ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', true)->get();
+        foreach($janin as $j) {
+            $j->week = $this->getPregnancyAgeInWeek($j->hpl);
+            $j->remaining_days = $this->getRemainingPregnancyDays($j->hpl);
+            // cek test rekomendasi
+            $j->food_recommendations = [
+                [
+                    'food_category' => 'Nasi atau Makanan Pokok',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
+                ],
+                [
+                    'food_category' => 'Nasi atau Makanan Pokok',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
+                ],
+                [
+                    'food_category' => 'Nasi atau Makanan Pokok',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
+                ]
+            ];
         }
 
-        // cek test rekomendasi
-        $res->food_recommendations = [
-            [
-                'food_category' => 'Nasi atau Makanan Pokok',
-                'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
-            ],
-            [
-                'food_category' => 'Nasi atau Makanan Pokok',
-                'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
-            ],
-            [
-                'food_category' => 'Nasi atau Makanan Pokok',
-                'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
-            ]
-        ];
-        $res->children = $kiaAnak;
-
-        return Constants::successResponseWithNewValue('data', $res);
+        return Constants::successResponseWithNewValue('data', $janin);
     }
 
     public function createTriSemesterData(Request $request) {

@@ -101,7 +101,7 @@ class DataController extends Controller
                 'nomor_register_kohort_ibu' => $request->bunda_nomor_register_kohort_ibu,
                 'user_id' => $user->id
             ]);
-            $bundaData->init_immunization();
+            $bundaData->init_fundamental_data();
             $ayahValidation['kia_ibu_id'] = $bundaData->id;
             KiaIdentitasAyah::create([
                 'nama' => $request->ayah_nama,
@@ -134,6 +134,7 @@ class DataController extends Controller
                 $anakData->no_catatan_medik = $this->nullableVal($anak['no_catatan_medik']);
                 $anakData->kia_ibu_id = $bundaData->id;
                 $anakData->save();
+                $anakData->init_fundamental_data();
             }
             DB::commit();
             return Constants::successResponseWithNewValue('user', $user);

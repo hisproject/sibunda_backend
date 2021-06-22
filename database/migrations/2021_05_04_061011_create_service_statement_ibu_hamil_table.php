@@ -15,9 +15,9 @@ class CreateServiceStatementIbuHamilTable extends Migration
     {
         Schema::create('service_statement_ibu_hamil', function (Blueprint $table) {
             $table->id();
-            $table->string('bb');
-            $table->string('tb');
-            $table->string('imt');
+            $table->string('bb')->nullable();
+            $table->string('tb')->nullable();
+            $table->string('imt')->nullable();
             $table->unsignedSmallInteger('trisemester');
             $table->unsignedBigInteger('kia_anak_id');
             $table->timestamps();

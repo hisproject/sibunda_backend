@@ -41,7 +41,7 @@ class KiaIdentitasIbu extends Model
         $this->init_immunization();
     }
 
-    public function init_immunization() {
+    private function init_immunization() {
         for($i = 1; $i <= 3; $i ++) {
             for($j = 0; $j < 2; $j ++)
                 ServiceStatementIbuImmunization::create([

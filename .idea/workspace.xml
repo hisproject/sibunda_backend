@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sibunda_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sibunda_backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Kia.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/KiaIdentitasAnak.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KiaIdentitasAnak.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KiaIdentitasAyah.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KiaIdentitasAyah.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/KiaIdentitasIbu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KiaIdentitasIbu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utils/Traits/Util.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Traits/Util.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_031437_create_kia_identitas_anak_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_031437_create_kia_identitas_anak_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_031438_create_kia_identitas_ibu_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_031436_create_kia_identitas_ibu_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_031439_create_kia_identitas_ayah_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_031439_create_kia_identitas_ayah_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_031440_create_kia_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_061011_create_service_statement_ibu_hamil_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_061011_create_service_statement_ibu_hamil_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_061415_create_service_statement_ibu_hamil_periksa_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_061415_create_service_statement_ibu_hamil_periksa_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_062642_create_service_statement_ibu_bersalin_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_062642_create_service_statement_ibu_bersalin_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/WilayahSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/WilayahSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +226,8 @@
       <workItem from="1623343342290" duration="518000" />
       <workItem from="1623646487970" duration="15735000" />
       <workItem from="1623932004811" duration="1675000" />
-      <workItem from="1624259163241" duration="17026000" />
+      <workItem from="1624259163241" duration="17627000" />
+      <workItem from="1624377826114" duration="4147000" />
     </task>
     <servers />
   </component>

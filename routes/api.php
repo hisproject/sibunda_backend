@@ -48,5 +48,6 @@ Route::prefix('data')->group(function() {
 Route::prefix('kehamilanku')->group(function() {
    Route::middleware('auth:api')->group(function() {
        Route::get('overview', [KehamilankuController::class, 'getOverview']);
+       Route::get('create-weekly-report', [KehamilankuController::class, 'createTriSemesterData']);
    }) ;
 });

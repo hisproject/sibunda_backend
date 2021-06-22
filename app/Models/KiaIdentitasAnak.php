@@ -25,5 +25,22 @@ class KiaIdentitasAnak extends Model
         'kia_ibu_id',
         'hpl',
         'hpht',
+        'is_janin'
     ];
+
+    public function trisemesters() {
+        return $this->hasMany(ServiceStatementIbuHamil::class, 'kia_anak_id');
+    }
+
+    public function init_fundamental_data() {
+        $this->init_trisemester_data();
+    }
+
+    private function init_trisemester_data() {
+        for($i = 1; $i <= 3; $i ++)
+            ServiceStatementIbuHamil::create([
+                'trisemester' => $i,
+                'kia_anak_id' => $this->id
+            ]);
+    }
 }

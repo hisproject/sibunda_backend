@@ -16,13 +16,14 @@ class CreateServiceStatementIbuHamilPeriksaTable extends Migration
         Schema::create('service_statement_ibu_hamil_periksa', function (Blueprint $table) {
             $table->id();
             $table->smallInteger('week');
-            $table->date('tanggal_perika');
+            $table->date('tanggal_periksa');
             $table->string('tempat_periksa');
             $table->string('nama_pemeriksa');
             $table->string('keluhan_bunda');
             $table->enum('jenis_kelamin', ['L', 'P', 'N'])->nullable();
             $table->date('tanggal_periksa_kembali');
             $table->date('hpht')->nullable();
+            $table->date('hpl')->nullable();
             $table->double('bb');
             $table->double('kenaikan_bb');
             $table->double('tb');

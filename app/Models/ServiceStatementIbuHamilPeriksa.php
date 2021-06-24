@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ServiceStatementIbuHamilPeriksa extends Model
 {
     use HasFactory;
-    protected $table = 'service_statement_hasil_periksa';
+    protected $table = 'service_statement_ibu_hamil_periksa';
     protected $fillable = [
         'week',
         'tanggal_periksa',

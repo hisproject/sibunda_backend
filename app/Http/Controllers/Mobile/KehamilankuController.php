@@ -57,7 +57,7 @@ class KehamilankuController extends Controller
         $data = $request->validate([
             'week' => 'integer|required',
             'tanggal_periksa' => 'date|required',
-            'tempat_periksa' => 'date|required',
+            'tempat_periksa' => 'string|required',
             'nama_pemeriksa' => 'string|required',
             'keluhan_bunda' => 'string|required',
             'jenis_kelamin' => 'size:1',
@@ -104,16 +104,16 @@ class KehamilankuController extends Controller
         $babyMovementGrowthParam = BabyMovementGrowthParam::where('week', $checkupServiceStatement->week)->first();
         $res['fetus_growth_desc'] = FetusGrowthParam::where('week', $checkupServiceStatement->week)->first();
         $res['weight_desc'] = $this->getBmiDesc(
-            $checkupServiceStatement->tb,
-            $checkupServiceStatement->bb,
-            $weightGrowthParam->bottom_obesity_threshold,
-            $weightGrowthParam->bottom_over_threshold,
-            $weightGrowthParam->bottom_normal_threshold,
+            $checkupServiceStatement->tb ?? 0,
+            $checkupServiceStatement->bb ?? 0,
+            $weightGrowthParam->bottom_obesity_threshold ?? 0,
+            $weightGrowthParam->bottom_over_threshold ?? 0,
+            $weightGrowthParam->bottom_normal_threshold ?? 0,
         );
-        $res['mom_pulse_desc'] = $this->getMomPulseDesc($checkupServiceStatement->map, $momPulseGrowthParam->top_threshold);
-        $res['tfu_desc'] = $this->getTfuDesc($checkupServiceStatement->tfu, $tfuGrowthParam->top_threshold, $tfuGrowthParam->bottom_threshold);
-        $res['djj_desc'] = $this->getDjjDesc($checkupServiceStatement->djj, $djjGrowthParam->top_threshold, $djjGrowthParam->bottom_threshold);
-        $res['baby_movement_desc'] = $this->getBabyMovementDesc($checkupServiceStatement->gerakan_bayi, $babyMovementGrowthParam->bottom_threshold);
+        $res['mom_pulse_desc'] = $this->getMomPulseDesc($checkupServiceStatement->map, $momPulseGrowthParam->top_threshold ?? 0);
+        $res['tfu_desc'] = $this->getTfuDesc($checkupServiceStatement->tfu, $tfuGrowthParam->top_threshold ?? 0, $tfuGrowthParam->bottom_threshold ?? 0);
+        $res['djj_desc'] = $this->getDjjDesc($checkupServiceStatement->djj, $djjGrowthParam->top_threshold ?? 0, $djjGrowthParam->bottom_threshold ?? 0);
+        $res['baby_movement_desc'] = $this->getBabyMovementDesc($checkupServiceStatement->gerakan_bayi, $babyMovementGrowthParam->bottom_threshold ?? 0);
 
         return Constants::successResponseWithNewValue('data', $res);
     }

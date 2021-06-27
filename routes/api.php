@@ -50,5 +50,11 @@ Route::prefix('kehamilanku')->group(function() {
        Route::get('overview', [KehamilankuController::class, 'getOverview']);
        Route::post('create-weekly-report', [KehamilankuController::class, 'createTriSemesterData']);
        Route::post('show-weekly-report', [KehamilankuController::class, 'showTriSemesterCheckupData']);
+       Route::get('immunization', [KehamilankuController::class, 'getImmunizationData']);
+       Route::post('immunization', [KehamilankuController::class, 'createImmunizationData']);
+       Route::get('graph/tfu', [KehamilankuController::class, 'getTfuGraphData']);
+       Route::get('graph/djj', [KehamilankuController::class, 'getDjjGraphData']);
+       Route::get('graph/map', [KehamilankuController::class, 'getMapGraphData']);
+       Route::get('graph/mom-weight', [KehamilankuController::class, 'getWeightGraphData']);
    }) ;
 });

@@ -34,7 +34,7 @@ class KiaIdentitasIbu extends Model
     }
 
     public function immunization() {
-        return $this->hasMany(Immunization::class);
+        return $this->hasMany(ServiceStatementIbuImmunization::class, 'kia_ibu_id');
     }
 
     public function init_fundamental_data() {

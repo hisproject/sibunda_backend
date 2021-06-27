@@ -13,7 +13,8 @@
         "laravel/passport": "^10.1",
         "laravel/tinker": "^2.5",
         "league/csv": "^9.7",
-      "ext-http": "*"
+      "ext-http": "*",
+      "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

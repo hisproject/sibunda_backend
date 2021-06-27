@@ -12,10 +12,12 @@ use App\Models\MomPulseGrowthParam;
 use App\Models\ServiceStatementIbuHamilPeriksa;
 use App\Models\ServiceStatementIbuImmunization;
 use App\Models\TfuGrowthParam;
+use App\Models\User;
 use App\Models\WeightGrowthParam;
 use App\Utils\Constants;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use stdClass;
 
 class KehamilankuController extends Controller
@@ -118,26 +120,131 @@ class KehamilankuController extends Controller
         return Constants::successResponseWithNewValue('data', $res);
     }
 
-    public function getImmunizationData($bundaId) {
-        $bunda = KiaIdentitasIbu::find($bundaId);
-
-        return $bunda->immunization();
+    public function getImmunizationData() {
+        $bunda = Auth::user()->kia_ibu;
+        return ServiceStatementIbuImmunization::where('kia_ibu_id', $bunda->id)
+                                                ->orderBy('trisemester')->orderBy('immunization_id')->get();
     }
 
     public function createImmunizationData(Request $request) {
         $request->validate([
             'immunization_id' => 'integer|required',
             'date' => 'date|required',
-            'place' => 'string|required',
+            'location' => 'string|required',
             'pic' => 'string|required',
         ]);
 
         $immunization = ServiceStatementIbuImmunization::find($request->immunization_id);
         $immunization->date = $request->date;
-        $immunization->place = $request->place;
+        $immunization->location = $request->location;
         $immunization->pic = $request->pic;
         $immunization->save();
 
         return Constants::successResponse();
+    }
+
+    public function getTfuGraphData() {
+        $tfuParams = TfuGrowthParam::orderBy('week')->get();
+        $insertedData = $this->getPregnancyData('tfu');
+        $res = [];
+        $currDataIndex = 0;
+        $currDataLen = count($insertedData);
+
+        foreach($tfuParams as $tfuParam) {
+            $data = [
+                'week' => $tfuParam->week,
+                'bottom_threshold' => (int) $tfuParam->bottom_threshold,
+                'normal_threshold' => (int) $tfuParam->normal_threshold,
+                'top_threshold' => (int) $tfuParam->top_threshold,
+            ];
+
+            if($currDataIndex < $currDataLen &&
+                    $tfuParam->week == $insertedData[$currDataIndex]->week)
+                $data['input'] = $insertedData[$currDataIndex ++]->tfu;
+            else
+                $data['input'] = -1;
+
+            array_push($res, $data);
+        }
+
+        return $res;
+    }
+
+    public function getDjjGraphData() {
+        $djjParams = DjjGrowthParam::orderBy('week')->get();
+        $insertedData = $this->getPregnancyData('djj');
+        $res = [];
+        $currDataIndex = 0;
+        $currDataLen = count($insertedData);
+
+        foreach($djjParams as $djjParam) {
+            $data = [
+                'week' => $djjParam->week,
+                'bottom_threshold' => (int) $djjParam->bottom_threshold,
+                'top_threshold' => (int) $djjParam->top_threshold,
+            ];
+
+            if($currDataIndex < $currDataLen &&
+                    $djjParam->week == $insertedData[$currDataIndex]->week)
+                $data['input'] = $insertedData[$currDataIndex ++]->djj;
+            else
+                $data['input'] = -1;
+
+            array_push($res, $data);
+        }
+
+        return $res;
+    }
+
+    public function getMapGraphData() {
+        $mapParams = MomPulseGrowthParam::orderBy('week')->get();
+        $insertedData = $this->getPregnancyData('map');
+        $res = [];
+        $currDataIndex = 0;
+        $currDataLen = count($insertedData);
+
+        foreach($mapParams as $mapParam) {
+            $data = [
+                'week' => $mapParam->week,
+                'top_threshold' => (int) $mapParam->top_threshold
+            ];
+
+            if($currDataIndex < $currDataLen &&
+                    $mapParam->week == $insertedData[$currDataIndex]->week)
+                $data['input'] = $insertedData[$currDataIndex]->map;
+            else
+                $data['input'] = -1;
+
+            array_push($res, $data);
+        }
+
+        return $res;
+    }
+
+    public function getWeightGraphData() {
+        $weightParams = WeightGrowthParam::orderBy('week')->get();
+        $insertedData = $this->getPregnancyData('bb');
+        $res = [];
+        $currDataIndex = 0;
+        $currDataLen = count($insertedData);
+
+        foreach($weightParams as $weightParam) {
+            $data = [
+                'week' => $weightParam->week,
+                'bottom_obesity_threshold' => (int) $weightParam->bottom_obesity_threshold,
+                'bottom_over_threshold' => (int) $weightParam->bottom_over_threshold,
+                'bottom_normal_threshold' => (int) $weightParam->bottom_normal_threshold
+            ];
+
+            if($currDataIndex < $currDataLen &&
+                    $weightParam->week == $insertedData[$currDataIndex]->week)
+                $data['input'] = $insertedData[$currDataIndex]->bb;
+            else
+                $data['input'] = -1;
+
+            array_push($res, $data);
+        }
+
+        return $res;
     }
 }

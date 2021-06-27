@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Mobile;
 
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 trait GlobalDataHelper
 {
@@ -104,5 +105,14 @@ trait GlobalDataHelper
                 'type' => 2,
                 'desc' => 'Tidak Aktif'
             ];
+    }
+
+
+    public function getPregnancyData($prop) {
+        $q = 'select sp.' . $prop . ', sp.week from service_statement_ibu_hamil_periksa sp
+                                    join service_statement_ibu_hamil s on s.id = sp.trisemester_id
+                                    join kia_identitas_anak ka on ka.id = s.kia_anak_id
+                                    where ka.kia_ibu_id = 1 order by sp.week';
+        return DB::select($q);
     }
 }

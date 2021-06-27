@@ -58,3 +58,9 @@ Route::prefix('kehamilanku')->group(function() {
        Route::get('graph/mom-weight', [KehamilankuController::class, 'getWeightGraphData']);
    }) ;
 });
+
+Route::prefix('anaku')->group(function() {
+    Route::middleware('auth:api')->group(function() {
+
+    });
+});

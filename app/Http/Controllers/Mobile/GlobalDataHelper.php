@@ -9,6 +9,28 @@ use Illuminate\Support\Facades\DB;
 
 trait GlobalDataHelper
 {
+    // return description string
+    public function getChildAge($bornDateStr) {
+        try {
+            $nowDate = Carbon::now();
+            $bornDate = Carbon::parse($bornDateStr);
+            $days = $bornDate->diffInDays($nowDate);
+
+            if($days > 30) {
+                if(($days % 30) > 7) {
+                    return ($days / 30) . ' Bulan lebih ' . (($days % 30) / 7) . ' Minggu ' .
+                        (($days % 30) % 7) . ' Hari';
+                } else
+                    return ($days / 30) . ' Bulan lebih ' . ($days % 30) . ' Hari';
+            } else if($days > 7) {
+                return ($days / 7) . ' Minggu lebih ' . ($days % 7) . ' Hari';
+            } else
+                return $days  . ' Hari';
+        } catch (\Exception $e) {}
+
+        return null;
+    }
+
     public function getPregnancyAgeInWeek($hpl) {
         $nowDate = Carbon::now();
         $hplDate = Carbon::parse($hpl);

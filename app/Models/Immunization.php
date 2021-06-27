@@ -11,6 +11,9 @@ class Immunization extends Model
 
     const TETANUS = 1;
 
+    const TYPE_UNDER_4_MONTHS = 1;
+    const TYPE_ABOVE_4_MONTHS = 2;
+
     protected $table = 'immunization';
     protected $fillable = ['name'];
 }

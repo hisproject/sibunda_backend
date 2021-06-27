@@ -104,8 +104,30 @@ class ParameterSeeder extends Seeder {
             ]);
         }
 
-        Immunization::create([
-            'name' => 'Tetanus'
-        ]);
+        $immunizations = [
+            'Tetanus',
+            'Hepatitis B (<24 Jam)',
+            'BCG',
+            'Polio Tetes 1',
+            'DPT-HB-Hib 1',
+            'Polio Tetes 2',
+            'DPT-HB-Hib 2',
+            'Polio Tetes 3',
+            'DPT-HB-Hib 3',
+            'Polio Tetes 4',
+            'Polio Suntik (IPV)',
+            '*PCV 1',
+            '*PCV 2',
+            'Campak - Rubella (MR)',
+            'DPT-Hib-HB lanjutan',
+            'Campak - Rubella (MR)',
+            '*Japanese Encephalitis',
+            '*PCV 3'
+        ];
+
+        foreach($immunizations as $immunization)
+            Immunization::create([
+                'name' => $immunization
+            ]);
     }
 }

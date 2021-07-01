@@ -49,7 +49,8 @@ Route::prefix('kehamilanku')->group(function() {
    Route::middleware('auth:api')->group(function() {
        Route::get('overview', [KehamilankuController::class, 'getOverview']);
        Route::post('create-weekly-report', [KehamilankuController::class, 'createTriSemesterData']);
-       Route::post('show-weekly-report', [KehamilankuController::class, 'showTriSemesterCheckupData']);
+       Route::post('show-weekly-report', [KehamilankuController::class, 'showWeeklyTrisemesterData']);
+       Route::post('show-weekly-report-analysis', [KehamilankuController::class, 'showTriSemesterAnalysis']);
        Route::get('immunization', [KehamilankuController::class, 'getImmunizationData']);
        Route::post('immunization', [KehamilankuController::class, 'createImmunizationData']);
        Route::get('graph/tfu', [KehamilankuController::class, 'getTfuGraphData']);

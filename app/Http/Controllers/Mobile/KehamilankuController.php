@@ -93,12 +93,29 @@ class KehamilankuController extends Controller
         ]);
     }
 
-    public function showTriSemesterCheckupData(Request $request) {
+    public function showWeeklyTrisemesterData(Request $request) {
+        $request->validate([
+            'weekly_trisemester_checkup_id' => 'integer|required'
+        ]);
+
+        $data = ServiceStatementIbuHamilPeriksa::find($request->weekly_trisemester_checkup_id);
+
+        if(empty($data))
+            return abort(404);
+
+        return $data;
+    }
+
+    public function showTriSemesterAnalysis(Request $request) {
         $request->validate([
             'weekly_trisemester_checkup_id' => 'integer|required'
         ]);
 
         $checkupServiceStatement = ServiceStatementIbuHamilPeriksa::find($request->weekly_trisemester_checkup_id);
+
+        if(empty($checkupServiceStatement))
+            return abort(404);
+
         $weightGrowthParam = WeightGrowthParam::where('week', $checkupServiceStatement->week)->first();
         $momPulseGrowthParam = MomPulseGrowthParam::where('week', $checkupServiceStatement->week)->first();
         $tfuGrowthParam = TfuGrowthParam::where('week', $checkupServiceStatement->week)->first();

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Mobile\AuthController;
+use App\Http\Controllers\Mobile\BayikuController;
 use App\Http\Controllers\Mobile\DataController;
 use App\Http\Controllers\Mobile\KehamilankuController;
 use Illuminate\Http\Request;
@@ -62,6 +63,7 @@ Route::prefix('kehamilanku')->group(function() {
 
 Route::prefix('anaku')->group(function() {
     Route::middleware('auth:api')->group(function() {
-
+        Route::post('monthly-report', [BayikuController::class, 'getMonthlyCheckup']);
+        Route::get('perkembangan-questionnaire/{month}', [BayikuController::class, 'getMonthlyPerkembanganQuestionnaire']);
     });
 });

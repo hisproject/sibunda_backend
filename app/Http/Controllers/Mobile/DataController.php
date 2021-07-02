@@ -65,17 +65,17 @@ class DataController extends Controller
         // validasi data anak
         $request->validate([
             'anak' => 'array|required',
-            'anak.*.nama' => 'string',
-            'anak.*.anak_ke' => 'integer',
-            'anak.*.no_akte_kelahiran' => 'string',
-            'anak.*.nik' => 'string',
-            'anak.*.gol_darah' => 'string|max:2',
+            'anak.*.nama' => 'string|required',
+            'anak.*.anak_ke' => 'integer|required',
+            'anak.*.no_akte_kelahiran' => 'string|required',
+            'anak.*.nik' => 'string|required',
+            'anak.*.gol_darah' => 'string|max:2|required',
             'anak.*.tempat_lahir' => 'integer|required',
-            'anak.*.tanggal_lahir' => 'date',
-            'anak.*.no_jkn' => 'string',
-            'anak.*.tanggal_berlaku_jkn' => 'date',
-            'anak.*.no_kohort' => 'string',
-            'anak.*.no_catatan_medik' => 'string'
+            'anak.*.tanggal_lahir' => 'date|required',
+            'anak.*.no_jkn' => 'string|required',
+            'anak.*.tanggal_berlaku_jkn' => 'date|required',
+            'anak.*.no_kohort' => 'string|required',
+            'anak.*.no_catatan_medik' => 'string|required'
         ]);
 
         DB::beginTransaction();

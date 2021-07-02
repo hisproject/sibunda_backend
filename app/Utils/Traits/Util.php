@@ -20,4 +20,12 @@ trait Util
                 return null;
         return $val;
     }
+
+    public function getArrayVal($val, $key) {
+        try {
+            return $val[$key];
+        } catch (\Exception $e) {
+            return null;
+        }
+    }
 }

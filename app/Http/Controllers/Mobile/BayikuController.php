@@ -4,13 +4,14 @@ namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
 use App\Models\KiaIdentitasAnak;
+use App\Models\PerkembanganQuestionnaire;
 use App\Models\ServiceStatementAnakMonthlyCheckup;
 use App\Models\ServiceStatementAnakNeonatusKn1;
 use App\Models\ServiceStatementAnakNeonatusKn2;
 use App\Models\ServiceStatementAnakNeonatusKn3;
 use App\Models\ServiceStatementAnakNeonatusSixHours;
+use App\Models\ServiceStatementMonthlyPerkembangan;
 use App\Utils\Constants;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -57,14 +58,51 @@ class BayikuController extends Controller
             $checkupData->imt = $request->imt;
             $checkupData->save();
 
-            // key harus 1 - indexed
-            $checkupData->fill_perkembangan_qs($request->perkembangan);
-
             DB::commit();
             return Constants::successResponse();
         } catch (\Exception $e) {
             DB::rollBack();
             return Constants::errorResponse($e->getMessage());
+        }
+    }
+
+    public function getMonthlyCheckup(Request $request) {
+        $request->validate([
+            'month' => 'integer|required',
+            'year_id' => 'integer|required'
+        ]);
+
+        $data = ServiceStatementAnakMonthlyCheckup::where('month', $request->month)
+                                                    ->where('year_id', $request->year_id)->first();
+
+        if(empty($data))
+            return Constants::errorResponse('no matching data for month ' . $request->month);
+
+        return $data;
+    }
+
+    public function getMonthlyPerkembanganQuestionnaire($month) {
+        $q = PerkembanganQuestionnaire::where('month_start', '<=', $month)
+                                        ->where('month_until', '>=', $month)
+                                        ->orderBy('no')->get();
+
+        return $q;
+    }
+
+    public function createPerkembanganQuestionnaireAns(Request $request) {
+        $request->validate([
+            'monthly_report_id' => 'integer|required',
+            'answers' => 'array',
+            'answers.*.q_id' => 'integer',
+            'answers.*.ans' => 'boolean'
+        ]);
+
+        foreach($request->answers as $ans) {
+            ServiceStatementMonthlyPerkembangan::create([
+                'monthly_report_id' => $request->monthly_report_id,
+                'questionnaire_id' => $ans['q_id'],
+                'ans' => $ans['ans']
+            ]);
         }
     }
 

@@ -47,6 +47,7 @@ class ParameterSeeder extends Seeder {
         $momPulseGrowths->setDelimiter(',');
         $momPulseGrowths->setHeaderOffset(0);
 
+
         // insert data
         foreach ($fetusGrowths as $d) {
             echo $d['week'] . PHP_EOL;

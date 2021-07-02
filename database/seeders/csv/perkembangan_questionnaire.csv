@@ -1,139 +1,139 @@
-﻿question,img,month_start,month_until
-"Pada waktu bayi telentang, apakah masing-masing lengan dan tungkai bergerak dengan mudah? * 
+﻿no,question,img,month_start,month_until
+1,"Pada waktu bayi telentang, apakah masing-masing lengan dan tungkai bergerak dengan mudah? * 
 Jawab TIDAK bila salah satu atau kedua tungkai atau lengan bayi bergerak tak terarah/tak terkendali",,3,5
-Pada waktu bayi telentang apakah ia melihat dan menatap wajah anda? * ,,3,5
-"Apakah bayi dapat mengeluarkan suara-suara lain (ngoceh), disamping menangis? * ",,3,5
-"Pada waktu bayi telentang, apakah ia dapat mengikuti gerakan anda dengan menggerakkan kepalanya dari kanan/kiri ke tengah? * ",/res/img/questions/img-1.png,3,5
-"Pada waktu bayi telentang, apakah ia dapat mengikuti gerakan anda dengan menggerakkan kepalanya dari satu sisi hampir sampai pada sisi yang lain? *",/res/img/questions/img-2.png,3,5
-"Pada waktu anda mengajak bayi berbicara dan tersenyum, apakah ia tersenyum kembali kepada anda? *",,3,5
-"Pada waktu bayi telungkup di alas yang datar, apakah ia dapat mengangkat kepalanya seperti pada gambar ini? *",/res/img/questions/img-3.png,3,5
-"Pada waktu bayi telungkup di alas yang datar, apakah ia dapat mengangkat kepalanya sehingga membentuk sudut 45° seperti pada gambar ? *",/res/img/questions/img-4.png,3,5
-"Pada waktu bayi telungkup di alas yang datar, apakah ia dapat mengangkat kepalanya dengan tegak seperti pada gambar? *",/res/img/questions/img-5.png,3,5
-Apakah bayi suka tertawa keras walau tidak digelitik atau diraba-raba? * ,,3,5
-"Pada waktu bayi telentang, apakah ia dapat mengikuti gerakan anda dengan menggerakkan kepalanya dari satu sisi hampir sampai pada sisi yang lain? ",/res/img/questions/img-6.png,6,8
-Dapatkah bayi mempertahankan posisi kepala dalam keadaan tegak dan stabil? ,,6,8
-Jawab TIDAK bila kepala bayi cenderung jatuh ke kanan/kiri atau ke dadanya ,,6,8
-"Sentuhkan pensil di punggung tangan atau ujung jari bayi. Apakah bayi dapat menggenggam pensil itu selama beberapa detik? 
+2,Pada waktu bayi telentang apakah ia melihat dan menatap wajah anda? * ,,3,5
+3,"Apakah bayi dapat mengeluarkan suara-suara lain (ngoceh), disamping menangis? * ",,3,5
+4,"Pada waktu bayi telentang, apakah ia dapat mengikuti gerakan anda dengan menggerakkan kepalanya dari kanan/kiri ke tengah? * ",/res/img/questions/img-1.png,3,5
+5,"Pada waktu bayi telentang, apakah ia dapat mengikuti gerakan anda dengan menggerakkan kepalanya dari satu sisi hampir sampai pada sisi yang lain? *",/res/img/questions/img-2.png,3,5
+6,"Pada waktu anda mengajak bayi berbicara dan tersenyum, apakah ia tersenyum kembali kepada anda? *",,3,5
+7,"Pada waktu bayi telungkup di alas yang datar, apakah ia dapat mengangkat kepalanya seperti pada gambar ini? *",/res/img/questions/img-3.png,3,5
+8,"Pada waktu bayi telungkup di alas yang datar, apakah ia dapat mengangkat kepalanya sehingga membentuk sudut 45° seperti pada gambar ? *",/res/img/questions/img-4.png,3,5
+9,"Pada waktu bayi telungkup di alas yang datar, apakah ia dapat mengangkat kepalanya dengan tegak seperti pada gambar? *",/res/img/questions/img-5.png,3,5
+10,Apakah bayi suka tertawa keras walau tidak digelitik atau diraba-raba? * ,,3,5
+1,"Pada waktu bayi telentang, apakah ia dapat mengikuti gerakan anda dengan menggerakkan kepalanya dari satu sisi hampir sampai pada sisi yang lain? ",/res/img/questions/img-6.png,6,8
+2,Dapatkah bayi mempertahankan posisi kepala dalam keadaan tegak dan stabil? ,,6,8
+3,Jawab TIDAK bila kepala bayi cenderung jatuh ke kanan/kiri atau ke dadanya ,,6,8
+4,"Sentuhkan pensil di punggung tangan atau ujung jari bayi. Apakah bayi dapat menggenggam pensil itu selama beberapa detik? 
 Jangan meletakkan di atas telapak tangan bayi ",/res/img/questions/img-7.png,6,8
-"Ketika bayi telungkup di alas datar, apakah ia dapat mengangkat dada dengan kedua lengannya sebagai penyangga seperti pada gambar ? ",/res/img/questions/img-8.png,6,8
-Pernahkah bayi mengeluarkan suara gembira bernada tinggi atau memekik tetapi bukan menangis? ,,6,8
-"Pernahkah bayi berbalik paling sedikit dua kali, dari telentang ke telungkup atau sebaliknya? ",,6,8
-"Pernahkah anda melihat bayi tersenyurn ketika melihat mainan yang lucu, gambar atau binatang peliharaan pada saat ia bermain sendiri? ",,6,8
-"Dapatkah bayi mengarahkan matanya pada benda kecil sebesar kacang, kismis atau uang logam? 
+5,"Ketika bayi telungkup di alas datar, apakah ia dapat mengangkat dada dengan kedua lengannya sebagai penyangga seperti pada gambar ? ",/res/img/questions/img-8.png,6,8
+6,Pernahkah bayi mengeluarkan suara gembira bernada tinggi atau memekik tetapi bukan menangis? ,,6,8
+7,"Pernahkah bayi berbalik paling sedikit dua kali, dari telentang ke telungkup atau sebaliknya? ",,6,8
+8,"Pernahkah anda melihat bayi tersenyurn ketika melihat mainan yang lucu, gambar atau binatang peliharaan pada saat ia bermain sendiri? ",,6,8
+9,"Dapatkah bayi mengarahkan matanya pada benda kecil sebesar kacang, kismis atau uang logam? 
 Jawab TIDAK jika ia tidak dapat mengarahkan matanya. PERHATIKAN : untuk tidak meninggal objek yang digunakan terjangkau oleh bayi. ",,6,8
-Dapatkah bayi meraih mainan yang diletakkan agak jauh namun masih berada dalam jangkauan tangannya? ,,6,8
-"Pada posisi bayi telentang, pegang kedua tangannya lalu tarik perlahan-lahan ke posisi duduk. Dapatkah bayi mempertahankan lehernya secara kaku seperti gambar? ",/res/img/questions/img-9.png,6,8
-"Pada posisi bayi telentang, pegang kedua tangannya lalu tarik perlahan-lahan ke posisi clucluk. Dapatkah bayi mempertahankan lehernya secara kaku seperti gambar di sebelah kiri ? Jawab TIDAK bila kepala bayi jatuh kembali seperti gambar sebelah kanan. ",/res/img/questions/img-10.png,9,11
-Pernahkah anda melihat bayi memindahkan mainan atau kue kering dari satu tangan ke tangan yang lain? Benda?benda panjang seperti sendok atau kerincingan bertangkai tidak ikut dinilai. ,,9,11
-"Tarik perhatian bayi dengan memperlihatkan selendang, sapu tangan atau serbet, kemudian jatuhkan ke lantai. Apakah bayi mencoba mencarinya? Misalnya mencari di bawah meja atau di belakang kursi? ",,9,11
-"Apakah bayi dapat memungut dua benda seperti mainan/kue kering, dan masing-masing tangan memegang satu benda pada saat yang sama? Jawab TIDAK bila bayi tidak pernah melakukan perbuatan ini. ",,9,11
-"Jika anda mengangkat bayi melalui ketiaknya ke posisi berdiri, dapatkah ia menyangga sebagian berat badan dengan kedua kakinya? Jawab YA bila ia mencoba berdiri dan sebagian berat badan tertumpu pada kedua kakinya. ",,9,11
-"Dapatkah bayi memungut dengan tangannya benda-benda kecil seperti kismis, kacang?kacangan, potongan biskuit, dengan gerakan miring atau menggerapai seperti gambar ? ",/res/img/questions/img-11.png,9,11
-"Tanpa disangga oleh bantal, kursi atau dinding, dapatkah bayi duduk sendiri selama 60 detik? ",/res/img/questions/img-12.png,9,11
-Apakah bayi dapat makan kue kering sendiri? ,,9,11
-"Pada waktu bayi bermain sendiri dan anda diam-diam datang berdiri di belakangnya, apakah ia menengok ke belakang seperti mendengar kedatangan anda? Suara keras tidak ikut dihitung. Jawab YA hanya jika anda melihat reaksinya terhadap suara yang perlahan atau bisikan. ",,9,11
-"Letakkan suatu mainan yang dinginkannya di luar jangkauan bayi, apakah ia mencoba mendapatkannya dengan mengulurkan lengan atau badannya? ",,9,11
-"Tanpa bantuan, apakah anak dapat mempertemukan dua kubus kecil yang ia pegang? Kerincingan bertangkai dan tutup, panci tidak ikut dinilai ",,12,14
-Apakah anak dapat jalan sendiri atau jalan dengan berpegangan? ,,12,14
-"Tanpa bantuan, apakah anak dapat bertepuk tangan atau melambai-lambai? Jawab TIDAK bila ia membutuh kemandirian kaq bantuan. ",,12,14
-"Apakah anak dapat mengatakan “papa” ketika ia memanggil/melihat ayahnya, atau mengatakan “mama” jika memanggil/melihat ibunya? Jawab YA bila anak mengatakan salah satu diantaranya. ",,12,14
-Dapatkah anak berdiri sendiri tanpa berpegangan selama kira-kira 5 detik? ,,12,14
-Dapatkan anak berdiri sendiri tanpa berpegangan selama 30 detik atau lebih? ,,12,14
-"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai dan kemudian berdiri kembali? ",,12,14
-"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan ",,12,14
-Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung? ,,12,14
-"Apakah anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu seperti pada gambar ini ",/res/img/questions/img-13.png,12,14
-"Tanpa bantuan, apakah anak dapat mempertemukan dua kubus kecil yang ia pegang? Kerincingan bertangkai dan tutup, panci tidak ikut dinilai",,15,17
-Apakah anak dapat jalan sendiri atau jalan dengan berpegangan?,,15,17
-"Tanpa bantuan, apakah anak dapat bertepuk tangan atau melambai-lambai? Jawab TIDAK bila ia membutuh kemandirian kaq bantuan.",,15,17
-"Apakah anak dapat mengatakan “papa” ketika ia memanggil/melihat ayahnya, atau mengatakan “mama” jika memanggil/melihat ibunya? Jawab YA bila anak mengatakan salah satu diantaranya.",,15,17
-Dapatkah anak berdiri sendiri tanpa berpegangan selama kira-kira 5 detik?,,15,17
-Dapatkan anak berdiri sendiri tanpa berpegangan selama 30 detik atau lebih?,,15,17
-"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai dan kemudian berdiri kembali?",,15,17
-"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan",,15,17
-Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung?,,15,17
-"Apakah anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu seperti pada gambar ini",/res/img/questions/img-14.png,15,17
-"Tanpa bantuan, apakah anak dapat bertepuk tangan atau melambai-lambai? Jawab TIDAK bila ia membutuhkan bantuan.",,18,20
-"Apakah anak dapat mengatakan “papa” ketika ia memanggil/melihat ayahnya, atau mengatakan “mama” jika memanggil/melihat ibunya?",,18,20
-Apakah anak dapat berdiri sendiri tanpa berpegangan selama kira-kira 5 detik?,,18,20
-Apakah anak dapat berdiri sendiri tanpa berpegangan selama 30 detik atau lebih?,,18,20
-"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai clan kemudian berdiri kembali?",,18,20
-"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan.",,18,20
-Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung?,,18,20
-"Apakah anak anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu jari dan jari telunjuk seperti pada gambar ?",/res/img/questions/img-15.png,18,20
-"Jika anda menggelindingkan bola ke anak, apakah ia menggelindingkan/melemparkan kembali bola pada anda?",,18,20
-Apakah anak dapat memegang sendiri cangkir/gelas dan minum dari tempat tersebut tanpa tumpah?,,18,20
-"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai dan kemudian berdiri kembali?",,21,23
-"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan.",,21,23
-Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung?,,21,23
-"Apakah anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu jari clan jari telunjuk seperti pada gambar ?",/res/img/questions/img-16.png,21,23
-"Jika anda menggelindingkan bola ke anak, apakah ia menggelindingkan/melemparkan kembali bola pada anda?",,21,23
-Apakah anak dapat memegang sendiri cangkir/gelas clan minum dari tempat tersebut tanpa tumpah?,,21,23
-"Jika anda sedang melakukan pekerjaan rumah tangga, apakah anak meniru apa yang anda lakukan?",,21,23
-Apakah anak dapat meletakkan satu kubus di atas Gerak halus Ya Tida kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5-5.0 cm,,21,23
-Apakah anak dapat mengucapkan paling sedikit 3 kata yang mempunyai arti selain “papa” dan “mama”?.,,21,23
-Apakah anak dapat berjalan mundur 5 langkah atau lebih tanpa kehilangan keseimbangan? (Anda mungkin dapat melihatnya ketika anak menarik mainannya),,21,23
-"Jika anda sedang melakukan pekerjaan rumah tangga, apakah anak meniru apa yang anda lakukan?",,24,29
-Apakah anak dapat meletakkan 1 buah kubus di atas kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5 — 5 cm.,,24,29
-"Apakah anak dapat mengucapkan paling sedikit 3 kata yang mempunyai arti selain ""papa"" clan ""mama""?",,24,29
-"Apakah anak dapat berjalan mundur 5 langkah atau lebih tanpa kehilangan keseimbangan?
+10,Dapatkah bayi meraih mainan yang diletakkan agak jauh namun masih berada dalam jangkauan tangannya? ,,6,8
+11,"Pada posisi bayi telentang, pegang kedua tangannya lalu tarik perlahan-lahan ke posisi duduk. Dapatkah bayi mempertahankan lehernya secara kaku seperti gambar? ",/res/img/questions/img-9.png,6,8
+1,"Pada posisi bayi telentang, pegang kedua tangannya lalu tarik perlahan-lahan ke posisi clucluk. Dapatkah bayi mempertahankan lehernya secara kaku seperti gambar di sebelah kiri ? Jawab TIDAK bila kepala bayi jatuh kembali seperti gambar sebelah kanan. ",/res/img/questions/img-10.png,9,11
+2,Pernahkah anda melihat bayi memindahkan mainan atau kue kering dari satu tangan ke tangan yang lain? Benda?benda panjang seperti sendok atau kerincingan bertangkai tidak ikut dinilai. ,,9,11
+3,"Tarik perhatian bayi dengan memperlihatkan selendang, sapu tangan atau serbet, kemudian jatuhkan ke lantai. Apakah bayi mencoba mencarinya? Misalnya mencari di bawah meja atau di belakang kursi? ",,9,11
+4,"Apakah bayi dapat memungut dua benda seperti mainan/kue kering, dan masing-masing tangan memegang satu benda pada saat yang sama? Jawab TIDAK bila bayi tidak pernah melakukan perbuatan ini. ",,9,11
+5,"Jika anda mengangkat bayi melalui ketiaknya ke posisi berdiri, dapatkah ia menyangga sebagian berat badan dengan kedua kakinya? Jawab YA bila ia mencoba berdiri dan sebagian berat badan tertumpu pada kedua kakinya. ",,9,11
+6,"Dapatkah bayi memungut dengan tangannya benda-benda kecil seperti kismis, kacang?kacangan, potongan biskuit, dengan gerakan miring atau menggerapai seperti gambar ? ",/res/img/questions/img-11.png,9,11
+7,"Tanpa disangga oleh bantal, kursi atau dinding, dapatkah bayi duduk sendiri selama 60 detik? ",/res/img/questions/img-12.png,9,11
+8,Apakah bayi dapat makan kue kering sendiri? ,,9,11
+9,"Pada waktu bayi bermain sendiri dan anda diam-diam datang berdiri di belakangnya, apakah ia menengok ke belakang seperti mendengar kedatangan anda? Suara keras tidak ikut dihitung. Jawab YA hanya jika anda melihat reaksinya terhadap suara yang perlahan atau bisikan. ",,9,11
+10,"Letakkan suatu mainan yang dinginkannya di luar jangkauan bayi, apakah ia mencoba mendapatkannya dengan mengulurkan lengan atau badannya? ",,9,11
+1,"Tanpa bantuan, apakah anak dapat mempertemukan dua kubus kecil yang ia pegang? Kerincingan bertangkai dan tutup, panci tidak ikut dinilai ",,12,14
+2,Apakah anak dapat jalan sendiri atau jalan dengan berpegangan? ,,12,14
+3,"Tanpa bantuan, apakah anak dapat bertepuk tangan atau melambai-lambai? Jawab TIDAK bila ia membutuh kemandirian kaq bantuan. ",,12,14
+4,"Apakah anak dapat mengatakan “papa” ketika ia memanggil/melihat ayahnya, atau mengatakan “mama” jika memanggil/melihat ibunya? Jawab YA bila anak mengatakan salah satu diantaranya. ",,12,14
+5,Dapatkah anak berdiri sendiri tanpa berpegangan selama kira-kira 5 detik? ,,12,14
+6,Dapatkan anak berdiri sendiri tanpa berpegangan selama 30 detik atau lebih? ,,12,14
+7,"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai dan kemudian berdiri kembali? ",,12,14
+8,"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan ",,12,14
+9,Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung? ,,12,14
+10,"Apakah anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu seperti pada gambar ini ",/res/img/questions/img-13.png,12,14
+1,"Tanpa bantuan, apakah anak dapat mempertemukan dua kubus kecil yang ia pegang? Kerincingan bertangkai dan tutup, panci tidak ikut dinilai",,15,17
+2,Apakah anak dapat jalan sendiri atau jalan dengan berpegangan?,,15,17
+3,"Tanpa bantuan, apakah anak dapat bertepuk tangan atau melambai-lambai? Jawab TIDAK bila ia membutuh kemandirian kaq bantuan.",,15,17
+4,"Apakah anak dapat mengatakan “papa” ketika ia memanggil/melihat ayahnya, atau mengatakan “mama” jika memanggil/melihat ibunya? Jawab YA bila anak mengatakan salah satu diantaranya.",,15,17
+5,Dapatkah anak berdiri sendiri tanpa berpegangan selama kira-kira 5 detik?,,15,17
+6,Dapatkan anak berdiri sendiri tanpa berpegangan selama 30 detik atau lebih?,,15,17
+7,"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai dan kemudian berdiri kembali?",,15,17
+8,"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan",,15,17
+9,Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung?,,15,17
+10,"Apakah anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu seperti pada gambar ini",/res/img/questions/img-14.png,15,17
+1,"Tanpa bantuan, apakah anak dapat bertepuk tangan atau melambai-lambai? Jawab TIDAK bila ia membutuhkan bantuan.",,18,20
+2,"Apakah anak dapat mengatakan “papa” ketika ia memanggil/melihat ayahnya, atau mengatakan “mama” jika memanggil/melihat ibunya?",,18,20
+3,Apakah anak dapat berdiri sendiri tanpa berpegangan selama kira-kira 5 detik?,,18,20
+4,Apakah anak dapat berdiri sendiri tanpa berpegangan selama 30 detik atau lebih?,,18,20
+5,"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai clan kemudian berdiri kembali?",,18,20
+6,"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan.",,18,20
+7,Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung?,,18,20
+8,"Apakah anak anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu jari dan jari telunjuk seperti pada gambar ?",/res/img/questions/img-15.png,18,20
+9,"Jika anda menggelindingkan bola ke anak, apakah ia menggelindingkan/melemparkan kembali bola pada anda?",,18,20
+10,Apakah anak dapat memegang sendiri cangkir/gelas dan minum dari tempat tersebut tanpa tumpah?,,18,20
+1,"Tanpa berpegangan atau menyentuh lantai, apakah anak dapat membungkuk untuk memungut mainan di lantai dan kemudian berdiri kembali?",,21,23
+2,"Apakah anak dapat menunjukkan apa yang diinginkannya tanpa menangis atau merengek? Jawab YA bila ia menunjuk, menarik atau mengeluarkan suara yang menyenangkan.",,21,23
+3,Apakah anak dapat berjalan di sepanjang ruangan tanpa jatuh atau terhuyung-huyung?,,21,23
+4,"Apakah anak dapat mengambil benda kecil seperti kacang, kismis, atau potongan biskuit dengan menggunakan ibu jari clan jari telunjuk seperti pada gambar ?",/res/img/questions/img-16.png,21,23
+5,"Jika anda menggelindingkan bola ke anak, apakah ia menggelindingkan/melemparkan kembali bola pada anda?",,21,23
+6,Apakah anak dapat memegang sendiri cangkir/gelas clan minum dari tempat tersebut tanpa tumpah?,,21,23
+7,"Jika anda sedang melakukan pekerjaan rumah tangga, apakah anak meniru apa yang anda lakukan?",,21,23
+8,Apakah anak dapat meletakkan satu kubus di atas Gerak halus Ya Tida kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5-5.0 cm,,21,23
+9,Apakah anak dapat mengucapkan paling sedikit 3 kata yang mempunyai arti selain “papa” dan “mama”?.,,21,23
+10,Apakah anak dapat berjalan mundur 5 langkah atau lebih tanpa kehilangan keseimbangan? (Anda mungkin dapat melihatnya ketika anak menarik mainannya),,21,23
+1,"Jika anda sedang melakukan pekerjaan rumah tangga, apakah anak meniru apa yang anda lakukan?",,24,29
+2,Apakah anak dapat meletakkan 1 buah kubus di atas kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5 — 5 cm.,,24,29
+3,"Apakah anak dapat mengucapkan paling sedikit 3 kata yang mempunyai arti selain ""papa"" clan ""mama""?",,24,29
+4,"Apakah anak dapat berjalan mundur 5 langkah atau lebih tanpa kehilangan keseimbangan?
 (Anda mungkin dapat melihatnya ketika anak menarik mainannya).",,24,29
-"Dapatkah anak melepas pakaiannya seperti: baju, rok, atau celananya? (topi clan kaos kaki tidak ikut dinilai).",,24,29
-Dapatkah anak berjalan naik tangga sendiri? Jawab YA jika ia naik tangga dengan posisi tegak atau berpegangan pada dinding atau pegangan tangga. Jawab TIDAK jika ia naik tangga dengan merangkak atau anda tidak membolehkan anak naik tangga atau anak harus berpegangan pada seseorang.,,24,29
-"Tanpa bimbingan, petunjuk atau bantuan anda, dapatkah anak menunjuk dengan benar paling sedikit satu bagian badannya (rambut, mata, hidung, mulut, atau bagian badan yang lain)?",,24,29
-Dapatkah anak makan nasi sendiri tanpa banyak tumpah?,,24,29
-Dapatkah anak membantu memungut mainannya sendiri atau membantu mengangkat piring jika diminta?,,24,29
-Dapatkah anak menendang bola kecil (sebesar bola tenis) ke depan tanpa berpegangan pada apapun? Mendorong tidak ikut dinilai,,24,29
-"Dapatkah anak melepas pakaiannya seperti: baju, rok, atau celananya? (topi dan kaos kaki tidak ikut dinilai)",,30,35
-Dapatkah anak berjalan naik tangga sendiri? Jawab YA jika ia naik tangga dengan posisi tegak atau berpegangan pada dinding atau pegangan tangga. Jawab TIDAK jika ia naik tangga dengan merangkak atau anda tidak membolehkan anak naik tangga atau anak harus berpegangan pada seseorang.,,30,35
-"Tanpa bimbingan, petunjuk atau bantuan anda, dapatkah anak menunjuk dengan benar paling sedikit satu bagian badannya (rambut, mata, hidung, mulut, atau bagian badan yang lain)?",,30,35
-Dapatkah anak makan nasi sendiri tanpa banyak tumpah?,,30,35
-Dapatkah anak membantu memungut mainannya sendiri atau membantu mengangkat piring jika diminta?,,30,35
-Dapatkah anak menendang bola kecil (sebesar bola tenis) Gerak kasar ke depan tanpa berpegangan pada apapun? Mendorong tidak ikut dinilai.,,30,35
-"Bila diberi pensil, apakah anak mencoret-coret kertas tanpa bantuan/petunjuk?",,30,35
-Dapatkah anak meletakkan 4 buah kubus satu persatu di atas kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5 – 5 cm.,,30,35
-"Dapatkah anak menggunakan 2 kata pada saat berbicara seperti “minta minum”, “mau tidur”? “Terimakasih” dan “Dadag” tidak ikut dinilai.",,30,35
-Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?,/res/img/questions/img-17.png,30,35
-"Bila diberi pensil, apakah anak mencoret-coret kertas tanpa bantuan/petunjuk?",,36,41
-Dapatkah anak meletakkan 4 buah kubus satu persatu di atas kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5 – 5 cm.,,36,41
-Dapatkah anak menggunakan 2 kata pada saat berbicara seperti “minta minum”; “mau tidur”? “Terimakasih” dan “Dadag” tidak ikut dinilai.,,36,41
-Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?,/res/img/questions/img-18.png,36,41
-"Dapatkah anak melempar bola lurus ke arah perut atau dada anda dari jarak 1,5 meter?",,36,41
-"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mata pada saat memberikan perintah berikut ini:
+5,"Dapatkah anak melepas pakaiannya seperti: baju, rok, atau celananya? (topi clan kaos kaki tidak ikut dinilai).",,24,29
+6,Dapatkah anak berjalan naik tangga sendiri? Jawab YA jika ia naik tangga dengan posisi tegak atau berpegangan pada dinding atau pegangan tangga. Jawab TIDAK jika ia naik tangga dengan merangkak atau anda tidak membolehkan anak naik tangga atau anak harus berpegangan pada seseorang.,,24,29
+7,"Tanpa bimbingan, petunjuk atau bantuan anda, dapatkah anak menunjuk dengan benar paling sedikit satu bagian badannya (rambut, mata, hidung, mulut, atau bagian badan yang lain)?",,24,29
+8,Dapatkah anak makan nasi sendiri tanpa banyak tumpah?,,24,29
+9,Dapatkah anak membantu memungut mainannya sendiri atau membantu mengangkat piring jika diminta?,,24,29
+10,Dapatkah anak menendang bola kecil (sebesar bola tenis) ke depan tanpa berpegangan pada apapun? Mendorong tidak ikut dinilai,,24,29
+1,"Dapatkah anak melepas pakaiannya seperti: baju, rok, atau celananya? (topi dan kaos kaki tidak ikut dinilai)",,30,35
+2,Dapatkah anak berjalan naik tangga sendiri? Jawab YA jika ia naik tangga dengan posisi tegak atau berpegangan pada dinding atau pegangan tangga. Jawab TIDAK jika ia naik tangga dengan merangkak atau anda tidak membolehkan anak naik tangga atau anak harus berpegangan pada seseorang.,,30,35
+3,"Tanpa bimbingan, petunjuk atau bantuan anda, dapatkah anak menunjuk dengan benar paling sedikit satu bagian badannya (rambut, mata, hidung, mulut, atau bagian badan yang lain)?",,30,35
+4,Dapatkah anak makan nasi sendiri tanpa banyak tumpah?,,30,35
+5,Dapatkah anak membantu memungut mainannya sendiri atau membantu mengangkat piring jika diminta?,,30,35
+6,Dapatkah anak menendang bola kecil (sebesar bola tenis) Gerak kasar ke depan tanpa berpegangan pada apapun? Mendorong tidak ikut dinilai.,,30,35
+7,"Bila diberi pensil, apakah anak mencoret-coret kertas tanpa bantuan/petunjuk?",,30,35
+8,Dapatkah anak meletakkan 4 buah kubus satu persatu di atas kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5 – 5 cm.,,30,35
+9,"Dapatkah anak menggunakan 2 kata pada saat berbicara seperti “minta minum”, “mau tidur”? “Terimakasih” dan “Dadag” tidak ikut dinilai.",,30,35
+10,Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?,/res/img/questions/img-17.png,30,35
+1,"Bila diberi pensil, apakah anak mencoret-coret kertas tanpa bantuan/petunjuk?",,36,41
+2,Dapatkah anak meletakkan 4 buah kubus satu persatu di atas kubus yang lain tanpa menjatuhkan kubus itu? Kubus yang digunakan ukuran 2.5 – 5 cm.,,36,41
+3,Dapatkah anak menggunakan 2 kata pada saat berbicara seperti “minta minum”; “mau tidur”? “Terimakasih” dan “Dadag” tidak ikut dinilai.,,36,41
+4,Apakah anak dapat menyebut 2 diantara gambar-gambar ini tanpa bantuan?,/res/img/questions/img-18.png,36,41
+5,"Dapatkah anak melempar bola lurus ke arah perut atau dada anda dari jarak 1,5 meter?",,36,41
+6,"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mata pada saat memberikan perintah berikut ini:
 “Letakkan kertas ini di lantai”.
 “Letakkan kertas ini di kursi”.
 “Berikan kertas ini kepada ibu”.
 Dapatkah anak melaksanakan ketiga perintah tadi?",,36,41
-"Buat garis lurus ke bawah sepanjang sekurangkurangnya 2.5 cm. Suruh anak menggambar garis lain di
+7,"Buat garis lurus ke bawah sepanjang sekurangkurangnya 2.5 cm. Suruh anak menggambar garis lain di
 samping garis tsb.",/res/img/questions/img-19.png,36,41
-Letakkan selembar kertas seukuran buku di lantai. Apakah anak dapat melompati bagian lebar kertas dengan mengangkat kedua kakinya secara bersamaan tanpa didahului lari?,,36,41
-Dapatkah anak mengenakan sepatunya sendiri?,,36,41
-Dapatkah anak mengayuh sepeda roda tiga sejauh sedikitnya 3 meter?,,36,41
-Dapatkah anak mengenakan sepatunya sendiri?,,42,47
-Dapatkah anak mengayuh sepeda rods tiga sejauh sedikitnya 3 meter?,,42,47
-"Setelah makan, apakah anak mencuci clan mengeringkan tangannya dengan balk sehingga anda ticlak perlu mengulanginya?",,42,47
-Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya clan beri anak anda kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 2 detik atau lebih?,,42,47
-Letakkan selembar kertas seukuran buku ini di lantai. Apakah anak dapat melompati panjang kertas ini dengan mengangkat kedua kakinya secara bersamaan tanpa didahului lari?,,42,47
-Jangan membantu anak clan jangan menyebut lingkaran. Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Dapatkah anak menggambar lingkaran?,/res/img/questions/img-20.png,42,47
-"Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tersebut?
+8,Letakkan selembar kertas seukuran buku di lantai. Apakah anak dapat melompati bagian lebar kertas dengan mengangkat kedua kakinya secara bersamaan tanpa didahului lari?,,36,41
+9,Dapatkah anak mengenakan sepatunya sendiri?,,36,41
+10,Dapatkah anak mengayuh sepeda roda tiga sejauh sedikitnya 3 meter?,,36,41
+1,Dapatkah anak mengenakan sepatunya sendiri?,,42,47
+2,Dapatkah anak mengayuh sepeda rods tiga sejauh sedikitnya 3 meter?,,42,47
+3,"Setelah makan, apakah anak mencuci clan mengeringkan tangannya dengan balk sehingga anda ticlak perlu mengulanginya?",,42,47
+4,Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya clan beri anak anda kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 2 detik atau lebih?,,42,47
+5,Letakkan selembar kertas seukuran buku ini di lantai. Apakah anak dapat melompati panjang kertas ini dengan mengangkat kedua kakinya secara bersamaan tanpa didahului lari?,,42,47
+6,Jangan membantu anak clan jangan menyebut lingkaran. Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Dapatkah anak menggambar lingkaran?,/res/img/questions/img-20.png,42,47
+7,"Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tersebut?
 Kubus yang digunakan ukuran 2.5 – 5 cm.",,42,47
-"Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain clan mengikuti aturan bermain?",,42,47
-"Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk kemandirian memasang kancing, gesper atau ikat pinggang)",,42,47
-Dapatkah anak mengayuh sepeda roda tiga sejauh sedikitnya 3 meter?,,48,53
-"Setelah makan, apakah anak mencuci dan mengeringkan tangannya dengan baik sehingga anda tidak perlu mengulanginya?",,48,53
-Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak anda kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 2 detik atau lebih?,,48,53
-Letakkan selembar kertas seukuran buku ini di lantai. Apakah anak dapat melompati panjang kertas ini dengan mengangkat kedua kakinya secara bersamaan tanpa didahului lari?,,48,53
-Jangan membantu anak dan jangan menyebut lingkaran. Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Dapatkah anak menggambar lingkaran?,/res/img/questions/img-21.png,48,53
-"Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tersebut?
+8,"Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain clan mengikuti aturan bermain?",,42,47
+9,"Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk kemandirian memasang kancing, gesper atau ikat pinggang)",,42,47
+1,Dapatkah anak mengayuh sepeda roda tiga sejauh sedikitnya 3 meter?,,48,53
+2,"Setelah makan, apakah anak mencuci dan mengeringkan tangannya dengan baik sehingga anda tidak perlu mengulanginya?",,48,53
+3,Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak anda kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 2 detik atau lebih?,,48,53
+4,Letakkan selembar kertas seukuran buku ini di lantai. Apakah anak dapat melompati panjang kertas ini dengan mengangkat kedua kakinya secara bersamaan tanpa didahului lari?,,48,53
+5,Jangan membantu anak dan jangan menyebut lingkaran. Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Dapatkah anak menggambar lingkaran?,/res/img/questions/img-21.png,48,53
+6,"Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tersebut?
 Kubus yang digunakan ukuran 2.5 – 5 cm.",,48,53
-"Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain dan mengikuti aturan bermain?",,48,53
-"Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang)",,48,53
-Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebutkan sebagian namanya atau ucapannya sulit dimengerti.,,48,53
-Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tersebut? Kubus yang digunakan ukuran 2-5 – 5 cm.,,54,59
-"Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain dan mengikuti aturan bermain?",,54,59
-"Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang)",,54,59
-Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebut sebagian namanya atau ucapannya sulit dimengerti.,,54,59
-"Isi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan.
+7,"Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain dan mengikuti aturan bermain?",,48,53
+8,"Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang)",,48,53
+9,Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebutkan sebagian namanya atau ucapannya sulit dimengerti.,,48,53
+1,Dapatkah anak meletakkan 8 buah kubus satu persatu di atas yang lain tanpa menjatuhkan kubus tersebut? Kubus yang digunakan ukuran 2-5 – 5 cm.,,54,59
+2,"Apakah anak dapat bermain petak umpet, ular naga atau permainan lain dimana ia ikut bermain dan mengikuti aturan bermain?",,54,59
+3,"Dapatkah anak mengenakan celana panjang, kemeja, baju atau kaos kaki tanpa di bantu? (Tidak termasuk memasang kancing, gesper atau ikat pinggang)",,54,59
+4,Dapatkah anak menyebutkan nama lengkapnya tanpa dibantu? Jawab TIDAK jika ia hanya menyebut sebagian namanya atau ucapannya sulit dimengerti.,,54,59
+5,"Isi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan.
 “Apa yang kamu lakukan jika kamu kedinginan?”
 “Apa yang kamu lakukan jika kamu lapar?”
 “Apa yang kamu lakukan jika kamu lelah?”
@@ -141,22 +141,22 @@ Jawab YA biia anak merjawab ke 3 pertanyaan tadi dengan benar, bukan dengan gera
 Jika kedinginan, jawaban yang benar adalah “menggigil” ,”pakai mantel’ atau “masuk kedalam rumah’.
 Jika lapar, jawaban yang benar adalah “makan”
 Jika lelah, jawaban yang benar adalah “mengantuk”, “tidur”, “berbaring/tidur-tiduran”, “istirahat” atau “diam sejenak”",,54,59
-Apakah anak dapat mengancingkan bajunya atau pakaian boneka?,,54,59
-Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak ands kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 6 detik atau lebih?,,54,59
-"Jangan mengoreksi/membantu anak. Jangan menyebut kata “lebih panjang”.
+6,Apakah anak dapat mengancingkan bajunya atau pakaian boneka?,,54,59
+7,Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak ands kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 6 detik atau lebih?,,54,59
+8,"Jangan mengoreksi/membantu anak. Jangan menyebut kata “lebih panjang”.
 Perlihatkan gambar kedua garis ini pada anak.
 Tanyakan: “Mana garis yang lebih panjang?”
 Minta anak menunjuk garis yang lebih panjang.
 Setelah anak menunjuk, putar lembar ini dan ulangi pertanyaan tersebut.
 Setelah anak menunjuk, putar lembar ini lagi dan ulangi pertanyaan tadi.
 Apakah anak dapat menunjuk garis yang lebih panjang sebanyak 3 kali dengan benar?",/res/img/questions/img-22.png,54,59
-"Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini?",/res/img/questions/img-23.png,54,59
-"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mats pads saat memberikan perintah berikut ini: “Letakkan kertas ini di atas lantai”.
+9,"Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini?",/res/img/questions/img-23.png,54,59
+10,"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mats pads saat memberikan perintah berikut ini: “Letakkan kertas ini di atas lantai”.
 “Letakkan kertas ini di bawah kursi”.
 “Letakkan kertas ini di depan kamu”
 “Letakkan kertas ini di belakang kamu”
 Jawab YA hanya jika anak mengerti arti “di atas”, “di bawah”, “di depan” dan “di belakang”",,54,59
-"Isi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan.
+1,"Isi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan.
 “Apa yang kamu lakukan jika kamu kedinginan?”
 “Apa yang kamu lakukan jika kamu lapar?”
 “Apa yang kamu lakukan jika kamu lelah?”
@@ -164,74 +164,74 @@ Jawab YA biia anak merjawab ke 3 pertanyaan tadi dengan benar, bukan dengan gera
 Jika kedinginan, jawaban yang benar adalah “menggigil” ,”pakai mantel’ atau “masuk kedalam rumah’.
 Jika lapar, jawaban yang benar adalah “makan”
 Jika lelah, jawaban yang benar adalah A126“mengantuk”, “tidur”, “berbaring/tidur-tiduran”, “istirahat” atau “diam sejenak”",,60,65
-Apakah anak dapat mengancingkan bajunya atau pakaian boneka?,,60,65
-Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak ands kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 6 detik atau lebih?,,60,65
-"Jangan mengoreksi/membantu anak. Jangan menyebut kata “lebih panjang”.
+2,Apakah anak dapat mengancingkan bajunya atau pakaian boneka?,,60,65
+3,Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya dan beri anak ands kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 6 detik atau lebih?,,60,65
+4,"Jangan mengoreksi/membantu anak. Jangan menyebut kata “lebih panjang”.
 Perlihatkan gambar kedua garis ini pada anak.
 Tanyakan: “Mana garis yang lebih panjang?”
 Minta anak menunjuk garis yang lebih panjang.
 Setelah anak menunjuk, putar lembar ini dan ulangi pertanyaan tersebut.
 Setelah anak menunjuk, putar lembar ini lagi dan ulangi pertanyaan tadi.
 Apakah anak dapat menunjuk garis yang lebih panjang sebanyak 3 kali dengan benar?",/res/img/questions/img-24.png,60,65
-"Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini?",/res/img/questions/img-25.png,60,65
-"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mats pads saat memberikan perintah berikut ini: “Letakkan kertas ini di atas lantai”.
+5,"Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini?",/res/img/questions/img-25.png,60,65
+6,"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mats pads saat memberikan perintah berikut ini: “Letakkan kertas ini di atas lantai”.
 “Letakkan kertas ini di bawah kursi”.
 “Letakkan kertas ini di depan kamu”
 “Letakkan kertas ini di belakang kamu”
 Jawab YA hanya jika anak mengerti arti “di atas”, “di bawah”, “di depan” dan “di belakang”",,60,65
-Apakah anak bereaksi dengan tenang dan tidak rewel (tanpa menangis atau menggelayut pada anda) pada saat anda meninqgalkannya?,,60,65
-"Jangan menunjuk, membantu atau membetulkan, katakan pada anak : “Tunjukkan segi empat merah”
+7,Apakah anak bereaksi dengan tenang dan tidak rewel (tanpa menangis atau menggelayut pada anda) pada saat anda meninqgalkannya?,,60,65
+8,"Jangan menunjuk, membantu atau membetulkan, katakan pada anak : “Tunjukkan segi empat merah”
 “Tunjukkan segi empat kuning”
 ‘Tunjukkan segi empat biru”
 “Tunjukkan segi empat hijau”
 Dapatkah anak menunjuk keempat warna itu dengan benar?",/res/img/questions/img-26.png,60,65
-Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki?,,60,65
-Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?,,60,65
-"Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini? ",/res/img/questions/img-27.png,66,71
-"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mats pads saat memberikan perintah berikut ini: ""Letakkan kertas ini di atas lantai"".
+9,Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki?,,60,65
+10,Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?,,60,65
+1,"Jangan membantu anak dan jangan memberitahu nama gambar ini, suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia. Berikan 3 kali kesempatan. Apakah anak dapat menggambar seperti contoh ini? ",/res/img/questions/img-27.png,66,71
+2,"Ikuti perintah ini dengan seksama. Jangan memberi isyarat dengan telunjuk atau mats pads saat memberikan perintah berikut ini: ""Letakkan kertas ini di atas lantai"".
 ""Letakkan kertas ini di bawah kursi"".
 ""Letakkan kertas ini di depan kamu""
 ""Letakkan kertas ini di belakang kamu""
 Jawab YA hanya jika anak mengerti arti ""di atas"", ""di bawah"", ""di depan"" dan ""di belakang”",,66,71
-Apakah anak bereaksi dengan tenang dan tidak rewel (tanpa menangis atau menggelayut pada anda) pada saat anda meninqgalkannya?,,66,71
-"Jangan menunjuk, membantu atau membetulkan, katakan pada anak :
+3,Apakah anak bereaksi dengan tenang dan tidak rewel (tanpa menangis atau menggelayut pada anda) pada saat anda meninqgalkannya?,,66,71
+4,"Jangan menunjuk, membantu atau membetulkan, katakan pada anak :
  ""Tunjukkan segi empat merah""
 ""Tunjukkan segi empat kuning""
 ‘Tunjukkan segi empat biru”
 ""Tunjukkan segi empat hijau""
 Dapatkah anak menunjuk keempat warna itu dengan benar?",/res/img/questions/img-28.png,66,71
-Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki?,,66,71
-Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?,,66,71
-"Suruh anak menggambar di tempat kosong yang tersedia. Katakan padanya: ""Buatlah gambar orang"".
+5,Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki?,,66,71
+6,Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?,,66,71
+7,"Suruh anak menggambar di tempat kosong yang tersedia. Katakan padanya: ""Buatlah gambar orang"".
 Jangan memberi perintah lebih dari itu. Jangan bertanya/ mengingatkan anak bila ada bagian yang belum tergambar. Dalam memberi nilai, hitunglah berapa bagian tubuh yang tergambar. Untuk bagian tubuh yang berpasangan seperti mata, telinga, lengan dan kaki, setiap pasang dinilai satu bagian. Dapatkah anak menggambar sedikitnya 3 bagian tubuh?",,66,71
-"Pada gambar orang yang dibuat pada nomor 7, dapatkah anak menggambar sedikitnya 6 bagian tubuh?",,66,71
-"Tulis apa yang dikatakan anak pada kalimat-kalimat yang belum selesai ini, jangan membantu kecuali mengulang pertanyaan:   
+8,"Pada gambar orang yang dibuat pada nomor 7, dapatkah anak menggambar sedikitnya 6 bagian tubuh?",,66,71
+9,"Tulis apa yang dikatakan anak pada kalimat-kalimat yang belum selesai ini, jangan membantu kecuali mengulang pertanyaan:   
 ""Jika kuda besar maka tikus ………  
 ""Jika api panas maka es ………  
 ""Jika ibu seorang wanita maka ayah seorang ………  
 Apakah anak menjawab dengan benar (tikus kecil, es dingin, ayah seorang pria) ?",,66,71
-Apakah anak dapat menangkap bola kecil sebesar bola tenis/bola kasti hanya dengan menggunakan kedua tangannya? (Bola besar tidak ikut dinilai).,,66,71
-"Jangan menunjuk, membantu atau membetulkan, katakan pada anak :
+10,Apakah anak dapat menangkap bola kecil sebesar bola tenis/bola kasti hanya dengan menggunakan kedua tangannya? (Bola besar tidak ikut dinilai).,,66,71
+1,"Jangan menunjuk, membantu atau membetulkan, katakan pada anak :
 “Tunjukkan segi empat merah”
 “Tunjukkan segi empat kuning”
 “Tunjukkan segi empat biru”
 “Tunjukkan segi empat hijau”
 Dapatkah anak menunjuk keempat warna itu dengan benar?",/res/img/questions/img-29.png,72,72
-Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki?,,72,72
-Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?,,72,72
-"Suruh anak menggambar di tempat kosong yang tersedia. Katakan padanya: ""Buatlah gambar orang"".
+2,Suruh anak melompat dengan satu kaki beberapa kali tanpa berpegangan (lompatan dengan dua kaki tidak ikut dinilai). Apakah ia dapat melompat 2-3 kali dengan satu kaki?,,72,72
+3,Dapatkah anak sepenuhnya berpakaian sendiri tanpa bantuan?,,72,72
+4,"Suruh anak menggambar di tempat kosong yang tersedia. Katakan padanya: ""Buatlah gambar orang"".
 Jangan memberi perintah lebih dari itu. Jangan bertanya/ mengingatkan anak bila ada bagian yang belum tergambar. Dalam memberi nilai, hitunglah berapa bagian tubuh yang tergambar. Untuk bagian tubuh yang berpasangan seperti mata, telinga, lengan dan kaki, setiap pasang dinilai satu bagian. Dapatkah anak menggambar sedikitnya 3 bagian tubuh?",,72,72
-"Pada gambar orang yang dibuat pads nomor 7, dapatkah anak menggambar sedikitnya 6 bagian tubuh?",,72,72
-"Tulis apa yang dikatakan anak pada kalimat-kalimat yang belum selesai ini, jangan membantu kecuali mengulang pertanyaan:   
+5,"Pada gambar orang yang dibuat pads nomor 7, dapatkah anak menggambar sedikitnya 6 bagian tubuh?",,72,72
+6,"Tulis apa yang dikatakan anak pada kalimat-kalimat yang belum selesai ini, jangan membantu kecuali mengulang pertanyaan:   
 ""Jika kuda besar maka tikus   
 ""Jika api panas maka es   
 ""Jika ibu seorang wanita maka ayah seorang   
 Apakah anak menjawab dengan benar (tikus kecil, es dingin, ayah seorang pria) ?",,72,72
-Apakah anak dapat menangkap bola kecil sebesar bola tenis/bola kasti hanya dengan menggunakan kedua tangannya? (Bola besar tidak ikut dinilai).,,72,72
-Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya    clan beri anak ands kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 11 detik atau lebih?,,72,72
-"Jangan membantu anak clan jangan memberitahu nama gambar ini, Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia- Berikan 3 kali kesempatan.
+7,Apakah anak dapat menangkap bola kecil sebesar bola tenis/bola kasti hanya dengan menggunakan kedua tangannya? (Bola besar tidak ikut dinilai).,,72,72
+8,Suruh anak berdiri satu kaki tanpa berpegangan. Jika perlu tunjukkan caranya    clan beri anak ands kesempatan melakukannya 3 kali. Dapatkah ia mempertahankan keseimbangan dalam waktu 11 detik atau lebih?,,72,72
+9,"Jangan membantu anak clan jangan memberitahu nama gambar ini, Suruh anak menggambar seperti contoh ini di kertas kosong yang tersedia- Berikan 3 kali kesempatan.
 Apakah anak dapat menggambar seperti contoh ini?",/res/img/questions/img-30.png,72,72
-"lsi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan sampai 3 kali bila anak menanyakannya.
+10,"lsi titik-titik di bawah ini dengan jawaban anak. Jangan membantu kecuali mengulangi pertanyaan sampai 3 kali bila anak menanyakannya.
 ""Sendok dibuat dari apa?""   
 ""Sepatu dibuat dari apa?""   
 ""Pintu dibuat dari apa?""   

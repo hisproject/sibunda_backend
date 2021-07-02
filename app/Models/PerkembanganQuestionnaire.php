@@ -10,6 +10,7 @@ class PerkembanganQuestionnaire extends Model
     use HasFactory;
     protected $table = 'perkembangan_questionnaire';
     protected $fillable = [
+        'no',
         'question',
         'img_url',
         'month_start',

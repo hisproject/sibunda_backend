@@ -34,16 +34,27 @@ class KiaIdentitasAnak extends Model
 
     public function init_fundamental_data() {
         $this->init_trisemester_data();
+        $this->init_years_data();
         $this->init_immunization();
     }
 
-    // for bayi
+    // for janin
     private function init_trisemester_data() {
         for($i = 1; $i <= 3; $i ++)
             ServiceStatementIbuHamil::create([
                 'trisemester' => $i,
                 'kia_anak_id' => $this->id
             ]);
+    }
+
+    // for bayi - anak
+    private function init_years_data() {
+        for($i = 1; $i <= 6; $i ++) {
+            ServiceStatementAnakYear::create([
+                'year' => $i,
+                'kia_anak_id' => $this->id
+            ]);
+        }
     }
 
     private function init_immunization() {

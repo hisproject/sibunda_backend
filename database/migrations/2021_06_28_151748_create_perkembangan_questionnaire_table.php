@@ -15,6 +15,7 @@ class CreatePerkembanganQuestionnaireTable extends Migration
     {
         Schema::create('perkembangan_questionnaire', function (Blueprint $table) {
             $table->id();
+            $table->unsignedSmallInteger('no');
             $table->text('question');
             $table->string('img_url')->nullable();
             $table->smallInteger('month_start');

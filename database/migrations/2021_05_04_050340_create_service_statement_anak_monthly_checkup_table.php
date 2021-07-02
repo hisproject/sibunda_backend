@@ -17,6 +17,7 @@ class CreateServiceStatementAnakMonthlyCheckupTable extends Migration
         Schema::create('service_statement_anak_monthly_checkup', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('year_id');
+            $table->unsignedSmallInteger('month');
             $table->date('date');
             $table->string('location');
             $table->string('pemeriksa');

@@ -70,5 +70,9 @@ Route::prefix('anaku')->group(function() {
 });
 
 Route::get('token-dummy', function() {
-   return User::where('email', 'a@a.a')->first()->access_token;
+    try {
+        return User::where('email', 'a@a.a')->first()->access_token;
+    } catch (Exception $e) {
+        return 'token masih belum ada';
+    }
 });

@@ -4,6 +4,7 @@ use App\Http\Controllers\Mobile\AuthController;
 use App\Http\Controllers\Mobile\BayikuController;
 use App\Http\Controllers\Mobile\DataController;
 use App\Http\Controllers\Mobile\KehamilankuController;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -66,4 +67,8 @@ Route::prefix('anaku')->group(function() {
         Route::post('monthly-report', [BayikuController::class, 'getMonthlyCheckup']);
         Route::get('perkembangan-questionnaire/{month}', [BayikuController::class, 'getMonthlyPerkembanganQuestionnaire']);
     });
+});
+
+Route::get('token-dummy', function() {
+   return User::where('email', 'a@a.a')->first()->access_token;
 });

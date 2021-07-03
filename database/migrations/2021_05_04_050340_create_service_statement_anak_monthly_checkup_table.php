@@ -26,6 +26,7 @@ class CreateServiceStatementAnakMonthlyCheckupTable extends Migration
             $table->double('tb'); // in cm
             $table->double('lingkar_kepala'); // in cm
             $table->double('imt');
+            $table->unique(['year_id', 'month']);
             $table->timestamps();
         });
     }

@@ -50,9 +50,9 @@ Route::prefix('data')->group(function() {
 Route::prefix('kehamilanku')->group(function() {
    Route::middleware('auth:api')->group(function() {
        Route::get('overview', [KehamilankuController::class, 'getOverview']);
-       Route::post('create-weekly-report', [KehamilankuController::class, 'createTriSemesterData']);
-       Route::post('show-weekly-report', [KehamilankuController::class, 'showWeeklyTrisemesterData']);
-       Route::post('show-weekly-report-analysis', [KehamilankuController::class, 'showTriSemesterAnalysis']);
+       Route::post('create-weekly-report', [KehamilankuController::class, 'createWeeklyReport']);
+       Route::post('show-weekly-report', [KehamilankuController::class, 'getWeeklyReport']);
+       Route::post('show-weekly-report-analysis', [KehamilankuController::class, 'getWeeklyReportAnalysis']);
        Route::get('immunization', [KehamilankuController::class, 'getImmunizationData']);
        Route::post('immunization', [KehamilankuController::class, 'createImmunizationData']);
        Route::get('graph/tfu', [KehamilankuController::class, 'getTfuGraphData']);
@@ -64,7 +64,14 @@ Route::prefix('kehamilanku')->group(function() {
 
 Route::prefix('anaku')->group(function() {
     Route::middleware('auth:api')->group(function() {
-        Route::post('monthly-report', [BayikuController::class, 'getMonthlyCheckup']);
+        Route::get('overview', [BayikuController::class, 'getOverview']);
+        Route::post('create-monthly-report', [BayikuController::class, 'createMonthlyReport']);
+        Route::post('create-neonatus-6-hours', [BayikuController::class, 'createNeonatusSixHours']);
+        Route::post('create-neonatus-kn1', [BayikuController::class, 'createNeonatusKn1']);
+        Route::post('create-neonatus-kn2', [BayikuController::class, 'createNeonatusKn2']);
+        Route::post('create-neonatus-kn3', [BayikuController::class, 'createNeonatusKn3']);
+        Route::post('show-monthly-report', [BayikuController::class, 'getMonthlyReport']);
+        Route::post('show-monthly-report-analysis', [BayikuController::class, 'getMonthlyReportAnalysis']);
         Route::get('perkembangan-questionnaire/{month}', [BayikuController::class, 'getMonthlyPerkembanganQuestionnaire']);
     });
 });

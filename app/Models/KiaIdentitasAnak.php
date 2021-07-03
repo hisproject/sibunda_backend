@@ -32,6 +32,10 @@ class KiaIdentitasAnak extends Model
         return $this->hasMany(ServiceStatementIbuHamil::class, 'kia_anak_id');
     }
 
+    public function years() {
+        return $this->hasMany(ServiceStatementAnakYear::class, 'kia_anak_id');
+    }
+
     public function init_fundamental_data() {
         $this->init_trisemester_data();
         $this->init_years_data();

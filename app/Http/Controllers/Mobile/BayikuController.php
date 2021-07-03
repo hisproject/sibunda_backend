@@ -22,41 +22,54 @@ class BayikuController extends Controller
     use GlobalDataHelper;
     //
     public function getOverview() {
-        $kiaIbu = Auth::user()->kia_ibu;
-        $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke')->with('trisemesters')
-            ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', false)->get();
-        foreach($anak as $a) {
-            $anak->age = $this->getChildAge($a->tanggal_lahir ?? null);
-        }
+        try {
+            $kiaIbu = Auth::user()->kia_ibu;
+            $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke')->with('years')
+                ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', false)->get();
+            foreach ($anak as $a) {
+                $anak->age = $this->getChildAge($a->tanggal_lahir ?? null);
+            }
 
-        return Constants::successResponseWithNewValue('data', $anak);
+            return Constants::successResponseWithNewValue('data', $anak);
+        } catch(\Exception $e) {
+            return Constants::errorResponse($e->getMessage());
+        }
     }
 
-    public function createMonthlyCheckup(Request $request) {
+    public function createMonthlyReport(Request $request) {
         $request->validate([
             'year_id' => 'integer|required',
+            'month' => 'integer|required',
             'date' => 'date',
             'location' => 'string',
+            'pemeriksa' => 'string',
             'age' => 'integer',
             'bb' => 'numeric',
             'tb' => 'numeric',
             'lingkar_kepala' => 'numeric',
             'imt' => 'numeric',
-            'perkembangan' => 'array|required'
+            'perkembangan_ans' => 'array',
+            'perkembangan_ans.*.q_id' => 'integer',
+            'perkembangan_ans.*.ans' => 'integer'
         ]);
 
         DB::beginTransaction();
         try {
             $checkupData = new ServiceStatementAnakMonthlyCheckup();
             $checkupData->year_id = $request->year_id;
+            $checkupData->month = $request->month;
             $checkupData->date = $request->date;
             $checkupData->location = $request->location;
+            $checkupData->pemeriksa = $request->pemeriksa;
             $checkupData->age = $request->age;
             $checkupData->bb = $request->bb;
             $checkupData->tb = $request->tb;
             $checkupData->lingkar_kepala = $request->lingkar_kepala;
             $checkupData->imt = $request->imt;
             $checkupData->save();
+
+            if(!empty($request->perkembangan_ans))
+                $this->createPerkembanganQuestionnaireAns($checkupData->id, $request->perkembangan_ans);
 
             DB::commit();
             return Constants::successResponse();
@@ -66,7 +79,17 @@ class BayikuController extends Controller
         }
     }
 
-    public function getMonthlyCheckup(Request $request) {
+    private function createPerkembanganQuestionnaireAns($report, $perkembanganAns) {
+        foreach($perkembanganAns as $ans) {
+            ServiceStatementMonthlyPerkembangan::create([
+                'monthly_report_id' => $report,
+                'questionnaire_id' => $ans['q_id'],
+                'ans' => $ans['ans']
+            ]);
+        }
+    }
+
+    public function getMonthlyReport(Request $request) {
         $request->validate([
             'month' => 'integer|required',
             'year_id' => 'integer|required'
@@ -81,29 +104,16 @@ class BayikuController extends Controller
         return $data;
     }
 
+    public function getMonthlyReportAnalysis(Request $request) {
+
+    }
+
     public function getMonthlyPerkembanganQuestionnaire($month) {
         $q = PerkembanganQuestionnaire::where('month_start', '<=', $month)
                                         ->where('month_until', '>=', $month)
                                         ->orderBy('no')->get();
 
         return $q;
-    }
-
-    public function createPerkembanganQuestionnaireAns(Request $request) {
-        $request->validate([
-            'monthly_report_id' => 'integer|required',
-            'answers' => 'array',
-            'answers.*.q_id' => 'integer',
-            'answers.*.ans' => 'boolean'
-        ]);
-
-        foreach($request->answers as $ans) {
-            ServiceStatementMonthlyPerkembangan::create([
-                'monthly_report_id' => $request->monthly_report_id,
-                'questionnaire_id' => $ans['q_id'],
-                'ans' => $ans['ans']
-            ]);
-        }
     }
 
     public function createNeonatusSixHours(Request $request) {
@@ -116,7 +126,7 @@ class BayikuController extends Controller
             'q_salep' => 'integer|required',
             'q_imunisasi_hb' => 'integer|required',
             'date' => 'date|required',
-            'time' => 'time|required',
+            'time' => 'date_format:H:i|required',
             'no_batch' => 'string|min:0',
             'dirujuk_ke' => 'string|min:0',
             'petugas' => 'string|min:0',

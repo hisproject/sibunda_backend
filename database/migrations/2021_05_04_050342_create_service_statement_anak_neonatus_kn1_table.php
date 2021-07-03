@@ -31,7 +31,7 @@ class CreateServiceStatementAnakNeonatusKn1Table extends Migration
             $table->string('dirujuk_ke');
             $table->string('petugas');
             $table->string('catatan_penting');
-            $table->unsignedBigInteger('monthly_checkup_id');
+            $table->unsignedBigInteger('monthly_checkup_id')->unique();
             $table->timestamps();
             $table->foreign('monthly_checkup_id')->references('id')->on('service_statement_anak_monthly_checkup');
         });

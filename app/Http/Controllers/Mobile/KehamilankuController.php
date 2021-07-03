@@ -55,7 +55,7 @@ class KehamilankuController extends Controller
         return Constants::successResponseWithNewValue('data', $janin);
     }
 
-    public function createTriSemesterData(Request $request) {
+    public function createWeeklyReport(Request $request) {
         $data = $request->validate([
             'week' => 'integer|required',
             'tanggal_periksa' => 'date|required',
@@ -93,7 +93,7 @@ class KehamilankuController extends Controller
         ]);
     }
 
-    public function showWeeklyTrisemesterData(Request $request) {
+    public function getWeeklyReport(Request $request) {
         $request->validate([
             'weekly_trisemester_checkup_id' => 'integer|required'
         ]);
@@ -106,7 +106,7 @@ class KehamilankuController extends Controller
         return $data;
     }
 
-    public function showTriSemesterAnalysis(Request $request) {
+    public function getWeeklyReportAnalysis(Request $request) {
         $request->validate([
             'weekly_trisemester_checkup_id' => 'integer|required'
         ]);

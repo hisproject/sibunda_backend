@@ -18,4 +18,8 @@ class ServiceStatementAnakImmunization extends Model
         'kia_anak_id',
         'month_type'
     ];
+
+    public function immunization() {
+        return $this->belongsTo(Immunization::class, 'immunization_id');
+    }
 }

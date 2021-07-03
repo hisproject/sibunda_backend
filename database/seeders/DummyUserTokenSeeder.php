@@ -89,6 +89,7 @@ class DummyUserTokenSeeder extends Seeder
             $anakData->anak_ke = 2;
             $anakData->no_akte_kelahiran = '2398383';
             $anakData->nik = '2239838837';
+            $anakData->jenis_kelamin = 'L';
             $anakData->gol_darah = 'B';
             $anakData->tempat_lahir = 1101;
             $anakData->tanggal_lahir = '2018-01-01';

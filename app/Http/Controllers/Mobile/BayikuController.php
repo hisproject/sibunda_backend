@@ -3,8 +3,14 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\AnakParamBbPb;
+use App\Models\AnakParamBbUsia;
+use App\Models\AnakParamImt;
+use App\Models\AnakParamLingkarKepala;
+use App\Models\AnakParamPbUsia;
 use App\Models\KiaIdentitasAnak;
 use App\Models\PerkembanganQuestionnaire;
+use App\Models\ServiceStatementAnakImmunization;
 use App\Models\ServiceStatementAnakMonthlyCheckup;
 use App\Models\ServiceStatementAnakNeonatusKn1;
 use App\Models\ServiceStatementAnakNeonatusKn2;
@@ -105,7 +111,65 @@ class BayikuController extends Controller
     }
 
     public function getMonthlyReportAnalysis(Request $request) {
+        $request->validate([
+            'month_id' => 'integer|required'
+        ]);
 
+        $monthData = ServiceStatementAnakMonthlyCheckup::find($request->month_id);
+
+        if(empty($monthData))
+            return Constants::errorResponse('no matching data for month_id : ' . $request->month_id);
+
+        $isLaki = $monthData->year->kia_identitas_anak->jenis_kelamin == 'L';
+        $tb = $monthData->tb;
+        $diff = $tb - (int) $tb;
+
+        if($diff > 0.25 && $diff < 0.75)
+            $tb = (int) $tb + 0.5;
+        else if($diff <= 0.25)
+            $tb = (int) $tb;
+        else
+            $tb = (int) $tb + 1;
+
+        $anakParamBbUsia = AnakParamBbUsia::where('month', $monthData->month)
+                                            ->where('is_laki', $isLaki)
+                                            ->first();
+        $anakParamPbUsia = AnakParamPbUsia::where('month', $monthData->month)
+            ->where('is_laki', $isLaki)
+            ->first();
+        $anakParamBbPb = AnakParamBbPb::where('pb', $tb)
+            ->where('is_laki', $isLaki)
+            ->first();
+        $anakParamLingkarKepala = AnakParamLIngkarKepala::where('month', $monthData->month)
+                                                            ->where('is_laki', $isLaki)
+                                                            ->first();
+        $anakParamImt = AnakParamImt::where('month', $monthData->month)
+                                        ->where('is_laki', $isLaki)
+                                        ->first();
+
+        $res['bb_usia_desc'] = $this->getAnakuAnalysisDesc(
+                                        $anakParamBbUsia->minus_2_sd ?? -1,
+                                        $anakParamBbUsia->plus_1_sd ?? -1,
+                                        $monthData->bb ?? -1);
+
+        $res['pb_usia_desc'] = $this->getAnakuAnalysisDesc(
+            $anakParamPbUsia->minus_2_sd ?? -1,
+            $anakParamPbUsia->plus_3_sd ?? -1,
+            $monthData->tb ?? -1);
+        $res['bb_pb_desc'] = $this->getAnakuAnalysisDesc(
+            $anakParamBbPb->minus_2_sd ?? -1,
+            $anakParamBbPb->plus_1_sd ?? -1,
+            $monthData->bb ?? -1);
+        $res['lingkar_kepala_desc'] = $this->getAnakuAnalysisDesc(
+            $anakParamLingkarKepala->minus_2_sd ?? -1,
+            $anakParamLingkarKepala->plus_1_sd ?? -1,
+            $monthData->lingkar_kepala ?? -1);
+        $res['imt_desc'] = $this->getAnakuAnalysisDesc(
+            $anakParamImt->minus_2_sd ?? -1,
+            $anakParamImt->plus_1_sd ?? -1,
+            $monthData->imt ?? -1);
+
+        return Constants::successResponseWithNewValue('data', $res);
     }
 
     public function getMonthlyPerkembanganQuestionnaire($month) {
@@ -211,6 +275,32 @@ class BayikuController extends Controller
         ]);
 
         ServiceStatementAnakNeonatusKn3::create($data);
+
+        return Constants::successResponse();
+    }
+
+    public function getImmunization($kiaAnakId) {
+        $data = ServiceStatementAnakImmunization::where('kia_anak_id', $kiaAnakId)
+                                                    ->orderBy('immunization_id')->with('immunization')->get();
+
+        return Constants::successResponseWithNewValue('data', $data);
+    }
+
+    public function createImmunization(Request $request) {
+        $request->validate([
+            'id' => 'integer|required',
+            'date' => 'date|required',
+            'location' => 'required',
+            'pic' => 'required',
+            'no_batch' => 'required',
+        ]);
+
+        $data = ServiceStatementAnakImmunization::find($request->id);
+        $data->date = $request->date;
+        $data->location = $request->location;
+        $data->pic = $request->pic;
+        $data->no_batch = $request->no_batch;
+        $data->save();
 
         return Constants::successResponse();
     }

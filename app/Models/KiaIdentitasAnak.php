@@ -15,6 +15,7 @@ class KiaIdentitasAnak extends Model
         'anak_ke',
         'no_akte_kelahiran',
         'nik',
+        'jenis_kelamin',
         'gol_darah',
         'tempat_lahir',
         'tanggal_lahir',

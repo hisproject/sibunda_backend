@@ -69,6 +69,7 @@ class DataController extends Controller
             'anak.*.anak_ke' => 'integer|required',
             'anak.*.no_akte_kelahiran' => 'string|required',
             'anak.*.nik' => 'string|required',
+            'anak.*.jenis_kelamin' => 'string|max:1|required',
             'anak.*.gol_darah' => 'string|max:2|required',
             'anak.*.tempat_lahir' => 'integer|required',
             'anak.*.tanggal_lahir' => 'date|required',
@@ -125,6 +126,7 @@ class DataController extends Controller
                 $anakData->anak_ke = $this->nullableVal($anak['anak_ke']);
                 $anakData->no_akte_kelahiran = $this->nullableVal($anak['no_akte_kelahiran']);
                 $anakData->nik = $this->nullableVal($anak['nik']);
+                $anakData->gol_darah = $this->nullableVal($anak['jenis_kelamin']);
                 $anakData->gol_darah = $this->nullableVal($anak['gol_darah']);
                 $anakData->tempat_lahir = $this->nullableVal($anak['tempat_lahir']);
                 $anakData->tanggal_lahir = $this->nullableVal($anak['tanggal_lahir']);

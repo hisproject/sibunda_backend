@@ -73,6 +73,8 @@ Route::prefix('anaku')->group(function() {
         Route::post('show-monthly-report', [BayikuController::class, 'getMonthlyReport']);
         Route::post('show-monthly-report-analysis', [BayikuController::class, 'getMonthlyReportAnalysis']);
         Route::get('perkembangan-questionnaire/{month}', [BayikuController::class, 'getMonthlyPerkembanganQuestionnaire']);
+        Route::post('immunization', [BayikuController::class, 'createImmunization']);
+        Route::get('immunization/{kiaAnakId}', [BayikuController::class, 'getImmunization']);
     });
 });
 

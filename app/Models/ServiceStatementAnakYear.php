@@ -13,4 +13,8 @@ class ServiceStatementAnakYear extends Model
         'year',
         'kia_anak_id'
     ];
+
+    public function kia_identitas_anak() {
+        return $this->belongsTo(KiaIdentitasAnak::class, 'kia_anak_id');
+    }
 }

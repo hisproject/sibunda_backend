@@ -46,6 +46,7 @@ trait GlobalDataHelper
         return $hplDate->diffInDays();
     }
 
+    // analysis result
     public function getBmiDesc($length, $weight, $obesityThreshold, $overThreshold, $normalThreshold) {
         try {
             $bmi = $weight / pow(($length / 100), 2);
@@ -149,5 +150,20 @@ trait GlobalDataHelper
                                     join kia_identitas_anak ka on ka.id = s.kia_anak_id
                                     where ka.kia_ibu_id = 1 order by sp.week';
         return DB::select($q);
+    }
+
+
+    // anaku analysis
+    public function getAnakuAnalysisDesc($bottomThreshold, $topThreshold, $val) {
+        if($val >= $bottomThreshold && $val <= $topThreshold)
+            return [
+                'desc' => 'Normal',
+                'is_normal' => true
+            ];
+
+        return [
+            'desc' => 'Tidak Normal',
+            'is_normal' => false
+        ];
     }
 }

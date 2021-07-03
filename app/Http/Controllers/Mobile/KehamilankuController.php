@@ -114,7 +114,7 @@ class KehamilankuController extends Controller
         $checkupServiceStatement = ServiceStatementIbuHamilPeriksa::find($request->weekly_trisemester_checkup_id);
 
         if(empty($checkupServiceStatement))
-            return abort(404);
+            return Constants::errorResponse('no matching data for weekly_trisemester_checkup_id : ' . $request->weekly_trisemester_checkup_id);
 
         $weightGrowthParam = WeightGrowthParam::where('week', $checkupServiceStatement->week)->first();
         $momPulseGrowthParam = MomPulseGrowthParam::where('week', $checkupServiceStatement->week)->first();

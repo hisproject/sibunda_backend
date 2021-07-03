@@ -20,6 +20,7 @@ class CreateKiaIdentitasAnakTable extends Migration
             $table->unsignedSmallInteger('anak_ke')->nullable();
             $table->string('no_akte_kelahiran')->nullable();
             $table->string('nik')->nullable();
+            $table->enum('jenis_kelamin', ['L', 'P', 'N'])->nullable();
             $table->enum('gol_darah', ['A', 'B', 'AB', 'O'])->nullable();
             $table->unsignedBigInteger('tempat_lahir')->nullable();
             $table->date('tanggal_lahir')->nullable();

@@ -20,4 +20,8 @@ class ServiceStatementAnakMonthlyCheckup extends Model
         'lingkar_kepala',
         'imt',
     ];
+
+    public function year() {
+        return $this->belongsTo(ServiceStatementAnakYear::class, 'year_id');
+    }
 }

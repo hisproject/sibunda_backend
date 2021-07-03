@@ -52,28 +52,33 @@ trait GlobalDataHelper
             if ($bmi < $normalThreshold) {
                 return [
                     'type' => 1,
-                    'desc' => 'Under Wight'
+                    'desc' => 'Under Wight',
+                    'is_normal' => false,
                 ];
             } else if ($bmi >= $normalThreshold && $bmi < $overThreshold) {
                 return [
                     'type' => 2,
-                    'desc' => 'Normal Weight'
+                    'desc' => 'Normal Weight',
+                    'is_normal' => true,
                 ];
             } else if ($bmi >= $overThreshold && $bmi < $obesityThreshold) {
                 return [
                     'type' => 3,
-                    'desc' => 'Over Weight'
+                    'desc' => 'Over Weight',
+                    'is_normal' => false,
                 ];
             } else if($bmi >= $obesityThreshold) {
                 return [
                     'type' => 4,
-                    'desc' => 'Obesitas'
+                    'desc' => 'Obesitas',
+                    'is_normal' => false,
                 ];
             }
         } catch (\Exception $e) {}
         return [
             'type' => 5,
-            'desc' => 'N/A'
+            'desc' => 'N/A',
+            'is_normal' => false,
         ];
     }
 
@@ -81,12 +86,14 @@ trait GlobalDataHelper
         if($val <= $topThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Normal'
+                'desc' => 'Normal',
+                'is_normal' => true,
             ];
         else
             return [
                 'type' => 2,
-                'desc' => 'Di atas normal'
+                'desc' => 'Di atas normal',
+                'is_normal' => false,
             ];
     }
 
@@ -94,12 +101,14 @@ trait GlobalDataHelper
         if($val >= $bottomThreshold && $val <= $topThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Normal'
+                'desc' => 'Normal',
+                'is_normal' => true,
             ];
         else
             return [
                 'type' => 1,
-                'desc' => 'Tidak normal'
+                'desc' => 'Tidak normal',
+                'is_normal' => false,
             ];
     }
 
@@ -107,12 +116,14 @@ trait GlobalDataHelper
         if($val >= $bottomThreshold && $val <= $topThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Normal'
+                'desc' => 'Normal',
+                'is_normal' => true,
             ];
         else
             return [
                 'type' => 1,
-                'desc' => 'Tidak normal'
+                'desc' => 'Tidak normal',
+                'is_normal' => false,
             ];
     }
 
@@ -120,12 +131,14 @@ trait GlobalDataHelper
         if($val >= $bottomThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Aktif'
+                'desc' => 'Aktif',
+                'is_normal' => true,
             ];
         else
             return [
                 'type' => 2,
-                'desc' => 'Tidak Aktif'
+                'desc' => 'Tidak Aktif',
+                'is_normal' => false,
             ];
     }
 

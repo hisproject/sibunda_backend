@@ -75,6 +75,11 @@ Route::prefix('anaku')->group(function() {
         Route::get('perkembangan-questionnaire/{month}', [BayikuController::class, 'getMonthlyPerkembanganQuestionnaire']);
         Route::post('immunization', [BayikuController::class, 'createImmunization']);
         Route::get('immunization/{kiaAnakId}', [BayikuController::class, 'getImmunization']);
+        Route::get('graph/bb-usia/{kiaAnakId}', [BayikuController::class, 'getBbUsiaGraphData']);
+        Route::get('graph/pb-usia/{kiaAnakId}', [BayikuController::class, 'getPbUsiaGraphData']);
+        Route::get('graph/bb-pb/{kiaAnakId}', [BayikuController::class, 'getBbPbGraphData']);
+        Route::get('graph/lingkar-kepala/{kiaAnakId}', [BayikuController::class, 'getLingkarKepalaGraphData']);
+        Route::get('graph/imt/{kiaAnakId}', [BayikuController::class, 'getImtGraphData']);
     });
 });
 

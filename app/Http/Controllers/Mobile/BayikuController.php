@@ -304,4 +304,198 @@ class BayikuController extends Controller
 
         return Constants::successResponse();
     }
+
+    // graphs
+
+    public function getBbUsiaGraphData($kiaAnakId) {
+        try {
+            $isLaki = KiaIdentitasAnak::find($kiaAnakId)->jenis_kelamin == 'L';
+            $bbUsiaParam = AnakParamBbUsia::where('is_laki', $isLaki)->orderBy('month')->get();
+            $insertedData = $this->getBayiAnakData('bb', $kiaAnakId);
+            $res = [];
+            $currDataIndex = 0;
+            $currDataLen = count($insertedData);
+
+            foreach ($bbUsiaParam as $param) {
+                $data = [
+                    'month' => (int) $param->month,
+                    'minus_3_sd' => (double) $param->minus_3_sd,
+                    'minus_2_sd' => (double) $param->minus_2_sd,
+                    'minus_1_sd' => (double) $param->minus_1_sd,
+                    'median' => (double) $param->median,
+                    'plus_1_sd' => (double) $param->plus_1_sd,
+                    'plus_2_sd' => (double) $param->plus_2_sd,
+                    'plus_3_sd' => (double) $param->plus_3_sd
+                ];
+
+                if ($currDataIndex < $currDataLen &&
+                    $param->month == $insertedData[$currDataIndex]->month)
+                    $data['input'] = (double) $insertedData[$currDataIndex++]->bb;
+                else
+                    $data['input'] = -1;
+
+                array_push($res, $data);
+            }
+
+            return $res;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
+
+    public function getPbUsiaGraphData($kiaAnakId) {
+        try {
+            $isLaki = KiaIdentitasAnak::find($kiaAnakId)->jenis_kelamin == 'L';
+            $pbUsiaParam = AnakParamPbUsia::where('is_laki', $isLaki)->orderBy('month')->get();
+            $insertedData = $this->getBayiAnakData('tb', $kiaAnakId);
+            $res = [];
+            $currDataIndex = 0;
+            $currDataLen = count($insertedData);
+
+            foreach ($pbUsiaParam as $param) {
+                $data = [
+                    'month' => (int) $param->month,
+                    'minus_3_sd' => (double) $param->minus_3_sd,
+                    'minus_2_sd' => (double) $param->minus_2_sd,
+                    'minus_1_sd' => (double) $param->minus_1_sd,
+                    'median' => (double) $param->median,
+                    'plus_1_sd' => (double) $param->plus_1_sd,
+                    'plus_2_sd' => (double) $param->plus_2_sd,
+                    'plus_3_sd' => (double) $param->plus_3_sd
+                ];
+
+                if ($currDataIndex < $currDataLen &&
+                    $param->month == $insertedData[$currDataIndex]->month)
+                    $data['input'] = (double) $insertedData[$currDataIndex++]->tb;
+                else
+                    $data['input'] = -1;
+
+                array_push($res, $data);
+            }
+
+            return $res;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
+
+    public function getBbPbGraphData($kiaAnakId) {
+        try {
+            $isLaki = KiaIdentitasAnak::find($kiaAnakId)->jenis_kelamin == 'L';
+            $bbPbParam = AnakParamBbPb::where('is_laki', $isLaki)->orderBy('pb')->get();
+            $insertedData = $this->getBayiAnakDataByTb('bb', $kiaAnakId);
+            $res = [];
+            $currDataIndex = 0;
+            $currDataLen = count($insertedData);
+
+            foreach ($bbPbParam as $param) {
+                $data = [
+                    'pb' => (double) $param->pb,
+                    'minus_3_sd' => (double) $param->minus_3_sd,
+                    'minus_2_sd' => (double) $param->minus_2_sd,
+                    'minus_1_sd' => (double) $param->minus_1_sd,
+                    'median' => (double) $param->median,
+                    'plus_1_sd' => (double) $param->plus_1_sd,
+                    'plus_2_sd' => (double) $param->plus_2_sd,
+                    'plus_3_sd' => (double) $param->plus_3_sd
+                ];
+
+                if ($currDataIndex < $currDataLen) {
+                    $tb = $insertedData[$currDataIndex]->tb;
+                    $diff = $tb - (int) $tb;
+
+                    if($diff > 0.25 && $diff < 0.75)
+                        $tb = (int) $tb + 0.5;
+                    else if($diff <= 0.25)
+                        $tb = (int) $tb;
+                    else
+                        $tb = (int) $tb + 1;
+
+                    if ($param->pb == $tb)
+                        $data['input'] = (double) $insertedData[$currDataIndex ++]->bb;
+                    else
+                        $data['input'] = -1;
+                } else
+                    $data['input'] = -1;
+
+                array_push($res, $data);
+            }
+
+            return $res;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
+
+    public function getLingkarKepalaGraphData($kiaAnakId) {
+        try {
+            $isLaki = KiaIdentitasAnak::find($kiaAnakId)->jenis_kelamin == 'L';
+            $lingkarKepalaParam = AnakParamLingkarKepala::where('is_laki', $isLaki)->orderBy('month')->get();
+            $insertedData = $this->getBayiAnakData('lingkar_kepala', $kiaAnakId);
+            $res = [];
+            $currDataIndex = 0;
+            $currDataLen = count($insertedData);
+
+            foreach ($lingkarKepalaParam as $param) {
+                $data = [
+                    'month' => (int) $param->month,
+                    'minus_3_sd' => (double) $param->minus_3_sd,
+                    'minus_2_sd' => (double) $param->minus_2_sd,
+                    'minus_1_sd' => (double) $param->minus_1_sd,
+                    'median' => (double) $param->median,
+                    'plus_1_sd' => (double) $param->plus_1_sd,
+                    'plus_2_sd' => (double) $param->plus_2_sd,
+                    'plus_3_sd' => (double) $param->plus_3_sd
+                ];
+
+                if ($currDataIndex < $currDataLen &&
+                    $param->month == $insertedData[$currDataIndex]->month)
+                    $data['input'] = (double) $insertedData[$currDataIndex++]->lingkar_kepala;
+                else
+                    $data['input'] = -1;
+
+                array_push($res, $data);
+            }
+
+            return $res;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
+
+    public function getImtGraphData($kiaAnakId) {
+        try {
+            $isLaki = KiaIdentitasAnak::find($kiaAnakId)->jenis_kelamin == 'L';
+            $imtParam = AnakParamImt::where('is_laki', $isLaki)->orderBy('month')->get();
+            $insertedData = $this->getBayiAnakData('imt', $kiaAnakId);
+            $res = [];
+            $currDataIndex = 0;
+            $currDataLen = count($insertedData);
+
+            foreach ($imtParam as $param) {
+                $data = [
+                    'month' => (int) $param->month,
+                    'minus_3_sd' => (double) $param->minus_3_sd,
+                    'minus_2_sd' => (double) $param->minus_2_sd,
+                    'minus_1_sd' => (double) $param->minus_1_sd,
+                    'median' => (double) $param->median,
+                    'plus_1_sd' => (double)$param->plus_1_sd,
+                    'plus_2_sd' => (double)$param->plus_2_sd,
+                    'plus_3_sd' => (double)$param->plus_3_sd
+                ];
+
+                if ($currDataIndex < $currDataLen &&
+                    $param->month == $insertedData[$currDataIndex]->month)
+                    $data['input'] = (double)$insertedData[$currDataIndex++]->imt;
+                else
+                    $data['input'] = -1;
+
+                array_push($res, $data);
+            }
+
+            return $res;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
 }

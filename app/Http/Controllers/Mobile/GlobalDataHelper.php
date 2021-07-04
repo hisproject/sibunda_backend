@@ -144,14 +144,28 @@ trait GlobalDataHelper
     }
 
 
-    public function getPregnancyData($prop) {
+    public function getPregnancyData($prop, $kiaAnakId = 1) {
         $q = 'select sp.' . $prop . ', sp.week from service_statement_ibu_hamil_periksa sp
-                                    join service_statement_ibu_hamil s on s.id = sp.trisemester_id
-                                    join kia_identitas_anak ka on ka.id = s.kia_anak_id
-                                    where ka.kia_ibu_id = 1 order by sp.week';
+                join service_statement_ibu_hamil s on s.id = sp.trisemester_id
+                where s.kia_anak_id = ' . $kiaAnakId . ' order by sp.week';
         return DB::select($q);
     }
 
+    public function getBayiAnakData($prop, $kiaAnakId = 2) {
+        $q = 'select sp.' . $prop . ', sp.month from service_statement_anak_monthly_checkup sp
+                join service_statement_anak_years sy on sy.id = sp.year_id
+                where sy.kia_anak_id = ' . $kiaAnakId . ' order by sp.month';
+
+        return DB::select($q);
+    }
+
+    public function getBayiAnakDataByTb($prop, $kiaAnakId = 2) {
+        $q = 'select sp.' . $prop . ', sp.tb from service_statement_anak_monthly_checkup sp
+                join service_statement_anak_years sy on sy.id = sp.year_id
+                where sy.kia_anak_id = ' . $kiaAnakId . ' order by sp.tb';
+
+        return DB::select($q);
+    }
 
     // anaku analysis
     public function getAnakuAnalysisDesc($bottomThreshold, $topThreshold, $val) {

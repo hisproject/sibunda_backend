@@ -160,6 +160,8 @@ class KehamilankuController extends Controller
         return Constants::successResponse();
     }
 
+    // Graphs
+
     public function getTfuGraphData() {
         $tfuParams = TfuGrowthParam::orderBy('week')->get();
         $insertedData = $this->getPregnancyData('tfu');

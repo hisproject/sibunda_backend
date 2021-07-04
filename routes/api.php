@@ -3,6 +3,7 @@
 use App\Http\Controllers\Mobile\AuthController;
 use App\Http\Controllers\Mobile\BayikuController;
 use App\Http\Controllers\Mobile\CovidController;
+use App\Http\Controllers\Mobile\DashboardController;
 use App\Http\Controllers\Mobile\DataController;
 use App\Http\Controllers\Mobile\KehamilankuController;
 use App\Models\User;
@@ -89,7 +90,16 @@ Route::prefix('covid')->group(function() {
        Route::get('checkup', [CovidController::class, 'getCovidCheckup']);
        Route::get('questionnaire', [CovidController::class, 'getQuestionnaire']);
        Route::post('checkup', [CovidController::class, 'createCovidCheckup']);
+       Route::get('anak', [CovidController::class, 'getAnak']);
    });
+});
+
+Route::prefix('dashboard')->group(function() {
+    Route::middleware('auth:api')->group(function() {
+       Route::get('index', [DashboardController::class, 'getHomeData']);
+       Route::get('notifications', [DashboardController::class, 'getNotifications']);
+       Route::get('messages', [DashboardController::class, 'getMessages']);
+    });
 });
 
 Route::get('token-dummy', function() {

@@ -112,4 +112,8 @@ class CovidController extends Controller
 
         return Constants::successResponseWithNewValue('data', $data);
     }
+
+    public function getAnak() {
+        return Constants::successResponseWithNewValue('data', Auth::user()->kia_ibu->kia_anak);
+    }
 }

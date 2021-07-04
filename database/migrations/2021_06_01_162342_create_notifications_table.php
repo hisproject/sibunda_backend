@@ -15,11 +15,14 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+            $table->boolean('is_message');
             $table->string('title');
             $table->string('desc');
             $table->text('img_url')->nullable();
             $table->text('url')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

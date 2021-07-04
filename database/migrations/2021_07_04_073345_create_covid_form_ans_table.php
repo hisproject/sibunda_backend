@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCovidIbuFormTable extends Migration
+class CreateCovidFormAnsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateCovidIbuFormTable extends Migration
      */
     public function up()
     {
-        Schema::create('covid_ibu_form', function (Blueprint $table) {
+        Schema::create('covid_form_ans', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('q_id');
-            $table->unsignedBigInteger('kia_ibu_id');
+            $table->unsignedBigInteger('form_id');
             $table->boolean('ans');
             $table->timestamps();
             $table->foreign('q_id')->references('id')->on('covid_questionnaire');
-            $table->foreign('kia_ibu_id')->references('id')->on('kia_identitas_ibu');
+            $table->foreign('form_id')->references('id')->on('covid_form');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateCovidIbuFormTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('covid_ibu_form');
+        Schema::dropIfExists('covid_form_ans');
     }
 }

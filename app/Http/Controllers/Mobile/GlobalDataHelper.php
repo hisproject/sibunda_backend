@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\Mobile;
 
 
+use App\Models\CovidFormAns;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -179,5 +180,21 @@ trait GlobalDataHelper
             'desc' => 'Tidak Normal',
             'is_normal' => false
         ];
+    }
+
+    // covid checkup analysis
+    protected function meetCovidCategory($formId, $q_ids) {
+        $mustAns = CovidFormAns::whereIn('q_id', $q_ids)->where('form_id', $formId)->get();
+        $mustNotAns = CovidFormAns::whereNotIn('q_id', $q_ids)->where('form_id', $formId)->get();
+
+        foreach($mustAns as $ans)
+            if(!$ans->ans)
+                return false;
+
+        foreach($mustNotAns as $ans)
+            if($ans->ans)
+                return false;
+
+        return true;
     }
 }

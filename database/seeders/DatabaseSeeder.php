@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\AnakParamBbPb;
+use App\Models\CovidQuestionnaire;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,5 +29,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AnakParamLingkarKepalaSeeder::class);
         $this->call(AnakParamPbUsiaSeeder::class);
         $this->call(AnakParamPerkembanganSeeder::class);
+        $this->call(CovidQuestionnaireSeeder::class);
     }
 }

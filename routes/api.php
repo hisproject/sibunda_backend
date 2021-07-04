@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Mobile\AuthController;
 use App\Http\Controllers\Mobile\BayikuController;
+use App\Http\Controllers\Mobile\CovidController;
 use App\Http\Controllers\Mobile\DataController;
 use App\Http\Controllers\Mobile\KehamilankuController;
 use App\Models\User;
@@ -81,6 +82,14 @@ Route::prefix('anaku')->group(function() {
         Route::get('graph/lingkar-kepala/{kiaAnakId}', [BayikuController::class, 'getLingkarKepalaGraphData']);
         Route::get('graph/imt/{kiaAnakId}', [BayikuController::class, 'getImtGraphData']);
     });
+});
+
+Route::prefix('covid')->group(function() {
+   Route::middleware('auth:api')->group(function() {
+       Route::get('checkup', [CovidController::class, 'getCovidCheckup']);
+       Route::get('questionnaire', [CovidController::class, 'getQuestionnaire']);
+       Route::post('checkup', [CovidController::class, 'createCovidCheckup']);
+   });
 });
 
 Route::get('token-dummy', function() {

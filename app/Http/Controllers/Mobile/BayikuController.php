@@ -509,6 +509,7 @@ class BayikuController extends Controller
                                     join service_statement_monthly_perkembangan p on p.monthly_report_id = m.id
                                     where p.ans is true and month = ' . $i . ' and kia_anak_id = ' . $kiaAnakId)->count;
             array_push($data, [
+                'month' => $i,
                 's_threshold' => 9,
                 'm_threshold' => 7,
                 'input' => $count

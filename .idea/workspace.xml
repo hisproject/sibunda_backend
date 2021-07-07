@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +241,7 @@
       <workItem from="1625291135723" duration="25526000" />
       <workItem from="1625364600213" duration="320000" />
       <workItem from="1625379018579" duration="22269000" />
-      <workItem from="1625664868608" duration="11297000" />
+      <workItem from="1625664868608" duration="11600000" />
     </task>
     <servers />
   </component>

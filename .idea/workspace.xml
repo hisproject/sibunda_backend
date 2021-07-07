@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KiaIdentitasIbu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KiaIdentitasIbu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_050341_create_service_statement_anak_immunization_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_050341_create_service_statement_anak_immunization_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_050360_create_service_statement_balita_two_yo_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_050361_create_service_statement_balita_three_yo_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_050450_create_service_statement_balita_four_yo_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_050513_create_service_statement_balita_five_yo_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_050533_create_service_statement_anak_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_062642_create_service_statement_ibu_bersalin_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_063041_create_service_statement_ibu_menyusui_dini_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_063207_create_service_statement_ibu_immunization_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_063207_create_service_statement_ibu_immunization_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_063207_create_service_statement_ibu_nifas_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +166,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/res/img/questions" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -251,7 +240,7 @@
       <workItem from="1625291135723" duration="25526000" />
       <workItem from="1625364600213" duration="320000" />
       <workItem from="1625379018579" duration="22269000" />
-      <workItem from="1625664868608" duration="4129000" />
+      <workItem from="1625664868608" duration="11297000" />
     </task>
     <servers />
   </component>

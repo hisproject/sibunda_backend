@@ -83,6 +83,7 @@ Route::prefix('anaku')->group(function() {
         Route::get('graph/bb-pb/{kiaAnakId}', [BayikuController::class, 'getBbPbGraphData']);
         Route::get('graph/lingkar-kepala/{kiaAnakId}', [BayikuController::class, 'getLingkarKepalaGraphData']);
         Route::get('graph/imt/{kiaAnakId}', [BayikuController::class, 'getImtGraphData']);
+        Route::get('graph/perkembangan/{kiaAnakId}', [BayikuController::class, 'getPerkembanganGraphData']);
     });
 });
 

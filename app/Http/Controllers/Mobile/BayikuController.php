@@ -8,6 +8,7 @@ use App\Models\AnakParamBbUsia;
 use App\Models\AnakParamImt;
 use App\Models\AnakParamLingkarKepala;
 use App\Models\AnakParamPbUsia;
+use App\Models\AnakParamPerkembangan;
 use App\Models\KiaIdentitasAnak;
 use App\Models\PerkembanganQuestionnaire;
 use App\Models\ServiceStatementAnakImmunization;
@@ -497,5 +498,23 @@ class BayikuController extends Controller
         } catch (\Exception $e) {
             return [];
         }
+    }
+
+    public function getPerkembanganGraphData($kiaAnakId) {
+        $data = [];
+
+        for($i = 1; $i <= 72; $i ++) {
+            $count = DB::selectOne('select count(p.id) from service_statement_anak_monthly_checkup m
+                                    join service_statement_anak_years y on y.id = m.year_id
+                                    join service_statement_monthly_perkembangan p on p.monthly_report_id = m.id
+                                    where p.ans is true and month = ' . $i . ' and kia_anak_id = ' . $kiaAnakId)->count;
+            array_push($data, [
+                's_threshold' => 9,
+                'm_threshold' => 7,
+                'input' => $count
+            ]);
+        }
+
+        return $data;
     }
 }

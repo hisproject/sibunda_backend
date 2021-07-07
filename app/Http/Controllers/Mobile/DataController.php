@@ -146,7 +146,6 @@ class DataController extends Controller
         }
     }
 
-
     public function createDataIbu(Request $request) {
         $validation = $this->validate($request, [
             'nama' => 'required',

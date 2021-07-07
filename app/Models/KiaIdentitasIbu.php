@@ -29,6 +29,10 @@ class KiaIdentitasIbu extends Model
         'user_id'
     ];
 
+    public function kia_ayah() {
+        return $this->hasOne(KiaIdentitasAyah::class, 'kia_ibu_id');
+    }
+
     public function kia_anak() {
         return $this->hasMany(KiaIdentitasAnak::class, 'kia_ibu_id');
     }

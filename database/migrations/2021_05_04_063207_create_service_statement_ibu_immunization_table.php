@@ -23,6 +23,7 @@ class CreateServiceStatementIbuImmunizationTable extends Migration
             $table->smallInteger('trisemester');
             $table->timestamps();
             $table->foreign('kia_ibu_id')->references('id')->on('kia_identitas_ibu');
+            $table->foreign('immunization_id')->references('id')->on('immunization');
         });
     }
 

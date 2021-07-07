@@ -24,6 +24,7 @@ class CreateServiceStatementAnakImmunizationTable extends Migration
             $table->unsignedSmallInteger('month_type'); // tipe bulan e.g 0 - 4, 5 ++ bulan
             $table->timestamps();
             $table->foreign('kia_anak_id')->references('id')->on('kia_identitas_anak');
+            $table->foreign('immunization_id')->references('id')->on('immunization');
         });
     }
 

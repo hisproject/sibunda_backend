@@ -361,6 +361,13 @@ class DataController extends Controller
         return Constants::successResponse('Identitas Anak Updated');
     }
 
+    public function getBioData() {
+        $data = KiaIdentitasIbu::where('user_id', Auth::id())
+                                    ->with(['kia_ayah', 'kia_anak'])->get();
+
+        return Constants::successResponseWithNewValue('data', $data);
+    }
+
     // master data
     public function getKota() {
         $data = DB::select('select id, trim(nama) as nama from kota order by id');

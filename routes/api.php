@@ -39,6 +39,7 @@ Route::prefix('auth')->group(function (){
 Route::prefix('data')->group(function() {
     // with auth
     Route::middleware('auth:api')->group(function () {
+        Route::get('bio', [DataController::class, 'getBioData']);
         Route::get('kota', [DataController::class, 'getKota']);
         Route::post('identitas-anak', [DataController::class, 'createDataAnak']);
         Route::post('identitas-ibu', [DataController::class, 'createDataIbu']);

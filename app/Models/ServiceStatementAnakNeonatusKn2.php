@@ -12,8 +12,8 @@ class ServiceStatementAnakNeonatusKn2 extends Model
     protected $fillable = [
         'q_menyusu',
         'q_tali_pusat',
-        'q_vit_k1',
-        'q_salep',
+        'q_tanda_bahaya',
+        'q_identifikasi_kuning',
         'q_imunisasi_hb',
         'date',
         'time',

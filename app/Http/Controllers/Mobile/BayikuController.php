@@ -234,8 +234,8 @@ class BayikuController extends Controller
         $data = $request->validate([
             'q_menyusu' => 'integer|required',
             'q_tali_pusat' => 'integer|required',
-            'q_vit_k1' => 'integer|required',
-            'q_salep' => 'integer|required',
+            'q_tanda_bahaya' => 'integer|required',
+            'q_identifikasi_kuning' => 'integer|required',
             'q_imunisasi_hb' => 'integer|required',
             'date' => 'date|required',
             'time' => 'date_format:H:i|required',

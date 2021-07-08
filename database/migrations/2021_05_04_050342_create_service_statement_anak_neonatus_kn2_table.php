@@ -17,8 +17,8 @@ class CreateServiceStatementAnakNeonatusKn2Table extends Migration
             $table->id();
             $table->boolean('q_menyusu')->default(false);
             $table->boolean('q_tali_pusat')->default(false);
-            $table->boolean('q_vit_k1')->default(false);
-            $table->boolean('q_salep')->default(false);
+            $table->boolean('q_tanda_bahaya')->default(false);
+            $table->boolean('q_identifikasi_kuning')->default(false);
             $table->boolean('q_imunisasi_hb')->default(false);// cm
             $table->date('date');
             $table->time('time');

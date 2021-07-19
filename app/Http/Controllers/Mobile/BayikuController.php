@@ -62,7 +62,11 @@ class BayikuController extends Controller
 
         DB::beginTransaction();
         try {
-            $checkupData = new ServiceStatementAnakMonthlyCheckup();
+            $checkupData = ServiceStatementAnakMonthlyCheckup::where('year_id', $request->year_id)
+                                                                ->where('month', $request->month)->first();
+            if(empty($checkupData))
+                $checkupData = new ServiceStatementAnakMonthlyCheckup();
+
             $checkupData->year_id = $request->year_id;
             $checkupData->month = $request->month;
             $checkupData->date = $request->date;

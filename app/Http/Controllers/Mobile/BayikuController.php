@@ -34,7 +34,7 @@ class BayikuController extends Controller
             $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke')->with('years')
                 ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', false)->get();
             foreach ($anak as $a) {
-                $anak->age = $this->getChildAge($a->tanggal_lahir ?? null);
+                $a->age = $this->getChildAge($a->tanggal_lahir ?? null);
             }
 
             return Constants::successResponseWithNewValue('data', $anak);

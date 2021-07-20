@@ -11,7 +11,8 @@ class ServiceStatementAnakYear extends Model
     protected $table = 'service_statement_anak_years';
     protected $fillable = [
         'year',
-        'kia_anak_id'
+        'kia_anak_id',
+        'img_url'
     ];
 
     public function kia_identitas_anak() {

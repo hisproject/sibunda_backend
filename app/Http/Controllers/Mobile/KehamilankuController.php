@@ -38,17 +38,17 @@ class KehamilankuController extends Controller
             // cek test rekomendasi
             $j->food_recommendations = [
                 [
-                    'img_url' => '/res/img/kehamilanku/rekomendasi_1.png',
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_1.png',
                     'food_category' => 'Nasi atau Makanan Pokok',
                     'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
                 ],
                 [
-                    'img_url' => '/res/img/kehamilanku/rekomendasi_2.png',
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_2.png',
                     'food_category' => 'Nasi atau Makanan Pokok',
                     'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
                 ],
                 [
-                    'img_url' => '/res/img/kehamilanku/rekomendasi_3.png',
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_3.png',
                     'food_category' => 'Nasi atau Makanan Pokok',
                     'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
                 ]

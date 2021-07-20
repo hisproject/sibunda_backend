@@ -57,7 +57,8 @@ class KiaIdentitasAnak extends Model
         for($i = 1; $i <= 6; $i ++) {
             ServiceStatementAnakYear::create([
                 'year' => $i,
-                'kia_anak_id' => $this->id
+                'kia_anak_id' => $this->id,
+                'img_url' => 'https://sibunda.amirmb.com/res/img/anaku/year_' . $i . '.png'
             ]);
         }
     }

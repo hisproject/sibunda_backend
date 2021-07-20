@@ -17,6 +17,7 @@ class CreateServiceStatementAnakYearsTable extends Migration
             $table->id();
             $table->unsignedInteger('year')->default(1);
             $table->unsignedBigInteger('kia_anak_id');
+            $table->text('img_url')->nullable();
             $table->unique(['year', 'kia_anak_id']);
             $table->timestamps();
             $table->foreign('kia_anak_id')->references('id')->on('kia_identitas_anak');

@@ -48,7 +48,8 @@ class KiaIdentitasAnak extends Model
         for($i = 1; $i <= 3; $i ++)
             ServiceStatementIbuHamil::create([
                 'trisemester' => $i,
-                'kia_anak_id' => $this->id
+                'kia_anak_id' => $this->id,
+                'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/trisemester_' . $i . '.png'
             ]);
     }
 

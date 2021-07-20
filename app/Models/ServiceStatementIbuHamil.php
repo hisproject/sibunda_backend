@@ -10,9 +10,7 @@ class ServiceStatementIbuHamil extends Model
     use HasFactory;
     protected $table = 'service_statement_ibu_hamil';
     protected $fillable = [
-        'bb',
-        'tb',
-        'imt',
+        'img_url',
         'trisemester',
         'kia_anak_id'
     ];

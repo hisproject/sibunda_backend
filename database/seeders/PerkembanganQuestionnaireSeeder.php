@@ -34,7 +34,7 @@ class PerkembanganQuestionnaireSeeder extends Seeder
             ]);
 
             if(!empty($d['img'])) {
-                $newData->img_url = $d['img'];
+                $newData->img_url = 'https://sibunda.amirmb.com' . $d['img'];
                 $newData->save();
             }
         }

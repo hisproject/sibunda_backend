@@ -88,13 +88,13 @@ trait GlobalDataHelper
         if($val <= $topThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Normal',
+                'desc' => 'Selamat Bunda! Denyut Jantung Janin Bunda normal ya Bun.',
                 'is_normal' => true,
             ];
         else
             return [
                 'type' => 2,
-                'desc' => 'Di atas normal',
+                'desc' => 'Denyut Jantung Janin Bunda kurang ya. Silahkan periksa ke faskes ya Bun',
                 'is_normal' => false,
             ];
     }
@@ -103,13 +103,13 @@ trait GlobalDataHelper
         if($val >= $bottomThreshold && $val <= $topThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Normal',
+                'desc' => 'Selamat Bunda! Tinggi Fundus Uterus Bunda normal ya Bun.',
                 'is_normal' => true,
             ];
         else
             return [
                 'type' => 1,
-                'desc' => 'Tidak normal',
+                'desc' => 'TFU Bunda tidak normal ya Bun. Bisa konsultasikan ke dokter terdekat ya',
                 'is_normal' => false,
             ];
     }
@@ -118,13 +118,13 @@ trait GlobalDataHelper
         if($val >= $bottomThreshold && $val <= $topThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Normal',
+                'desc' => 'Selamat Bunda! Denyut Nadi bunda normal ya. Jadi Bunda tidak beresiko mengalami preeklamsia.',
                 'is_normal' => true,
             ];
         else
             return [
                 'type' => 1,
-                'desc' => 'Tidak normal',
+                'desc' => 'Bunda beresiko mengalami preeklamsia. Segera menghubungi dokter ya Bun',
                 'is_normal' => false,
             ];
     }
@@ -133,13 +133,13 @@ trait GlobalDataHelper
         if($val >= $bottomThreshold)
             return [
                 'type' => 1,
-                'desc' => 'Aktif',
+                'desc' => 'Selamat Bunda! Gerakan Bayi Bunda sudah aktif dan normal ya Bun',
                 'is_normal' => true,
             ];
         else
             return [
                 'type' => 2,
-                'desc' => 'Tidak Aktif',
+                'desc' => 'Gerakan Bayi Bunda kurang aktif. Segera konsultasi ke dokter ya Bun',
                 'is_normal' => false,
             ];
     }

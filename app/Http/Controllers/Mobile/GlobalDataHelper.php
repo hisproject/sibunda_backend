@@ -54,25 +54,25 @@ trait GlobalDataHelper
             if ($bmi < $normalThreshold) {
                 return [
                     'type' => 1,
-                    'desc' => 'Under Weight',
+                    'desc' => 'Bunda, hasil pengukuran berat badan bunda termasuk Under Weight ya Bun.',
                     'is_normal' => false,
                 ];
             } else if ($bmi >= $normalThreshold && $bmi < $overThreshold) {
                 return [
                     'type' => 2,
-                    'desc' => 'Normal Weight',
+                    'desc' => 'hasil pengukuran berat badan bunda termasuk Normal ya Bun.',
                     'is_normal' => true,
                 ];
             } else if ($bmi >= $overThreshold && $bmi < $obesityThreshold) {
                 return [
                     'type' => 3,
-                    'desc' => 'Over Weight',
+                    'desc' => 'hasil pengukuran berat badan bunda termasuk Over Weight ya Bun.',
                     'is_normal' => false,
                 ];
             } else if($bmi >= $obesityThreshold) {
                 return [
                     'type' => 4,
-                    'desc' => 'Obesitas',
+                    'desc' => 'hasil pengukuran berat badan bunda termasuk Obesitas ya Bun.',
                     'is_normal' => false,
                 ];
             }

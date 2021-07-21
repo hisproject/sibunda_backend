@@ -79,13 +79,19 @@ class CovidController extends Controller
 
             if($isPdp) {
                 $covidForm->result_is_normal = false;
-                $covidForm->result_desc = 'PDP';
+                $covidForm->result_desc = 'Terindikasi PDP';
+                $covidForm->result_long_desc = 'Bunda, dari hasil form, ' .
+                    (!$request->is_ibu ? 'bayi ' : '') . 'bunda masuk kategori Pasien Dalam Pengawasan';
             } else if($isOdp) {
                 $covidForm->result_is_normal = false;
-                $covidForm->result_desc = 'ODP';
+                $covidForm->result_desc = 'Terindikasi ODP';
+                $covidForm->result_long_desc = 'Bunda, dari hasil form, ' .
+                    (!$request->is_ibu ? 'bayi ' : '') . 'bunda masuk kategori Orang Dalam Pengawasan';
             } else {
                 $covidForm->result_is_normal = false;
-                $covidForm->result_desc = 'Normal';
+                $covidForm->result_desc = 'Terindikasi Normal';
+                $covidForm->result_long_desc = 'Bunda, dari hasil form, ' .
+                    (!$request->is_ibu ? 'bayi ' : '') . 'bunda masuk kategori Normal';
             }
 
             if(!$request->is_ibu) {

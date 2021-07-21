@@ -20,6 +20,7 @@ class CreateCovidFormTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->boolean('result_is_normal')->nullable();
             $table->string('result_desc')->nullable();
+            $table->string('result_long_desc')->nullable();
             $table->unsignedBigInteger('kia_anak_id')->nullable();
             $table->text('img_url')->nullable();
             $table->timestamps();

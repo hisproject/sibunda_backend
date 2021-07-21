@@ -15,6 +15,7 @@ class CovidForm extends Model
         'user_id',
         'result_is_normal',
         'result_desc',
-        'kia_anak_id'
+        'kia_anak_id',
+        'img_url'
     ];
 }

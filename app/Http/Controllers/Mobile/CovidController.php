@@ -88,8 +88,11 @@ class CovidController extends Controller
                 $covidForm->result_desc = 'Normal';
             }
 
-            if(!$request->is_ibu)
+            if(!$request->is_ibu) {
                 $covidForm->kia_anak_id = $request->anak_id;
+                $covidForm->img_url = 'https://sibunda.amirmb.com/res/img/covid/result_anak.png';
+            } else
+                $covidForm->img_url = 'https://sibunda.amirmb.com/res/img/covid/result_ibu.png';
 
             $covidForm->save();
 

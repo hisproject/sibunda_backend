@@ -54,7 +54,7 @@ trait GlobalDataHelper
             if ($bmi < $normalThreshold) {
                 return [
                     'type' => 1,
-                    'desc' => 'Under Wight',
+                    'desc' => 'Under Weight',
                     'is_normal' => false,
                 ];
             } else if ($bmi >= $normalThreshold && $bmi < $overThreshold) {

@@ -59,7 +59,7 @@ class KehamilankuController extends Controller
     }
 
     public function createWeeklyReport(Request $request) {
-        $data = $request->validate([
+        $request->validate([
             'week' => 'integer|required',
             'tanggal_periksa' => 'date|required',
             'tempat_periksa' => 'string|required',
@@ -84,12 +84,48 @@ class KehamilankuController extends Controller
             'trisemester_id' => 'integer|required'
         ]);
 
-        // file
-        if(!empty($request->usg)) {
+        DB::beginTransaction();
 
+        $checkupServiceStatement = ServiceStatementIbuHamilPeriksa::where('trisemester_id', $request->trisemester_id)
+                                                                    ->where('week', $request->week)->first();
+
+        if(empty($checkupServiceStatement))
+            $checkupServiceStatement = new ServiceStatementIbuHamilPeriksa();
+
+        $checkupServiceStatement->week = $request->week;
+        $checkupServiceStatement->tanggal_periksa = $request->tanggal_periksa;
+        $checkupServiceStatement->tempat_periksa = $request->tempat_periksa;
+        $checkupServiceStatement->nama_pemeriksa = $request->nama_pemeriksa;
+        $checkupServiceStatement->keluhan_bunda = $request->keluhan_bunda;
+        $checkupServiceStatement->tanggal_periksa_kembali = $request->tanggal_periksa_kembali;
+        $checkupServiceStatement->bb = $request->bb;
+        $checkupServiceStatement->kenaikan_bb = $request->kenaikan_bb;
+        $checkupServiceStatement->tb = $request->tb;
+        $checkupServiceStatement->tfu = $request->tfu;
+        $checkupServiceStatement->djj = $request->djj;
+        $checkupServiceStatement->sistolik = $request->sistolik;
+        $checkupServiceStatement->diastolik = $request->diastolik;
+        $checkupServiceStatement->map = $request->map;
+        $checkupServiceStatement->gerakan_bayi = $request->gerakan_bayi;
+        $checkupServiceStatement->resep_obat = $request->resep_obat;
+        $checkupServiceStatement->alergi_obat = $request->alergi_obat;
+        $checkupServiceStatement->riwayat_penyakit = $request->riwayat_penyakit;
+        $checkupServiceStatement->catatan_khusus = $request->catatan_khusus;
+        $checkupServiceStatement->trisemester_id = $request->trisemester_id;
+
+        if(!empty($request->jenis_kelamin))
+            $checkupServiceStatement->jenis_kelamin = $request->jenis_kelamin;
+        if(!empty($request->hpl))
+            $checkupServiceStatement->hpl = $request->hpl;
+
+        $checkupServiceStatement->save();
+
+        if(!empty($request->img_usg)) {
+            $checkupServiceStatement->saveImgUsg($request->img_usg);
+            $checkupServiceStatement->save();
         }
 
-        $checkupServiceStatement = ServiceStatementIbuHamilPeriksa::create($data);
+        DB::commit();
 
         return Constants::successResponseWithNewValue('data', [
             'weekly_trisemester_checkup_id' => $checkupServiceStatement->id

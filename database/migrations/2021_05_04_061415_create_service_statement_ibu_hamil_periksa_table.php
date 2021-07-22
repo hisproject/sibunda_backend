@@ -37,7 +37,9 @@ class CreateServiceStatementIbuHamilPeriksaTable extends Migration
             $table->string('alergi_obat');
             $table->string('riwayat_penyakit');
             $table->text('catatan_khusus');
+            $table->text('img_usg')->nullable();
             $table->unsignedBigInteger('trisemester_id');
+            $table->unique(['trisemester_id', 'week']);
             $table->timestamps();
             $table->foreign('trisemester_id')->references('id')->on('service_statement_ibu_hamil');
         });

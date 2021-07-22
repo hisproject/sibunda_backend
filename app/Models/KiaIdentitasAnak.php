@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\FileController;
+use App\Http\Traits\CanSaveFile;
+use http\Exception;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class KiaIdentitasAnak extends Model
 {
-    use HasFactory;
+    use HasFactory, CanSaveFile;
 
     protected $table = 'kia_identitas_anak';
     protected $fillable = [
@@ -26,7 +29,7 @@ class KiaIdentitasAnak extends Model
         'kia_ibu_id',
         'hpl',
         'hpht',
-        'is_janin'
+        'is_janin',
     ];
 
     public function trisemesters() {

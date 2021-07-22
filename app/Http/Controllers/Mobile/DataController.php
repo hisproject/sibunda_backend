@@ -142,8 +142,9 @@ class DataController extends Controller
 
             if(!empty($request->janin_hpl)) {
                 $janin = new KiaIdentitasAnak();
-                $janin->name =
+                $janin->nama = 'Janin 1';
                 $janin->hpl = $request->janin_hpl;
+                $janin->kia_ibu_id = $bundaData->id;
                 $janin->save();
             }
 

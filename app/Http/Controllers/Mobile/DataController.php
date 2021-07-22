@@ -139,6 +139,14 @@ class DataController extends Controller
                 $anakData->save();
                 $anakData->init_fundamental_data();
             }
+
+            if(!empty($request->janin_hpl)) {
+                $janin = new KiaIdentitasAnak();
+                $janin->name =
+                $janin->hpl = $request->janin_hpl;
+                $janin->save();
+            }
+
             DB::commit();
             return Constants::successResponseWithNewValue('user', $user);
         } catch (Exception $e) {
@@ -327,6 +335,10 @@ class DataController extends Controller
             DB::rollback();
             return Constants::errorResponse();
         }
+    }
+
+    public function createDataJanin() {
+
     }
 
     public function updateDataAnak(Request $request, $dataAnakId) {

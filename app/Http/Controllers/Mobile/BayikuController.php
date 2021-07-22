@@ -31,7 +31,7 @@ class BayikuController extends Controller
     public function getOverview() {
         try {
             $kiaIbu = Auth::user()->kia_ibu;
-            $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke')->with('years')
+            $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke', 'nik')->with('years')
                 ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', false)->get();
             foreach ($anak as $a) {
                 $a->age = $this->getChildAge($a->tanggal_lahir ?? null);

@@ -135,6 +135,7 @@ class DataController extends Controller
                 $anakData->no_kohort = $this->nullableVal($anak['no_kohort']);
                 $anakData->no_catatan_medik = $this->nullableVal($anak['no_catatan_medik']);
                 $anakData->kia_ibu_id = $bundaData->id;
+                $anakData->is_janin = false;
                 $anakData->save();
                 $anakData->init_fundamental_data();
             }

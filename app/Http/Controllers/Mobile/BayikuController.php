@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AnakParamBbPb;
 use App\Models\AnakParamBbUsia;
 use App\Models\AnakParamImt;
+use App\Models\AnakParamKms;
 use App\Models\AnakParamLingkarKepala;
 use App\Models\AnakParamPbUsia;
 use App\Models\AnakParamPerkembangan;
@@ -311,6 +312,41 @@ class BayikuController extends Controller
     }
 
     // graphs
+    public function getKmsGraphData($kiaAnakId) {
+        try {
+            $isLaki = KiaIdentitasAnak::find($kiaAnakId)->jenis_kelamin == 'L';
+            $bbUsiaParam = AnakParamKms::where('is_laki', $isLaki)->orderBy('month')->get();
+            $insertedData = $this->getBayiAnakData('bb', $kiaAnakId);
+            $res = [];
+            $currDataIndex = 0;
+            $currDataLen = count($insertedData);
+
+            foreach ($bbUsiaParam as $param) {
+                $data = [
+                    'month' => (int) $param->month,
+                    'minus_3_sd' => (double) $param->minus_3_sd,
+                    'minus_2_sd' => (double) $param->minus_2_sd,
+                    'minus_1_sd' => (double) $param->minus_1_sd,
+                    'median' => (double) $param->median,
+                    'plus_1_sd' => (double) $param->plus_1_sd,
+                    'plus_2_sd' => (double) $param->plus_2_sd,
+                    'plus_3_sd' => (double) $param->plus_3_sd
+                ];
+
+                if ($currDataIndex < $currDataLen &&
+                    $param->month == $insertedData[$currDataIndex]->month)
+                    $data['input'] = (double) $insertedData[$currDataIndex++]->bb;
+                else
+                    $data['input'] = -1;
+
+                array_push($res, $data);
+            }
+
+            return $res;
+        } catch (\Exception $e) {
+            return [];
+        }
+    }
 
     public function getBbUsiaGraphData($kiaAnakId) {
         try {

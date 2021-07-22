@@ -146,6 +146,7 @@ class DataController extends Controller
                 $janin->hpl = $request->janin_hpl;
                 $janin->kia_ibu_id = $bundaData->id;
                 $janin->save();
+                $janin->init_fundamental_data();
             }
 
             DB::commit();

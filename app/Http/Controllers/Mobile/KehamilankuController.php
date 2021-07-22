@@ -132,6 +132,18 @@ class KehamilankuController extends Controller
         ]);
     }
 
+    public function createUsg(Request $request) {
+        $request->validate([
+            'weekly_trisemester_checkup_id' => 'integer|required',
+            'img_usg' => 'file|required'
+        ]);
+
+        $data = ServiceStatementIbuHamilPeriksa::find($request->weekly_trisemester_checkup_id);
+        $data->saveImgUsg($request->img_usg);
+
+        return Constants::successResponse();
+    }
+
     public function getWeeklyReport(Request $request) {
         $request->validate([
             'weekly_trisemester_checkup_id' => 'integer|required'

@@ -37,10 +37,12 @@ Route::prefix('auth')->group(function (){
 });
 
 Route::prefix('data')->group(function() {
+    // without auth
+    Route::get('kota', [DataController::class, 'getKota']);
+
     // with auth
     Route::middleware('auth:api')->group(function () {
         Route::get('bio', [DataController::class, 'getBioData']);
-        Route::get('kota', [DataController::class, 'getKota']);
         Route::post('identitas-anak', [DataController::class, 'createDataAnak']);
         Route::post('identitas-ibu', [DataController::class, 'createDataIbu']);
         Route::post('identitas-ayah', [DataController::class, 'createDataAyah']);
@@ -54,6 +56,7 @@ Route::prefix('kehamilanku')->group(function() {
    Route::middleware('auth:api')->group(function() {
        Route::get('overview', [KehamilankuController::class, 'getOverview']);
        Route::post('create-weekly-report', [KehamilankuController::class, 'createWeeklyReport']);
+       Route::post('create-weekly-report/usg', [KehamilankuController::class, 'createUsg']);
        Route::post('show-weekly-report', [KehamilankuController::class, 'getWeeklyReport']);
        Route::post('show-weekly-report-analysis', [KehamilankuController::class, 'getWeeklyReportAnalysis']);
        Route::get('immunization', [KehamilankuController::class, 'getImmunizationData']);

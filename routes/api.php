@@ -101,6 +101,8 @@ Route::prefix('dashboard')->group(function() {
        Route::get('index', [DashboardController::class, 'getHomeData']);
        Route::get('notifications', [DashboardController::class, 'getNotifications']);
        Route::get('messages', [DashboardController::class, 'getMessages']);
+       Route::get('tips-dan-info/carousel', [DashboardController::class, 'getTipsDanInfo']);
+        Route::get('tips-dan-info/latest', [DashboardController::class, 'getTipsDanInfo']);
     });
 });
 

@@ -7,6 +7,14 @@
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/GlobalDataHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/GlobalDataHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/TipsDanInfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TipsDanInfo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utils/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_07_22_132343_create_tips_dan_info_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_07_22_132343_create_tips_dan_info_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/TipDanInfoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TipDanInfoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +258,7 @@
       <workItem from="1626799985370" duration="6153000" />
       <workItem from="1626874966889" duration="6221000" />
       <workItem from="1626958859686" duration="15875000" />
-      <workItem from="1627049133668" duration="3411000" />
+      <workItem from="1627049133668" duration="13193000" />
     </task>
     <servers />
   </component>
@@ -274,7 +282,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Mobile/GlobalDataHelper.php</url>
-          <line>50</line>
+          <line>69</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

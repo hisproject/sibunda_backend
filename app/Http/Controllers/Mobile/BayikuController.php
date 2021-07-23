@@ -35,7 +35,7 @@ class BayikuController extends Controller
             $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke', 'nik')->with('years')
                 ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', false)->get();
             foreach ($anak as $a) {
-                $a->age = $this->getChildAge($a->tanggal_lahir ?? null);
+                $a->age = $this->getChildAgeDesc($a->tanggal_lahir ?? null);
             }
 
             return Constants::successResponseWithNewValue('data', $anak);
@@ -156,26 +156,36 @@ class BayikuController extends Controller
                                         ->first();
 
         $res['bb_usia_desc'] = $this->getAnakuAnalysisDesc(
-                                        $anakParamBbUsia->minus_2_sd ?? -1,
-                                        $anakParamBbUsia->plus_1_sd ?? -1,
-                                        $monthData->bb ?? -1);
+            $anakParamBbUsia->minus_2_sd ?? -1,
+            $anakParamBbUsia->plus_1_sd ?? -1,
+            $monthData->bb ?? -1,
+            'Selamat Bunda! Berat badan bayi normal ya Bun menurut usia bayi.',
+            'Bunda, berat badan bayi tidak normal ya Bun menurut usia bayi.');
 
         $res['pb_usia_desc'] = $this->getAnakuAnalysisDesc(
             $anakParamPbUsia->minus_2_sd ?? -1,
             $anakParamPbUsia->plus_3_sd ?? -1,
-            $monthData->tb ?? -1);
+            $monthData->tb ?? -1,
+            'Selamat Bunda! Panjang badan atau tinggi badan menurut usia bayi normal.',
+            'Bunda, panjang badan atau tinggi badan menurut usia bayi tidak normal.');
         $res['bb_pb_desc'] = $this->getAnakuAnalysisDesc(
             $anakParamBbPb->minus_2_sd ?? -1,
             $anakParamBbPb->plus_1_sd ?? -1,
-            $monthData->bb ?? -1);
+            $monthData->bb ?? -1,
+            'Selamat Bunda! Berat badan bayi menurut panjang/tinggi badan normal.',
+            'Bunda, berat badan bayi menurut panjang/tinggi badan tidak normal.');
         $res['lingkar_kepala_desc'] = $this->getAnakuAnalysisDesc(
             $anakParamLingkarKepala->minus_2_sd ?? -1,
             $anakParamLingkarKepala->plus_1_sd ?? -1,
-            $monthData->lingkar_kepala ?? -1);
+            $monthData->lingkar_kepala ?? -1,
+            'Selamat Bunda! Ukuran lingkar kepala bayi  normal menurut usia bayi.',
+        'Bunda, ukuran lingkar kepala bayi tidak normal menurut usia bayi.');
         $res['imt_desc'] = $this->getAnakuAnalysisDesc(
             $anakParamImt->minus_2_sd ?? -1,
             $anakParamImt->plus_1_sd ?? -1,
-            $monthData->imt ?? -1);
+            $monthData->imt ?? -1,
+            'Selamat Bunda! Indeks massa tubuh bayi normal ya Bun',
+            'Bunda, indeks massa tubuh bayi tidak normal ya Bun');
 
         return Constants::successResponseWithNewValue('data', $res);
     }
@@ -344,9 +354,32 @@ class BayikuController extends Controller
                 array_push($res, $data);
             }
 
-            return $res;
+            $desc = null;
+            try {
+                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
+                $desc = $this->getBayiAnakGraphDesc(
+                    'bb',
+                    $age,
+                    $kiaAnakId,
+                    $paramByAge->minus_2_sd ?? -1,
+                    $paramByAge->plus_1_sd ?? -1,
+                    'Selamat Bunda! Berat badan bayi dan kenaikannya normal ya Bun menurut usia bayi.',
+                    'Bunda, berat badan bayi dan kenaikannya tidak normal ya Bun');
+            } catch (\Exception $e) {}
+
+            $resData['data'] = $res;
+            $resData['desc'] = $desc;
+
+            return Constants::successResponseWithNewValue('data', $resData);
         } catch (\Exception $e) {
-            return [];
+            $resData['data'] = [];
+            $resData['desc'] = [
+                'desc' => null,
+                'is_normal' => false
+            ];
+            return Constants::successResponseWithNewValue('data', $resData);
         }
     }
 
@@ -380,9 +413,32 @@ class BayikuController extends Controller
                 array_push($res, $data);
             }
 
-            return $res;
+            $desc = null;
+            try {
+                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
+                $desc = $this->getBayiAnakGraphDesc(
+                    'bb',
+                    $age,
+                    $kiaAnakId,
+                    $paramByAge->minus_2_sd ?? -1,
+                    $paramByAge->plus_1_sd ?? -1,
+                    'Selamat Bunda! Berat badan bayi normal ya Bun menurut usia bayi.',
+                    'Bunda, berat badan bayi tidak normal ya Bun menurut usia bayi.');
+            } catch (\Exception $e) {}
+
+            $resData['data'] = $res;
+            $resData['desc'] = $desc;
+
+            return Constants::successResponseWithNewValue('data', $resData);
         } catch (\Exception $e) {
-            return [];
+            $resData['data'] = [];
+            $resData['desc'] = [
+                'desc' => null,
+                'is_normal' => false
+            ];
+            return Constants::successResponseWithNewValue('data', $resData);
         }
     }
 
@@ -416,9 +472,32 @@ class BayikuController extends Controller
                 array_push($res, $data);
             }
 
-            return $res;
+            $desc = null;
+            try {
+                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
+                $desc = $this->getBayiAnakGraphDesc(
+                    'tb',
+                    $age,
+                    $kiaAnakId,
+                    $paramByAge->minus_2_sd ?? -1,
+                    $paramByAge->plus_1_sd ?? -1,
+                    'Selamat Bunda! Panjang badan atau tinggi badan normal ya Bun menurut usia bayi.',
+                    'Bunda, panjang badan atau tinggi badan menurut usia bayi tidak normal.');
+            } catch (\Exception $e) {}
+
+            $resData['data'] = $res;
+            $resData['desc'] = $desc;
+
+            return Constants::successResponseWithNewValue('data', $resData);
         } catch (\Exception $e) {
-            return [];
+            $resData['data'] = [];
+            $resData['desc'] = [
+                'desc' => null,
+                'is_normal' => false
+            ];
+            return Constants::successResponseWithNewValue('data', $resData);
         }
     }
 
@@ -464,9 +543,32 @@ class BayikuController extends Controller
                 array_push($res, $data);
             }
 
-            return $res;
+            $desc = null;
+            try {
+                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
+                $desc = $this->getBayiAnakGraphDesc(
+                    'tb',
+                    $age,
+                    $kiaAnakId,
+                    $paramByAge->minus_2_sd ?? -1,
+                    $paramByAge->plus_1_sd ?? -1,
+                    'Selamat Bunda! Panjang badan atau tinggi badan normal ya Bun menurut usia bayi.',
+                    'Bunda, panjang badan atau tinggi badan menurut usia bayi tidak normal.');
+            } catch (\Exception $e) {}
+
+            $resData['data'] = $res;
+            $resData['desc'] = $desc;
+
+            return Constants::successResponseWithNewValue('data', $resData);
         } catch (\Exception $e) {
-            return [];
+            $resData['data'] = [];
+            $resData['desc'] = [
+                'desc' => null,
+                'is_normal' => false
+            ];
+            return Constants::successResponseWithNewValue('data', $resData);
         }
     }
 
@@ -500,9 +602,32 @@ class BayikuController extends Controller
                 array_push($res, $data);
             }
 
-            return $res;
+            $desc = null;
+            try {
+                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
+                $desc = $this->getBayiAnakGraphDesc(
+                    'lingkar_kepala',
+                    $age,
+                    $kiaAnakId,
+                    $paramByAge->minus_2_sd ?? -1,
+                    $paramByAge->plus_1_sd ?? -1,
+                    'Selamat Bunda! Ukuran lingkar kepala bayi normal ya Bun menurut usia bayi.',
+                    'Bunda, ukuran lingkar kepala bayi tidak normal menurut usia bayi.');
+            } catch (\Exception $e) {}
+
+            $resData['data'] = $res;
+            $resData['desc'] = $desc;
+
+            return Constants::successResponseWithNewValue('data', $resData);
         } catch (\Exception $e) {
-            return [];
+            $resData['data'] = [];
+            $resData['desc'] = [
+                'desc' => null,
+                'is_normal' => false
+            ];
+            return Constants::successResponseWithNewValue('data', $resData);
         }
     }
 
@@ -536,14 +661,41 @@ class BayikuController extends Controller
                 array_push($res, $data);
             }
 
-            return $res;
+            $desc = null;
+            try {
+                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
+                $desc = $this->getBayiAnakGraphDesc(
+                    'imt',
+                    $age,
+                    $kiaAnakId,
+                    $paramByAge->minus_2_sd ?? -1,
+                    $paramByAge->plus_1_sd ?? -1,
+                    'Selamat Bunda! Indeks Masa Tubuh bayi normal ya Bun menurut usia bayi.',
+                    'Bunda, Indeks Masa Tubuh bayi tidak normal ya Bun');
+            } catch (\Exception $e) {}
+
+            $resData['data'] = $res;
+            $resData['desc'] = $desc;
+
+            return Constants::successResponseWithNewValue('data', $resData);
         } catch (\Exception $e) {
-            return [];
+            $resData['data'] = [];
+            $resData['desc'] = [
+                'desc' => null,
+                'is_normal' => false
+            ];
+            return Constants::successResponseWithNewValue('data', $resData);
         }
     }
 
     public function getPerkembanganGraphData($kiaAnakId) {
         $data = [];
+
+        $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+        $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+        $currInput = 0;
 
         for($i = 1; $i <= 72; $i ++) {
             $count = DB::selectOne('select count(p.id) from service_statement_anak_monthly_checkup m
@@ -556,8 +708,21 @@ class BayikuController extends Controller
                 'm_threshold' => 7,
                 'input' => $count
             ]);
+
+            if($age == $i)
+                $currInput = $count;
         }
 
-        return $data;
+        $desc = $this->getAnakuAnalysisDesc(
+            7,
+            10,
+            $currInput,
+            'Selamat Bunda! Perkembangan bayi bunda normal ya Bun',
+            'Bunda, Perkembangan bayi tidak normal ya Bun');
+
+        $resData['data'] = $data;
+        $resData['desc'] = $desc;
+
+        return Constants::successResponseWithNewValue('data', $data);
     }
 }

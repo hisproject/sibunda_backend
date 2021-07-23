@@ -213,9 +213,9 @@ class KehamilankuController extends Controller
 
     // Graphs
 
-    public function getTfuGraphData() {
+    public function getTfuGraphData($kiaAnakId) {
         $tfuParams = TfuGrowthParam::orderBy('week')->get();
-        $insertedData = $this->getPregnancyData('tfu');
+        $insertedData = $this->getPregnancyData('tfu', $kiaAnakId);
         $res = [];
         $currDataIndex = 0;
         $currDataLen = count($insertedData);
@@ -237,12 +237,28 @@ class KehamilankuController extends Controller
             array_push($res, $data);
         }
 
-        return $res;
+        $tfuDesc = null;
+        try {
+            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $paramByAge = TfuGrowthParam::where('week', $age)->first();
+            $tfuDesc = $this->getPregnancyGraphDesc('tfu', $age, $kiaAnakId,
+                $paramByAge->bottom_threshold,
+                $paramByAge->top_threshold,
+                'Selamat Bunda! TFU Bunda normal ya, Bun',
+                'TFU Bunda tidak normal ya Bun. Bisa konsultasikan ke dokter terdekat ya'
+            );
+        } catch (\Exception $e) {}
+
+        $resData['data'] = $res;
+        $resData['desc'] = $tfuDesc;
+
+        return Constants::successResponseWithNewValue('data', $resData);
     }
 
-    public function getDjjGraphData() {
+    public function getDjjGraphData($kiaAnakId) {
         $djjParams = DjjGrowthParam::orderBy('week')->get();
-        $insertedData = $this->getPregnancyData('djj');
+        $insertedData = $this->getPregnancyData('djj', $kiaAnakId);
         $res = [];
         $currDataIndex = 0;
         $currDataLen = count($insertedData);
@@ -263,12 +279,28 @@ class KehamilankuController extends Controller
             array_push($res, $data);
         }
 
-        return $res;
+        $djjDesc = null;
+        try {
+            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $paramByAge = DjjGrowthParam::where('week', $age)->first();
+            $djjDesc = $this->getPregnancyGraphDesc('djj', $age, $kiaAnakId,
+                $paramByAge->bottom_threshold,
+                $paramByAge->top_threshold,
+                'Selamat Bunda! Denyut Jantung Janin Bunda normal ya, Bun',
+                'Denyut Jantung Janin Bunda kurang ya. Silahkan periksa ke faskes ya Bun'
+            );
+        } catch (\Exception $e) {}
+
+        $resData['data'] = $res;
+        $resData['desc'] = $djjDesc;
+
+        return Constants::successResponseWithNewValue('data', $resData);
     }
 
-    public function getMapGraphData() {
+    public function getMapGraphData($kiaAnakId) {
         $mapParams = MomPulseGrowthParam::orderBy('week')->get();
-        $insertedData = $this->getPregnancyData('map');
+        $insertedData = $this->getPregnancyData('map', $kiaAnakId);
         $res = [];
         $currDataIndex = 0;
         $currDataLen = count($insertedData);
@@ -288,12 +320,28 @@ class KehamilankuController extends Controller
             array_push($res, $data);
         }
 
-        return $res;
+        $mapDesc = null;
+        try {
+            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $paramByAge = MomPulseGrowthParam::where('week', $age)->first();
+            $mapDesc = $this->getPregnancyGraphDesc('map', $age, $kiaAnakId,
+                -1,
+                $paramByAge->top_threshold,
+                'Selamat Bunda! MAP Bunda normal ya, Bun',
+                'Bunda beresiko mengalami preeklamsia. Segera menghubungi dokter ya Bun'
+            );
+        } catch (\Exception $e) {}
+
+        $resData['data'] = $res;
+        $resData['desc'] = $mapDesc;
+
+        return Constants::successResponseWithNewValue('data', $resData);
     }
 
-    public function getWeightGraphData() {
+    public function getWeightGraphData($kiaAnakId) {
         $weightParams = WeightGrowthParam::orderBy('week')->get();
-        $insertedData = $this->getPregnancyData('bb');
+        $insertedData = $this->getPregnancyData('bb', $kiaAnakId);
         $res = [];
         $currDataIndex = 0;
         $currDataLen = count($insertedData);
@@ -315,6 +363,22 @@ class KehamilankuController extends Controller
             array_push($res, $data);
         }
 
-        return $res;
+        $weightDesc = null;
+        try {
+            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
+            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $paramByAge = WeightGrowthParam::where('week', $age)->first();
+            $weightDesc = $this->getPregnancyGraphDesc('bb', $age, $kiaAnakId,
+                $paramByAge->bottom_normal_threshold,
+                $paramByAge->bottom_over_threshold - 0.1,
+                'Selamat Bunda! Berat badan Bunda normal ya, Bun',
+                'Berat Bunda tidak normal ya Bun. Bisa konsultasikan ke dokter terdekat ya'
+            );
+        } catch (\Exception $e) {}
+
+        $resData['data'] = $res;
+        $resData['desc'] = $weightDesc;
+
+        return Constants::successResponseWithNewValue('data', $resData);
     }
 }

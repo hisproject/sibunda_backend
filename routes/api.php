@@ -61,10 +61,10 @@ Route::prefix('kehamilanku')->group(function() {
        Route::post('show-weekly-report-analysis', [KehamilankuController::class, 'getWeeklyReportAnalysis']);
        Route::get('immunization', [KehamilankuController::class, 'getImmunizationData']);
        Route::post('immunization', [KehamilankuController::class, 'createImmunizationData']);
-       Route::get('graph/tfu', [KehamilankuController::class, 'getTfuGraphData']);
-       Route::get('graph/djj', [KehamilankuController::class, 'getDjjGraphData']);
-       Route::get('graph/map', [KehamilankuController::class, 'getMapGraphData']);
-       Route::get('graph/mom-weight', [KehamilankuController::class, 'getWeightGraphData']);
+       Route::get('graph/tfu/{kiaAnakId}', [KehamilankuController::class, 'getTfuGraphData']);
+       Route::get('graph/djj/{kiaAnakId}', [KehamilankuController::class, 'getDjjGraphData']);
+       Route::get('graph/map/{kiaAnakId}', [KehamilankuController::class, 'getMapGraphData']);
+       Route::get('graph/mom-weight/{kiaAnakId}', [KehamilankuController::class, 'getWeightGraphData']);
    }) ;
 });
 
@@ -106,7 +106,8 @@ Route::prefix('dashboard')->group(function() {
        Route::get('notifications', [DashboardController::class, 'getNotifications']);
        Route::get('messages', [DashboardController::class, 'getMessages']);
        Route::get('tips-dan-info/carousel', [DashboardController::class, 'getTipsDanInfo']);
-        Route::get('tips-dan-info/latest', [DashboardController::class, 'getTipsDanInfo']);
+       Route::get('tips-dan-info/latest', [DashboardController::class, 'getTipsDanInfo']);
+       Route::get('tips-dan-info/{id}', [DashboardController::class, 'getTipsDetail']);
     });
 });
 

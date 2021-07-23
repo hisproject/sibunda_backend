@@ -20,7 +20,7 @@ class DashboardController extends Controller
             'age' => '27 Tahun'
         ];
         $data['kesehatan_keluarga'] = FamilyHealthTips::all();
-        $data['tips_dan_info'] = TipsDanInfo::all();
+        $data['tips_dan_info'] = TipsDanInfo::with('tips_category')->get();
 
         return Constants::successResponseWithNewValue('data', $data);
     }
@@ -46,7 +46,11 @@ class DashboardController extends Controller
     }
 
     public function getTipsDanInfo() {
-        $data = TipsDanInfo::all();
+        $data = TipsDanInfo::with('tips_category')->get();
         return Constants::successResponseWithNewValue('data', $data);
+    }
+
+    public function getTipsDetail($id) {
+        return TipsDanInfo::where('id', $id)->with('tips_category')->first();
     }
 }

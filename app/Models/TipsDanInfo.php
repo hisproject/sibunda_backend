@@ -12,10 +12,17 @@ class TipsDanInfo extends Model
     protected $fillable = [
         'img_url',
         'desc',
-        'user_id'
+        'date',
+        'content',
+        'user_id',
+        'tips_category_id'
     ];
 
     public function user() {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function tips_category() {
+        return $this->belongsTo(TipsCategory::class, 'tips_category_id');
     }
 }

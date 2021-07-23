@@ -16,9 +16,13 @@ class CreateTipsDanInfoTable extends Migration
         Schema::create('tips_dan_info', function (Blueprint $table) {
             $table->id();$table->text('img_url')->nullable();
             $table->string('desc');
+            $table->date('date');
+            $table->longText('content');
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedSmallInteger('tips_category_id');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('tips_category_id')->references('id')->on('tips_category');
         });
     }
 

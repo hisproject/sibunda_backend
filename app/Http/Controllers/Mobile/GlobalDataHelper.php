@@ -10,12 +10,24 @@ use Illuminate\Support\Facades\DB;
 
 trait GlobalDataHelper
 {
-    // return description string
-    public function getChildAge($bornDateStr) {
+    public function getChildAge($bornDateStr, $inMonth = false) {
         try {
             $nowDate = Carbon::now();
             $bornDate = Carbon::parse($bornDateStr);
-            $days = $bornDate->diffInDays($nowDate);
+
+            if($inMonth)
+                return $bornDate->diffInWeeks($nowDate);
+
+            return $bornDate->diffInDays($nowDate);
+        } catch (\Exception $e) {
+            return 0;
+        }
+    }
+
+    // return description string
+    public function getChildAgeDesc($bornDateStr) {
+        try {
+            $days = $this->getChildAge($bornDateStr);
 
             if($days > 30) {
                 if(($days % 30) > 7) {
@@ -41,10 +53,17 @@ trait GlobalDataHelper
         return $week;
     }
 
+    public function getHpl($week, $kiaAnakId) {
+        return DB::selectOne('select ka.hpl from service_statement_ibu_hamil_periksa c
+            join service_statement_ibu_hamil t on t.id = c.trisemester_id
+            join kia_identitas_anak ka on ka.id = t.kia_anak_id
+            where c.week = ' . $week . ' and ka.id = ' . $kiaAnakId);
+    }
+
     public function getRemainingPregnancyDays($hpl) {
         $nowDate = Carbon::now();
         $hplDate = Carbon::parse($hpl);
-        return $hplDate->diffInDays();
+        return $hplDate->diffInDays($nowDate);
     }
 
     // analysis result
@@ -144,12 +163,30 @@ trait GlobalDataHelper
             ];
     }
 
-
     public function getPregnancyData($prop, $kiaAnakId = 1) {
         $q = 'select sp.' . $prop . ', sp.week from service_statement_ibu_hamil_periksa sp
                 join service_statement_ibu_hamil s on s.id = sp.trisemester_id
                 where s.kia_anak_id = ' . $kiaAnakId . ' order by sp.week';
         return DB::select($q);
+    }
+
+    public function getPregnancyGraphDesc($prop, $week, $kiaAnakId, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
+        $data = DB::selectOne('select c.' . $prop . ' from service_statement_ibu_hamil_periksa c
+                join service_statement_ibu_hamil t on t.id = c.trisemester_id
+                where c.week = ' . $week . ' and t.kia_anak_id = ' . $kiaAnakId);
+
+        if(empty($data))
+           return [
+               'desc' => null,
+               'is_normal' => false
+           ];
+
+        $isNormal = $data->$prop >= $bottomThreshold && $data->prop <= $topThreshold;
+
+        return [
+            'desc' => ($isNormal ? $normalDesc : $abnormalDesc),
+            'is_normal' => $isNormal
+        ];
     }
 
     public function getBayiAnakData($prop, $kiaAnakId = 2) {
@@ -158,6 +195,20 @@ trait GlobalDataHelper
                 where sy.kia_anak_id = ' . $kiaAnakId . ' order by sp.month';
 
         return DB::select($q);
+    }
+
+    public function getBayiAnakGraphDesc($prop, $month, $kiaAnakId, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
+        $data = DB::selectOne('select c.' . $prop . ' from service_statement_anak_monthly_checkup c
+                join service_statement_anak_years t on t.id = c.year_id
+                where c.month = ' . $month . ' and t.kia_anak_id = ' . $kiaAnakId);
+
+        if(empty($data))
+            return [
+                'desc' => null,
+                'is_normal' => false
+            ];
+
+        return $this->getAnakuAnalysisDesc($bottomThreshold, $topThreshold, $data->$prop, $normalDesc, $abnormalDesc);
     }
 
     public function getBayiAnakDataByTb($prop, $kiaAnakId = 2) {
@@ -169,15 +220,15 @@ trait GlobalDataHelper
     }
 
     // anaku analysis
-    public function getAnakuAnalysisDesc($bottomThreshold, $topThreshold, $val) {
+    public function getAnakuAnalysisDesc($bottomThreshold, $topThreshold, $val, $normalDesc, $abnormalDesc) {
         if($val >= $bottomThreshold && $val <= $topThreshold)
             return [
-                'desc' => 'Normal',
+                'desc' => $normalDesc,
                 'is_normal' => true
             ];
 
         return [
-            'desc' => 'Tidak Normal',
+            'desc' => $abnormalDesc,
             'is_normal' => false
         ];
     }

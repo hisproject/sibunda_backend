@@ -26,6 +26,14 @@ class Constants
     const USER_GROUP_BUNDA = 2;
     const USER_GROUP_BIDAN = 3;
 
+    const TYPE_GRAPH_ANAK_PERKEMBANGAN = 0;
+    const TYPE_GRAPH_ANAK_KMS = 1;
+    const TYPE_GRAPH_ANAK_BB_UMUR = 2;
+    const TYPE_GRAPH_ANAK_PB_UMUR = 3;
+    const TYPE_GRAPH_ANAK_BB_PB = 4;
+    const TYPE_GRAPH_ANAK_LINGKAR_KEPALA = 5;
+    const TYPE_GRAPH_ANAK_IMT = 6;
+
     public static function successResponse($message = 'response success') {
         return Response::json(['message' => $message, 'status' => 'success', 'code' => self::RESPONSE_SUCCESS], self::RESPONSE_SUCCESS);
     }

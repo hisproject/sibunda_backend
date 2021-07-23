@@ -118,13 +118,15 @@ class BayikuController extends Controller
 
     public function getMonthlyReportAnalysis(Request $request) {
         $request->validate([
-            'month_id' => 'integer|required'
+            'month' => 'integer|required',
+            'year_id' => 'integer|required'
         ]);
 
-        $monthData = ServiceStatementAnakMonthlyCheckup::find($request->month_id);
+        $monthData = ServiceStatementAnakMonthlyCheckup::where('month', $request->month)
+            ->where('year_id', $request->year_id)->first();
 
         if(empty($monthData))
-            return Constants::errorResponse('no matching data for month_id : ' . $request->month_id);
+            return Constants::errorResponse('no matching data for month : ' . $request->month);
 
         $isLaki = $monthData->year->kia_identitas_anak->jenis_kelamin == 'L';
         $tb = $monthData->tb;

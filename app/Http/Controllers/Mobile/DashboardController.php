@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     //
+    use GlobalDataHelper;
+
     public function getHomeData() {
         $data['header'] = [
             'img_url' => 'https://cdn.popbela.com/content-images/post/20180626/18095091-1852239135027406-6035530276199727104-n-b2395d94b5924b9c4f5e6a866acf7c99_750x500.jpg',
             'name' => 'Andini Putri',
             'age' => '27 Tahun'
         ];
-        $data['kesehatan_keluarga'] = FamilyHealthTips::all();
+        $data['kesehatan_keluarga'] = $this->getHealthOverview();
         $data['tips_dan_info'] = TipsDanInfo::with('tips_category')->get();
 
         return Constants::successResponseWithNewValue('data', $data);

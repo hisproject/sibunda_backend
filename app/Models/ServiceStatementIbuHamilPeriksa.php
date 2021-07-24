@@ -39,6 +39,10 @@ class ServiceStatementIbuHamilPeriksa extends Model
         'img_usg'
     ];
 
+    public function trisemester() {
+        return $this->belongsTo(ServiceStatementIbuHamil::class, 'trisemester_id');
+    }
+
     public function saveImgUsg($img) {
         $path = FileController::PATH_IMG_USG;
         $fileName = 'img-' . $this->id;

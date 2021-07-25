@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sibunda_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sibunda_backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/GlobalDataHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/GlobalDataHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ServiceStatementIbuHamilPeriksa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ServiceStatementIbuHamilPeriksa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Notification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Notification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_06_01_162342_create_notifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_06_01_162342_create_notifications_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/NotificationSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/NotificationSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +76,10 @@
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
@@ -153,6 +157,11 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/vendor/plokko/laravel-firebase" />
+      <path value="$PROJECT_DIR$/vendor/plokko/firebase-php" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1rAULunClqOpnc4WbZWOHCnFcvP" />
@@ -165,18 +174,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\storage\app" />
       <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\app\Http" />
       <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\app\Http\Controllers" />
       <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\public\res\img\questions" />
       <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\database\migrations" />
-      <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\storage" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.Run App">
@@ -253,7 +262,8 @@
       <workItem from="1626874966889" duration="6221000" />
       <workItem from="1626958859686" duration="15875000" />
       <workItem from="1627049133668" duration="13344000" />
-      <workItem from="1627134570506" duration="10265000" />
+      <workItem from="1627134570506" duration="12883000" />
+      <workItem from="1627215082306" duration="10236000" />
     </task>
     <servers />
   </component>

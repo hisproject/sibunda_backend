@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Utils\Constants;
 use App\Utils\Traits\Util;
 use http\Exception;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -126,7 +127,7 @@ class DataController extends Controller
                 $anakData->anak_ke = $this->nullableVal($anak['anak_ke']);
                 $anakData->no_akte_kelahiran = $this->nullableVal($anak['no_akte_kelahiran']);
                 $anakData->nik = $this->nullableVal($anak['nik']);
-                $anakData->gol_darah = $this->nullableVal($anak['jenis_kelamin']);
+                $anakData->jenis_kelamin = $this->nullableVal($anak['jenis_kelamin']);
                 $anakData->gol_darah = $this->nullableVal($anak['gol_darah']);
                 $anakData->tempat_lahir = $this->nullableVal($anak['tempat_lahir']);
                 $anakData->tanggal_lahir = $this->nullableVal($anak['tanggal_lahir']);
@@ -308,31 +309,53 @@ class DataController extends Controller
     }
 
     public function createDataAnak(Request $request) {
-        $validation = $this->validate($request, [
-            'nama' => 'required',
-            'anak_ke' => 'integer|required',
-            'no_akte_kelahiran' => 'string',
-            'nik' => 'string',
-            'gol_darah' => 'string|max:2',
-            'tempat_lahir' => 'integer',
-            'tanggal_lahir' => 'date',
-            'no_jkn' => 'string',
-            'tanggal_berlaku_jkn' => 'date',
-            'no_kohort' => 'string',
-            'no_catatan_medik' => 'string'
+        $request->validate([
+            'ibu_id' => 'int|required',
+            'is_janin' => 'int|required',
+            'nama' => 'string|required_if:is_janin,==,0',
+            'anak_ke' => 'integer|required_if:is_janin,==,0',
+            'no_akte_kelahiran' => 'string|required_if:is_janin,==,0',
+            'nik' => 'string|required_if:is_janin,==,0',
+            'jenis_kelamin' => 'string|max:1|required_if:is_janin,==,0',
+            'gol_darah' => 'string|max:2|required_if:is_janin,==,0',
+            'tempat_lahir' => 'integer|required_if:is_janin,==,0',
+            'tanggal_lahir' => 'date|required_if:is_janin,==,0',
+            'no_jkn' => 'string|required_if:is_janin,==,0',
+            'tanggal_berlaku_jkn' => 'date|required_if:is_janin,==,0',
+            'no_kohort' => 'string|required_if:is_janin,==,0',
+            'no_catatan_medik' => 'string|required_if:is_janin,==,0',
+            'janin_hpl' => 'string|required_if:is_janin,==,1',
         ]);
 
         DB::beginTransaction();
         try {
-            $kia = Kia::where('user_id', Auth::id())->first();
-
-            if(empty($kia->kia_anak_id)) {
-                $kiaIdentitasAnakId = KiaIdentitasAnak::create($validation)->id;
-                $kia->kia_anak_id = $kiaIdentitasAnakId;
-                $kia->save();
+            $anakData = new KiaIdentitasAnak();
+            if(!$request->is_janin) {
+                $anakData->nama = $this->nullableVal($request->nama);
+                $anakData->anak_ke = $this->nullableVal($request->anak_ke);
+                $anakData->no_akte_kelahiran = $this->nullableVal($request->no_akte_kelahiran);
+                $anakData->nik = $this->nullableVal($request->nik);
+                $anakData->jenis_kelamin = $this->nullableVal($request->jenis_kelamin);
+                $anakData->gol_darah = $this->nullableVal($request->gol_darah);
+                $anakData->tempat_lahir = $this->nullableVal($request->tempat_lahir);
+                $anakData->tanggal_lahir = $this->nullableVal($request->tanggal_lahir);
+                $anakData->no_jkn = $this->nullableVal($request->no_jkn);
+                $anakData->tanggal_berlaku_jkn = $this->nullableVal($request->tanggal_berlaku_jkn);
+                $anakData->no_kohort = $this->nullableVal($request->no_kohort);
+                $anakData->no_catatan_medik = $this->nullableVal($request->no_catatan_medik);
+                $anakData->kia_ibu_id = $request->ibu_id;
+                $anakData->is_janin = false;
+            } else {
+                $anakData->nama = 'Janin 1';
+                $anakData->hpl = $request->janin_hpl;
+                $anakData->kia_ibu_id = $request->ibu_id;
             }
+
+            $anakData->save();
+            $anakData->init_fundamental_data();
+
             DB::commit();
-            return Constants::successResponse('Identitas Anak Created');
+            return Constants::successResponseWithNewValue('anak_id', $anakData->id);
         } catch(Exception $e) {
             DB::rollback();
             return Constants::errorResponse();

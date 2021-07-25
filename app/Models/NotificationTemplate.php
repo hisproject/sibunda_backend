@@ -5,17 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Notification extends Model
+class NotificationTemplate extends Model
 {
     use HasFactory;
-    protected $table = 'notifications';
+    protected $table = 'notification_template';
     protected $fillable = [
-        'is_message',
         'title',
         'desc',
-        'datetime',
         'img_url',
-        'url',
-        'user_id'
+        'url'
     ];
 }

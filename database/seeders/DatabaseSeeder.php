@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AnakParamPbUsiaSeeder::class);
         $this->call(AnakParamPerkembanganSeeder::class);
         $this->call(CovidQuestionnaireSeeder::class);
+        $this->call(NotificationTemplateSeeder::class);
         $this->call(NotificationSeeder::class);
         $this->call(TipDanInfoSeeder::class);
     }

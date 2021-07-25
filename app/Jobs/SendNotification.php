@@ -60,7 +60,7 @@ class SendNotification implements ShouldQueue
             $message->data->fill([
                 'title' => $this->notification->title,
                 'body' => $this->notification->body,
-                'img_url' => $this->notification->order_id,
+                'img_url' => $this->notification->img_url,
             ]);
 
             $message->setTarget($target);

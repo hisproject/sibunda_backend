@@ -146,10 +146,12 @@ class KehamilankuController extends Controller
 
     public function getWeeklyReport(Request $request) {
         $request->validate([
-            'weekly_trisemester_checkup_id' => 'integer|required'
+            'trisemester_id' => 'integer|required',
+            'week' => 'integer|required',
         ]);
 
-        $data = ServiceStatementIbuHamilPeriksa::find($request->weekly_trisemester_checkup_id);
+        $data = ServiceStatementIbuHamilPeriksa::where('trisemester_id', $request->trisemester_id)
+                                                ->where('week', $request->week)->first();
 
         if(empty($data))
             return abort(404);

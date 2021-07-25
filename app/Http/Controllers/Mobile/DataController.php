@@ -146,6 +146,7 @@ class DataController extends Controller
                 $janin->nama = 'Janin 1';
                 $janin->hpl = $request->janin_hpl;
                 $janin->kia_ibu_id = $bundaData->id;
+                $janin->is_lahir = false;
                 $janin->save();
                 $janin->init_fundamental_data();
             }
@@ -349,6 +350,7 @@ class DataController extends Controller
                 $anakData->nama = 'Janin 1';
                 $anakData->hpl = $request->janin_hpl;
                 $anakData->kia_ibu_id = $request->ibu_id;
+                $anakData->is_lahir = false;
             }
 
             $anakData->save();

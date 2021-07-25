@@ -30,6 +30,7 @@ class KiaIdentitasAnak extends Model
         'hpl',
         'hpht',
         'is_janin',
+        'is_lahir'
     ];
 
     public function trisemesters() {

@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/NotifyLatePregnancies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/NotifyLatePregnancies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/SendNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/SendNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KiaIdentitasAnak.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KiaIdentitasAnak.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_031437_create_kia_identitas_anak_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_031437_create_kia_identitas_anak_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +254,7 @@
       <workItem from="1626958859686" duration="15875000" />
       <workItem from="1627049133668" duration="13344000" />
       <workItem from="1627134570506" duration="12883000" />
-      <workItem from="1627215082306" duration="13937000" />
+      <workItem from="1627215082306" duration="14947000" />
     </task>
     <servers />
   </component>

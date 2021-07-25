@@ -723,6 +723,6 @@ class BayikuController extends Controller
         $resData['data'] = $data;
         $resData['desc'] = $desc;
 
-        return Constants::successResponseWithNewValue('data', $data);
+        return Constants::successResponseWithNewValue('data', $resData);
     }
 }

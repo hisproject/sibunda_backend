@@ -9,6 +9,7 @@ use App\Models\FetusGrowthParam;
 use App\Models\KiaIdentitasAnak;
 use App\Models\KiaIdentitasIbu;
 use App\Models\MomPulseGrowthParam;
+use App\Models\ServiceStatementIbuHamil;
 use App\Models\ServiceStatementIbuHamilPeriksa;
 use App\Models\ServiceStatementIbuImmunization;
 use App\Models\TfuGrowthParam;
@@ -188,6 +189,19 @@ class KehamilankuController extends Controller
         $res['baby_movement_desc'] = $this->getBabyMovementDesc($checkupServiceStatement->gerakan_bayi, $babyMovementGrowthParam->bottom_threshold ?? 0);
 
         return Constants::successResponseWithNewValue('data', $res);
+    }
+
+    public function confirmBabyBirth(Request $request) {
+        $request->validate([
+            'trisemester_id' => 'integer|required'
+        ]);
+
+        $trisemester = ServiceStatementIbuHamil::find($request->trisemester_id);
+        $anak = $trisemester->kia_anak;
+        $anak->is_lahir = true;
+        $anak->save();
+
+        return Constants::successResponse();
     }
 
     public function getImmunizationData() {

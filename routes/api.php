@@ -61,6 +61,7 @@ Route::prefix('kehamilanku')->group(function() {
        Route::post('show-weekly-report-analysis', [KehamilankuController::class, 'getWeeklyReportAnalysis']);
        Route::get('immunization', [KehamilankuController::class, 'getImmunizationData']);
        Route::post('immunization', [KehamilankuController::class, 'createImmunizationData']);
+       Route::post('birth-confirmation', [KehamilankuController::class, 'confirmBabyBirth']);
        Route::get('graph/tfu/{kiaAnakId}', [KehamilankuController::class, 'getTfuGraphData']);
        Route::get('graph/djj/{kiaAnakId}', [KehamilankuController::class, 'getDjjGraphData']);
        Route::get('graph/map/{kiaAnakId}', [KehamilankuController::class, 'getMapGraphData']);

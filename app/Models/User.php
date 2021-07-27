@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -48,6 +49,32 @@ class User extends Authenticatable
 
     public function kia_ibu(){
         return $this->hasOne(KiaIdentitasIbu::class, 'user_id');
+    }
+
+    public function init_notification() {
+        $notifications = [
+            [
+                'is_message' => false,
+                'title' => 'Selamat Datang di SiBunda',
+                'desc' => 'Satu aplikasi untuk semua tahap kehamilan dan kesehatan bayi bunda, mulai dari usia 0 - 6 tahun',
+                'img_url' => 'https://sibunda.amirmb.com/res/img/home/notif_1.png',
+                'url' => 'https://google.com',
+                'datetime' => Carbon::now(),
+            ],
+            [
+                'is_message' => true,
+                'title' => 'Bunda, Pastikan Kehamilan Bunda Sehat Ya',
+                'desc' => 'Jangan lupa untuk periksa rutin ya, serta selalu isikan data perkembangan bunda dan calon buah hati di aplikasi ya.',
+                'img_url' => 'https://sibunda.amirmb.com/res/img/home/message_1.png',
+                'url' => 'https://google.com',
+                'datetime' => Carbon::now()
+            ],
+        ];
+
+        foreach($notifications as $notification) {
+            $notification['user_id'] = $this->id;
+            Notification::create($notification);
+        }
     }
 
     public function saveImg($img) {

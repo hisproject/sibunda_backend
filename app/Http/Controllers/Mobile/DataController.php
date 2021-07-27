@@ -84,6 +84,7 @@ class DataController extends Controller
         try {
             $userValidation['password'] = Hash::make($userValidation['password']);
             $user = User::create($userValidation);
+            $user->init_notification();
             $bundaValidation['user_id'] = $user->id;
             $bundaData = KiaIdentitasIbu::create([
                 'nama' => $request->bunda_nama,

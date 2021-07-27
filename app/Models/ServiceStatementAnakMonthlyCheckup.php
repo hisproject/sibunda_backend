@@ -24,4 +24,8 @@ class ServiceStatementAnakMonthlyCheckup extends Model
     public function year() {
         return $this->belongsTo(ServiceStatementAnakYear::class, 'year_id');
     }
+
+    public function perkembangan_ans() {
+        return $this->hasMany(ServiceStatementMonthlyPerkembangan::class, 'monthly_report_id');
+    }
 }

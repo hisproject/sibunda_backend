@@ -107,7 +107,9 @@ class BayikuController extends Controller
             'year_id' => 'integer|required'
         ]);
 
-        $data = ServiceStatementAnakMonthlyCheckup::where('month', $request->month)
+        $data = ServiceStatementAnakMonthlyCheckup::with(['perkembangan_ans' => function($q) {
+            $q->orderBy('questionnaire_id');
+        }])->where('month', $request->month)
                                                     ->where('year_id', $request->year_id)->first();
 
         if(empty($data))

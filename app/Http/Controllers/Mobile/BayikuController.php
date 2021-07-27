@@ -112,6 +112,10 @@ class BayikuController extends Controller
         }])->where('month', $request->month)
                                                     ->where('year_id', $request->year_id)->first();
 
+        foreach($data->perkembangan_ans as $d) {
+            $d->ans = $d->ans ? 1 : 0;
+        }
+
         if(empty($data))
             return Constants::errorResponse('no matching data for month ' . $request->month);
 

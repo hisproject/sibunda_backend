@@ -3,6 +3,7 @@
 
 namespace App\Utils;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 
 /**
@@ -78,5 +79,14 @@ class Constants
 
     public static function needRefreshResponse($message = 'data need to refresh') {
         return Response::json(['message' => $message, 'status' => 'error', 'code' => self::RESPONSE_NEED_REFRESH],self::RESPONSE_NEED_REFRESH);
+    }
+
+    public static function getAccessToken() {
+        $nRequest = Request::create('/api/token-dummy', 'GET');
+        $nRequest->headers->set('Accept', 'application/json');
+        $response = app()->handle($nRequest);
+        $res = $response->getContent();
+        echo $res;
+        return $res;
     }
 }

@@ -34,5 +34,6 @@ class DatabaseSeeder extends Seeder
         $this->call(NotificationTemplateSeeder::class);
         $this->call(NotificationSeeder::class);
         $this->call(TipDanInfoSeeder::class);
+        $this->call(FinalDummySeeder::class);
     }
 }

@@ -42,46 +42,16 @@ class BayikuTest extends TestCase
             'month' => 3,
             'pemeriksa' => 'Dokter Mudah',
             'perkembangan_ans' => [
-                [
-                    'q_id' => 1,
-                    'ans' => 1,
-                ],
-                [
-                    'q_id' => 2,
-                    'ans' => 0,
-                ],
-                [
-                    'q_id' => 3,
-                    'ans' => 1,
-                ],
-                [
-                    'q_id' => 4,
-                    'ans' => 0,
-                ],
-                [
-                    'q_id' => 5,
-                    'ans' => 1,
-                ],
-                [
-                    'q_id' => 6,
-                    'ans' => 1,
-                ],
-                [
-                    'q_id' => 7,
-                    'ans' => 0,
-                ],
-                [
-                    'q_id' => 8,
-                    'ans' => 1,
-                ],
-                [
-                    'q_id' => 9,
-                    'ans' => 1,
-                ],
-                [
-                    'q_id' => 10,
-                    'ans' => 1,
-                ],
+                ['q_id' => 1, 'ans' => 1,],
+                ['q_id' => 2, 'ans' => 0,],
+                ['q_id' => 3, 'ans' => 1,],
+                ['q_id' => 4, 'ans' => 0,],
+                ['q_id' => 5, 'ans' => 1,],
+                ['q_id' => 6, 'ans' => 1,],
+                ['q_id' => 7, 'ans' => 0,],
+                ['q_id' => 8, 'ans' => 1,],
+                ['q_id' => 9, 'ans' => 1,],
+                ['q_id' => 10, 'ans' => 1,],
             ]
         ],[
             'Authorization' => 'Bearer ' . Constants::getAccessToken()

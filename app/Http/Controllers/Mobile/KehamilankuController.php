@@ -246,7 +246,7 @@ class KehamilankuController extends Controller
 
             if($currDataIndex < $currDataLen &&
                     $tfuParam->week == $insertedData[$currDataIndex]->week)
-                $data['input'] = $insertedData[$currDataIndex ++]->tfu;
+                $data['input'] = (double) $insertedData[$currDataIndex ++]->tfu;
             else
                 $data['input'] = -1;
 
@@ -288,7 +288,7 @@ class KehamilankuController extends Controller
 
             if($currDataIndex < $currDataLen &&
                     $djjParam->week == $insertedData[$currDataIndex]->week)
-                $data['input'] = $insertedData[$currDataIndex ++]->djj;
+                $data['input'] = (double) $insertedData[$currDataIndex ++]->djj;
             else
                 $data['input'] = -1;
 
@@ -329,7 +329,7 @@ class KehamilankuController extends Controller
 
             if($currDataIndex < $currDataLen &&
                     $mapParam->week == $insertedData[$currDataIndex]->week)
-                $data['input'] = $insertedData[$currDataIndex]->map;
+                $data['input'] = (double) $insertedData[$currDataIndex]->map;
             else
                 $data['input'] = -1;
 
@@ -372,7 +372,7 @@ class KehamilankuController extends Controller
 
             if($currDataIndex < $currDataLen &&
                     $weightParam->week == $insertedData[$currDataIndex]->week)
-                $data['input'] = $insertedData[$currDataIndex]->bb;
+                $data['input'] = (double) $insertedData[$currDataIndex]->bb;
             else
                 $data['input'] = -1;
 

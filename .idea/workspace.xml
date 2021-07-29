@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utils/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_061415_create_service_statement_ibu_hamil_periksa_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_061415_create_service_statement_ibu_hamil_periksa_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FinalDummySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FinalDummySeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/BayikuTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/BayikuTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,17 +180,17 @@
       <recent name="C:\Users\Amir MB\For Dev\Web &amp; Backend\sibunda_backend\database\migrations" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CovidTest.testCreateCovidForm">
-    <configuration name="BayikuTest.testGetImtGraph" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\BayikuTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/BayikuTest.php" method="testGetImtGraph" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHP Built-in Web Server.Run App">
     <configuration name="BayikuTest.testGetPerkembanganGraph" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\BayikuTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/BayikuTest.php" method="testGetPerkembanganGraph" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CovidTest.testCreateCovidForm" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CovidTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CovidTest.php" method="testCreateCovidForm" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CovidTest.testGetAllAnak" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CovidTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/CovidTest.php" method="testGetAllAnak" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CovidTest.testGetCovidFormHistory" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -219,19 +216,19 @@
     <list>
       <item itemvalue="PHP Built-in Web Server.Run App" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.BayikuTest.testGetImtGraph" />
       <item itemvalue="PHPUnit.BayikuTest.testGetPerkembanganGraph" />
       <item itemvalue="PHPUnit.CovidTest.testGetCovidFormHistory" />
       <item itemvalue="PHPUnit.CovidTest.testGetCovidFormQuestionnaire" />
+      <item itemvalue="PHPUnit.CovidTest.testGetAllAnak" />
       <item itemvalue="PHPUnit.CovidTest.testCreateCovidForm" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.CovidTest.testCreateCovidForm" />
+        <item itemvalue="PHPUnit.CovidTest.testGetAllAnak" />
         <item itemvalue="PHPUnit.CovidTest.testGetCovidFormQuestionnaire" />
         <item itemvalue="PHPUnit.CovidTest.testGetCovidFormHistory" />
         <item itemvalue="PHPUnit.BayikuTest.testGetPerkembanganGraph" />
-        <item itemvalue="PHPUnit.BayikuTest.testGetImtGraph" />
       </list>
     </recent_temporary>
   </component>
@@ -294,7 +291,7 @@
       <workItem from="1627134570506" duration="12883000" />
       <workItem from="1627215082306" duration="15782000" />
       <workItem from="1627305386698" duration="12532000" />
-      <workItem from="1627391092816" duration="41768000" />
+      <workItem from="1627391092816" duration="52096000" />
     </task>
     <servers />
   </component>
@@ -321,14 +318,47 @@
           <line>84</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php-line-method">
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Feature/CovidTest.php</url>
+          <line>50</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/tests/Feature/KehamilankuTest.php</url>
-          <line>101</line>
+          <line>32</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Feature/KehamilankuTest.php</url>
+          <line>89</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Feature/DataTest.php</url>
+          <line>23</line>
           <properties>
-            <option name="className" value="\Tests\Feature\KehamilankuTest" />
-            <option name="methodName" value="testGetTfuGraph" />
+            <option name="className" value="\Tests\Feature\DataTest" />
+            <option name="methodName" value="testBio" />
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Feature/BayikuTest.php</url>
+          <line>62</line>
+          <properties>
+            <option name="className" value="\Tests\Feature\BayikuTest" />
+            <option name="methodName" value="testGetReport" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Feature/BayikuTest.php</url>
+          <line>181</line>
+          <properties>
+            <option name="className" value="\Tests\Feature\BayikuTest" />
+            <option name="methodName" value="testGetPerkembanganQuestionaire" />
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

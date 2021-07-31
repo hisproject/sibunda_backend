@@ -235,7 +235,7 @@ class KehamilankuController extends Controller
         $res = [];
         $currDataIndex = 0;
         $currDataLen = count($insertedData);
-
+        echo 'wkwkw';
         foreach($tfuParams as $tfuParam) {
             $data = [
                 'week' => $tfuParam->week,

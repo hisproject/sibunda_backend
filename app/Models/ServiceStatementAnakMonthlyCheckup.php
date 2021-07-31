@@ -28,4 +28,20 @@ class ServiceStatementAnakMonthlyCheckup extends Model
     public function perkembangan_ans() {
         return $this->hasMany(ServiceStatementMonthlyPerkembangan::class, 'monthly_report_id');
     }
+
+    public function neonatus_six_hours() {
+        return $this->hasOne(ServiceStatementAnakNeonatusSixHours::class, 'monthly_checkup_id');
+    }
+
+    public function neonatus_kn_1() {
+        return $this->hasOne(ServiceStatementAnakNeonatusKn1::class, 'monthly_checkup_id');
+    }
+
+    public function neonatus_kn_2() {
+        return $this->hasOne(ServiceStatementAnakNeonatusKn2::class, 'monthly_checkup_id');
+    }
+
+    public function neonatus_kn_3() {
+        return $this->hasOne(ServiceStatementAnakNeonatusKn3::class, 'monthly_checkup_id');
+    }
 }

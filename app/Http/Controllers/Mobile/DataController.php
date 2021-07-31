@@ -414,4 +414,26 @@ class DataController extends Controller
 
         return $data;
     }
+
+    public function saveProfile(Request $request) {
+        $request->validate([
+            'name' => 'string|required',
+            'email' => 'email|required'
+        ]);
+
+        try {
+            $user = Auth::user();
+            $user->name = $request->name;
+            $user->email = $request->email;
+
+            if (!empty($request->password))
+                $user->password = Hash::make($request->password);
+
+            $user->save();
+
+            return Constants::successResponse();
+        } catch (\Exception $e) {
+            return Constants::errorResponse('failed to save profile');
+        }
+    }
 }

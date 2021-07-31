@@ -72,4 +72,21 @@ class AuthController extends Controller
 
         return Constants::successResponseWithNewValue('data', $user, 'user successfully registered');
     }
+
+    public function checkEmail(Request $request) {
+        try {
+            $request->validate([
+                'email'
+            ]);
+            $exist = User::where('email', $request->email)->first();
+
+            if(empty($exist))
+                return Constants::successResponseWithNewValue('available', true);
+
+            return Constants::successResponseWithNewValue('available', false);
+
+        } catch (\Exception $e) {
+            return Constants::successResponseWithNewValue('available', false);
+        }
+    }
 }

@@ -23,7 +23,7 @@ class DataTest extends TestCase
 
     public function testBio() {
         $this->json('GET', 'api/data/bio', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 }

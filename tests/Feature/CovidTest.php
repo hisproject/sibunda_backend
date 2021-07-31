@@ -23,19 +23,19 @@ class CovidTest extends TestCase
 
     public function testGetCovidFormHistory() {
         $this->json('GET', 'api/covid/checkup', [], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
     public function testGetCovidFormQuestionnaire() {
         $this->json('GET', 'api/covid/questionnaire', [], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
     public function testGetAllAnak() {
         $this->json('GET', 'api/covid/anak', [], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
@@ -54,7 +54,7 @@ class CovidTest extends TestCase
             ],
             'anak_id' => 1
         ], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 }

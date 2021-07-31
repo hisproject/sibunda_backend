@@ -22,31 +22,31 @@ class DashboardTest extends TestCase
 
     public function testGetNotification() {
         $this->json('GET', 'api/dashboard/notifications', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
     public function testGetMessage() {
         $this->json('GET', 'api/dashboard/messages', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
     public function testGetHomeData() {
         $this->json('GET', 'api/dashboard/index', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
     public function testGetTipsInfoCarousel() {
         $this->json('GET', 'api/dashboard/tips-dan-info/carousel', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 
     public function testGetTipsInfoLatest() {
         $this->json('GET', 'api/dashboard/tips-dan-info/latest', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertOk();
     }
 }

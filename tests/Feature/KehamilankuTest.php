@@ -23,7 +23,7 @@ class KehamilankuTest extends TestCase
 
     public function testOverview() {
         $this->json('GET', 'api/kehamilanku/overview', [],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertSee([
             'code' => 200
         ]);
@@ -54,7 +54,7 @@ class KehamilankuTest extends TestCase
             'catatan_khusus' => '-',
             'trisemester_id' => 1
         ],[
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertSee([
             'code' => 200
         ]);
@@ -65,7 +65,7 @@ class KehamilankuTest extends TestCase
             'trisemester_id' => 1,
             'week' => 1
         ], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertSee([
             'code' == 200
         ]);
@@ -75,7 +75,7 @@ class KehamilankuTest extends TestCase
         $this->json('POST', 'api/kehamilanku/show-weekly-report-analysis',[
             'weekly_trisemester_checkup_id' =>1
         ], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertSee([
             'code' => 200
         ]);
@@ -83,7 +83,7 @@ class KehamilankuTest extends TestCase
 
     public function testGetImmunization() {
         $this->json('get', 'api/kehamilanku/immunization', [],
-        ['Authorization' => 'Bearer ' . Constants::getAccessToken()])->assertOk();
+        ['Authorization' => 'Bearer ' . Constants::getDummyAccessToken()])->assertOk();
     }
 
     public function testCreateImmunization() {
@@ -93,7 +93,7 @@ class KehamilankuTest extends TestCase
             'location' => 'ITS',
             'pic' => 'Dr. P'
         ], [
-            'Authorization' => 'Bearer ' . Constants::getAccessToken()
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
         ])->assertSee([
             'code' => 200
         ]);
@@ -101,28 +101,28 @@ class KehamilankuTest extends TestCase
 
     public function testGetTfuGraph() {
         $this->json('GET', 'api/kehamilanku/graph/tfu/1', [],
-        ['Authorization' => 'Bearer ' . Constants::getAccessToken()])->assertSee([
+        ['Authorization' => 'Bearer ' . Constants::getDummyAccessToken()])->assertSee([
             'code' => 200
         ]);
     }
 
     public function testGetDjjGraph() {
         $this->json('GET', 'api/kehamilanku/graph/djj/1', [],
-            ['Authorization' => 'Bearer ' . Constants::getAccessToken()])->assertSee([
+            ['Authorization' => 'Bearer ' . Constants::getDummyAccessToken()])->assertSee([
             'code' => 200
         ]);
     }
 
     public function testGetMapGraph() {
         $this->json('GET', 'api/kehamilanku/graph/map/1', [],
-            ['Authorization' => 'Bearer ' . Constants::getAccessToken()])->assertSee([
+            ['Authorization' => 'Bearer ' . Constants::getDummyAccessToken()])->assertSee([
             'code' => 200
         ]);
     }
 
     public function testGetMomWeightGraph() {
         $this->json('GET', 'api/kehamilanku/graph/mom-weight/1', [],
-            ['Authorization' => 'Bearer ' . Constants::getAccessToken()])->assertSee([
+            ['Authorization' => 'Bearer ' . Constants::getDummyAccessToken()])->assertSee([
             'code' => 200
         ]);
     }

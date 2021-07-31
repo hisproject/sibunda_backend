@@ -131,6 +131,15 @@ class BayikuController extends Controller
         $monthData = ServiceStatementAnakMonthlyCheckup::where('month', $request->month)
             ->where('year_id', $request->year_id)->first();
 
+        $totalPerkembanganAnsCorrects = 0;
+
+        foreach($monthData->perkembangan_ans as $ans)
+            if($ans->ans)
+                $totalPerkembanganAnsCorrects ++;
+
+        if(empty($monthData->perkembangan_ans))
+            $totalperkembanganAnsCorrects = null;
+
         if(empty($monthData))
             return Constants::errorResponse('no matching data for month : ' . $request->month);
 
@@ -192,6 +201,16 @@ class BayikuController extends Controller
             $monthData->imt ?? -1,
             'Selamat Bunda! Indeks massa tubuh bayi normal ya Bun',
             'Bunda, indeks massa tubuh bayi tidak normal ya Bun');
+
+        if($totalPerkembanganAnsCorrects == null)
+            $res['perkembangan_desc'] = null;
+        else
+            $res['perkembangan_desc'] = $this->getAnakuAnalysisDesc(
+                7,
+                100,
+                $totalPerkembanganAnsCorrects,
+            'Selamat Bunda! Perkembangan bayi bunda normal ya Bun',
+            'Bunda, perkembangan bayi bunda tidak normal ya Bun');
 
         return Constants::successResponseWithNewValue('data', $res);
     }
@@ -301,6 +320,30 @@ class BayikuController extends Controller
         ServiceStatementAnakNeonatusKn3::create($data);
 
         return Constants::successResponse();
+    }
+
+    public function getNeonatus(Request $request) {
+        $request->validate([
+            'year_id' => 'integer|required',
+            'month' => 'integer|required'
+        ]);
+
+        $data = ServiceStatementAnakMonthlyCheckup::where('year_id', $request->year_id)
+                                                        ->where('month', $request->month)->first();
+
+        $res['six_hours'] = [];
+        $res['kn_1'] = [];
+        $res['kn_2'] = [];
+        $res['kn_3'] = [];
+
+        if(!empty($data)) {
+            $res['six_hours'] = $data->neonatus_six_hours;
+            $res['kn_1'] = $data->neonatus_kn_1;
+            $res['kn_2'] = $data->neonatus_kn_2;
+            $res['kn_3'] = $data->neonatus_kn_3;
+        }
+
+        return Constants::successResponseWithNewValue('data', $res);
     }
 
     public function getImmunization($kiaAnakId) {

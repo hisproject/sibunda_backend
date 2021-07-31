@@ -28,6 +28,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('auth')->group(function (){
     // without auth
     Route::post('login', [AuthController::class, 'login']);
+    Route::post('check-email-availability', [AuthController::class, 'checkEmail']);
     /*Route::post('register', [AuthController::class, 'register']);*/
     Route::post('register', [DataController::class, 'createBundaUser']);
     // with auth
@@ -49,6 +50,7 @@ Route::prefix('data')->group(function() {
         Route::put('identitas-anak', [DataController::class, 'updateDataAnak']);
         Route::put('identitas-ibu', [DataController::class, 'updateDataIbu']);
         Route::put('identitas-ayah', [DataController::class, 'updateDataAyah']);
+        Route::put('save-profile', [DataController::class, 'saveProfile']);
     });
 });
 
@@ -77,6 +79,7 @@ Route::prefix('anaku')->group(function() {
         Route::post('create-neonatus-kn1', [BayikuController::class, 'createNeonatusKn1']);
         Route::post('create-neonatus-kn2', [BayikuController::class, 'createNeonatusKn2']);
         Route::post('create-neonatus-kn3', [BayikuController::class, 'createNeonatusKn3']);
+        Route::post('get-neonatus', [BayikuController::class, 'getNeonatus']);
         Route::post('show-monthly-report', [BayikuController::class, 'getMonthlyReport']);
         Route::post('show-monthly-report-analysis', [BayikuController::class, 'getMonthlyReportAnalysis']);
         Route::get('perkembangan-questionnaire/{month}', [BayikuController::class, 'getMonthlyPerkembanganQuestionnaire']);

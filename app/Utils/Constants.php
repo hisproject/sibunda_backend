@@ -81,7 +81,7 @@ class Constants
         return Response::json(['message' => $message, 'status' => 'error', 'code' => self::RESPONSE_NEED_REFRESH],self::RESPONSE_NEED_REFRESH);
     }
 
-    public static function getAccessToken() {
+    public static function getDummyAccessToken() {
         $nRequest = Request::create('/api/token-dummy', 'GET');
         $nRequest->headers->set('Accept', 'application/json');
         $response = app()->handle($nRequest);

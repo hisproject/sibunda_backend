@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Utils\Constants;
 use Tests\TestCase;
 
 class AuthTest extends TestCase
@@ -23,6 +24,12 @@ class AuthTest extends TestCase
         ])->assertSee([
             'code' => 200
         ]);
+    }
+
+    public function testLogout() {
+        $this->json('GET', 'api/auth/logout', [], [
+            'Authorization' => 'Bearer ' . Constants::getDummyAccessToken()
+        ])->assertOk();
     }
 
     public function testRegister() {

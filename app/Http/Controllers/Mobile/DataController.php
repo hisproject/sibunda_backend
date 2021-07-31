@@ -65,7 +65,6 @@ class DataController extends Controller
         ]);
         // validasi data anak
         $request->validate([
-            'anak' => 'array|required',
             'anak.*.nama' => 'string|required',
             'anak.*.anak_ke' => 'integer|required',
             'anak.*.no_akte_kelahiran' => 'string|required',

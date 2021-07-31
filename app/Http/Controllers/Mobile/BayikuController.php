@@ -133,12 +133,13 @@ class BayikuController extends Controller
 
         $totalPerkembanganAnsCorrects = 0;
 
-        foreach($monthData->perkembangan_ans as $ans)
-            if($ans->ans)
-                $totalPerkembanganAnsCorrects ++;
-
         if(empty($monthData->perkembangan_ans))
-            $totalperkembanganAnsCorrects = null;
+            $totalPerkembanganAnsCorrects = null;
+        else {
+            foreach ($monthData->perkembangan_ans as $ans)
+                if ($ans->ans)
+                    $totalPerkembanganAnsCorrects++;
+        }
 
         if(empty($monthData))
             return Constants::errorResponse('no matching data for month : ' . $request->month);

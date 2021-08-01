@@ -332,10 +332,10 @@ class BayikuController extends Controller
         $data = ServiceStatementAnakMonthlyCheckup::where('year_id', $request->year_id)
                                                         ->where('month', $request->month)->first();
 
-        $res['six_hours'] = [];
-        $res['kn_1'] = [];
-        $res['kn_2'] = [];
-        $res['kn_3'] = [];
+        $res['six_hours'] = null;
+        $res['kn_1'] = null;
+        $res['kn_2'] = null;
+        $res['kn_3'] = null;
 
         if(!empty($data)) {
             $res['six_hours'] = $data->neonatus_six_hours;

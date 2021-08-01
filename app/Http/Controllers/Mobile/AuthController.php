@@ -39,7 +39,9 @@ class AuthController extends Controller
             $user->fcm_token = $request->fcm_token;
             $user->save();
 
-            return Constants::successResponseWithNewValue('data', json_decode($loginResponse), 'user successfully logged in');
+            return Constants::successResponseWithNewValue('data',
+                json_decode($loginResponse),
+                'user successfully logged in');
         }
 
         return Constants::errorResponse();

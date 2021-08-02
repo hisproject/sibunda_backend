@@ -214,7 +214,7 @@ class FinalDummySeeder extends Seeder
                 $newData->month = $d['month'];
                 $newData->date = $date;
                 $newData->bb = $d['bb'];
-                $newData->pb = $d['pb'];
+                $newData->tb = $d['pb'];
                 $newData->lingkar_kepala = $d['lingkar_kepala'];
                 $newData->imt = $d['imt'];
                 $newData->year_id = $year_id;

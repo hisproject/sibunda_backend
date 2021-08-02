@@ -9,6 +9,7 @@ use App\Models\CovidQuestionnaire;
 use App\Models\KiaIdentitasAnak;
 use App\Models\KiaIdentitasAyah;
 use App\Models\KiaIdentitasIbu;
+use App\Models\ServiceStatementAnakMonthlyCheckup;
 use App\Models\ServiceStatementIbuHamilPeriksa;
 use App\Models\User;
 use App\Utils\Constants;
@@ -164,6 +165,7 @@ class FinalDummySeeder extends Seeder
 
             if(!empty($d['bb']) && !empty($d['tfu']) && !empty($d['djj']) && !empty($d['mom_pulse'])) {
                 $newData = new ServiceStatementIbuHamilPeriksa();
+                $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
                 $newData->bb = $d['bb'];
                 $newData->tfu = $d['tfu'];
@@ -194,10 +196,10 @@ class FinalDummySeeder extends Seeder
                 $year = 6;
             }
 
-            $trisemester_id = 1;
+            $year_id = 1;
             foreach($anak->years as $y) {
                 if($year == $y->year) {
-                    $trisemester_id = $y->id;
+                    $year_id = $y->id;
                     break;
                 }
             }
@@ -205,13 +207,14 @@ class FinalDummySeeder extends Seeder
             $date = Carbon::now()->addMonths($d['month']);
 
             if(!empty($d['bb']) && !empty($d['tfu']) && !empty($d['djj']) && !empty($d['mom_pulse'])) {
-                $newData = new ServiceStatementIbuHamilPeriksa();
+                $newData = new ServiceStatementAnakMonthlyCheckup();
+                $newData->month = $d['month'];
                 $newData->tanggal_periksa = $date;
                 $newData->bb = $d['bb'];
-                $newData->tfu = $d['tfu'];
-                $newData->djj = $d['data'];
-                $newData->map = $d['mom_pulse'];
-                $newData->trisemester_id = $trisemester_id;
+                $newData->pb = $d['pb'];
+                $newData->lingkar_kepala = $d['lingkar_kepala'];
+                $newData->imt = $d['imt'];
+                $newData->year_id = $year_id;
                 $newData->save();
             }
         }

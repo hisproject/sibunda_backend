@@ -213,6 +213,9 @@ class FinalDummySeeder extends Seeder
                 $newData = new ServiceStatementAnakMonthlyCheckup();
                 $newData->month = $d['month'];
                 $newData->date = $date;
+                $newData->location = 'RS Utama';
+                $newData->pemeriksa = 'Dokter Amir';
+                $newData->age = $d['month'] * 30;
                 $newData->bb = $d['bb'];
                 $newData->tb = $d['pb'];
                 $newData->lingkar_kepala = $d['lingkar_kepala'];

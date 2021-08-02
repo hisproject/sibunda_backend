@@ -30,6 +30,10 @@ class FinalDummySeeder extends Seeder
     public function run()
     {
         //
+
+        $this->seed_user_data();
+        $this->seed_form();
+        $this->seed_covid_data();
     }
 
     private function seed_user_data() {
@@ -220,9 +224,6 @@ class FinalDummySeeder extends Seeder
         foreach($anak as $a) {
             if($anak->is_hamil)
                 continue;
-
-            $is_ibu = false;
-            $anakId = $a->id;
 
             $this->createCovidForm($questions, false, $a->id);
         }

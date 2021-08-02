@@ -86,7 +86,7 @@ class FinalDummySeeder extends Seeder
         $anakData->anak_ke = 1;
         $anakData->no_akte_kelahiran = '3578-LU-28112012-0018';
         $anakData->nik = '3571040504020001';
-        $anakData->jenis_kelamin = 'P';
+        $anakData->jenis_kelamin = 'L';
         $anakData->gol_darah = 'B';
         $anakData->tempat_lahir = 3578;
         $anakData->tanggal_lahir = '2018-01-01';
@@ -94,6 +94,7 @@ class FinalDummySeeder extends Seeder
         $anakData->tanggal_berlaku_jkn = '2020-01-01';
         $anakData->no_kohort = '23973739389';
         $anakData->no_catatan_medik = 'md/239/2018';
+        $anakData->is_janin = false;
         $anakData->kia_ibu_id = $bundaData->id;
         $anakData->save();
         $anakData->init_fundamental_data();
@@ -103,7 +104,7 @@ class FinalDummySeeder extends Seeder
         $anakData->anak_ke = 2;
         $anakData->no_akte_kelahiran = '3578-LU-28112012-0020';
         $anakData->nik = '2239838837';
-        $anakData->jenis_kelamin = 'L';
+        $anakData->jenis_kelamin = 'P';
         $anakData->gol_darah = 'B';
         $anakData->tempat_lahir = 1101;
         $anakData->tanggal_lahir = '2020-01-01';

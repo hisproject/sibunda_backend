@@ -162,8 +162,8 @@ class FinalDummySeeder extends Seeder
             }
 
             $date = Carbon::now()->addWeeks($d['week']);
-
-            if(!empty($d['bb']) && !empty($d['tfu']) && !empty($d['djj']) && !empty($d['mom_pulse'])) {
+            echo 'week ' . $d['week'] . ' : ';
+            if(!empty($d['bb']) || !empty($d['tfu']) || !empty($d['djj']) || !empty($d['mom_pulse'])) {
                 $newData = new ServiceStatementIbuHamilPeriksa();
                 $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
@@ -173,6 +173,9 @@ class FinalDummySeeder extends Seeder
                 $newData->map = $d['mom_pulse'];
                 $newData->trisemester_id = $trisemester_id;
                 $newData->save();
+                echo 'data found' . PHP_EOL;
+            } else {
+                echo 'data not found' . PHP_EOL;
             }
         }
     }
@@ -205,8 +208,8 @@ class FinalDummySeeder extends Seeder
             }
 
             $date = Carbon::now()->addMonths($d['month']);
-
-            if(!empty($d['bb']) && !empty($d['tfu']) && !empty($d['djj']) && !empty($d['mom_pulse'])) {
+            echo 'month ' . $d['month'] . ' : ';
+            if(!empty($d['bb']) && !empty($d['pb']) && !empty($d['lingkar_kepala']) && !empty($d['imt'])) {
                 $newData = new ServiceStatementAnakMonthlyCheckup();
                 $newData->month = $d['month'];
                 $newData->tanggal_periksa = $date;
@@ -216,7 +219,9 @@ class FinalDummySeeder extends Seeder
                 $newData->imt = $d['imt'];
                 $newData->year_id = $year_id;
                 $newData->save();
-            }
+                echo 'data found ' . PHP_EOL;
+            } else
+                echo 'data not found' . PHP_EOL;
         }
     }
 

@@ -233,7 +233,7 @@ class FinalDummySeeder extends Seeder
     }
 
     private function createCovidForm($questions, $is_ibu, $anakId) {
-        $user = User::where('email', 'gita@gmal.com')->first();
+        $user = User::where('email', 'gita@gmail.com')->first();
 
         $covidForm = CovidForm::create([
             'is_ibu' => $is_ibu,

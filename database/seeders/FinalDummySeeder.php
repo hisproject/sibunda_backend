@@ -222,7 +222,7 @@ class FinalDummySeeder extends Seeder
         $anak = User::where('email', 'gita@gmail.com')->first()->kia_ibu->kia_anak;
         $questions = CovidQuestionnaire::all();
         foreach($anak as $a) {
-            if($anak->is_hamil)
+            if($anak->is_janin)
                 continue;
 
             $this->createCovidForm($questions, false, $a->id);

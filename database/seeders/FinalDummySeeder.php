@@ -212,7 +212,7 @@ class FinalDummySeeder extends Seeder
             if(!empty($d['bb']) && !empty($d['pb']) && !empty($d['lingkar_kepala']) && !empty($d['imt'])) {
                 $newData = new ServiceStatementAnakMonthlyCheckup();
                 $newData->month = $d['month'];
-                $newData->tanggal_periksa = $date;
+                $newData->date = $date;
                 $newData->bb = $d['bb'];
                 $newData->pb = $d['pb'];
                 $newData->lingkar_kepala = $d['lingkar_kepala'];

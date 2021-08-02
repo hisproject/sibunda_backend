@@ -297,7 +297,7 @@
       <workItem from="1627740783402" duration="3683000" />
       <workItem from="1627811062181" duration="4056000" />
       <workItem from="1627891887874" duration="683000" />
-      <workItem from="1627917802924" duration="4671000" />
+      <workItem from="1627917802924" duration="6987000" />
     </task>
     <servers />
   </component>
@@ -353,6 +353,11 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Mobile/DataController.php</url>
           <line>418</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Mobile/BayikuController.php</url>
+          <line>592</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/tests/Feature/DataTest.php</url>

@@ -180,7 +180,7 @@ class FinalDummySeeder extends Seeder
                 $newData->tanggal_periksa = $date;
                 $newData->bb = $this->nullableVal($d['bb']) ?? 0.0;
                 $newData->tfu = $this->nullableVal($d['tfu']) ?? 0.0;
-                $newData->djj = $this->nullableVal($d['data']) ?? 0.0;
+                $newData->djj = $this->nullableVal($d['djj']) ?? 0.0;
                 $newData->map = $this->nullableVal($d['mom_pulse']) ?? 0.0;
                 $newData->sistolik = 90;
                 $newData->diastolik = 60;

@@ -58,6 +58,7 @@ class CovidController extends Controller
                 [2, 4, 6],
                 [2, 7]
             ];
+            $suspect = [[1, 2, 3, 4, 5, 6, 7]];
 
             $isPdp = false;
             foreach($pdp as $ids) {
@@ -77,6 +78,16 @@ class CovidController extends Controller
                 }
             }
 
+            $isSuspect = false;
+            if(!$isOdp) {
+                foreach($suspect as $ids) {
+                    if($this->meetCovidCategory($covidForm->id, $ids)) {
+                        $isSuspect = true;
+                        break;
+                    }
+                }
+            }
+
             if($isPdp) {
                 $covidForm->result_is_normal = false;
                 $covidForm->result_desc = 'Terindikasi PDP';
@@ -88,6 +99,12 @@ class CovidController extends Controller
                 $covidForm->result_desc = 'Terindikasi ODP';
                 $covidForm->result_long_desc = 'Bunda, dari hasil form, ' .
                     (!$request->is_ibu ? 'bayi ' : '') . 'bunda masuk kategori Orang Dalam Pengawasan';
+                $covidForm->result_is_normal = false;
+            } else if($isSuspect) {
+                $covidForm->result_is_normal = false;
+                $covidForm->result_desc = 'Terindikasi Suspect COVID-19';
+                $covidForm->result_long_desc = 'Bunda, dari hasil form, ' .
+                    (!$request->is_ibu ? 'bayi ' : '') . 'bunda masuk kategori Suspect COVID-19';
                 $covidForm->result_is_normal = false;
             } else {
                 $covidForm->result_is_normal = false;

@@ -13,11 +13,16 @@ use App\Models\BabyMovementGrowthParam;
 use App\Models\CovidFormAns;
 use App\Models\DjjGrowthParam;
 use App\Models\FetusGrowthParam;
+use App\Models\KiaIdentitasAyah;
 use App\Models\KiaIdentitasIbu;
 use App\Models\MomPulseGrowthParam;
+use App\Models\Notification;
+use App\Models\ServiceStatementAnakImmunization;
 use App\Models\ServiceStatementAnakMonthlyCheckup;
 use App\Models\ServiceStatementIbuHamilPeriksa;
 use App\Models\TfuGrowthParam;
+use App\Models\TipsDanInfo;
+use App\Models\User;
 use App\Models\WeightGrowthParam;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -387,5 +392,35 @@ trait GlobalDataHelper
         }
 
         return $res;
+    }
+
+    public function truncateUserData($userId) {
+        try {
+            $user = User::find($userId);
+            $anak = $user->kia_ibu->kia_anak;
+            Notification::where('user_id', $userId)->delete();
+            TipsDanInfo::where('user_id', $userId)->delelte();
+            KiaIdentitasAyah::where('kia_ibu_id', $user->kia_ibu->id)->delete();
+
+            foreach ($anak as $a) {
+                if($a->is_janin) {
+                    foreach ($a->trisemester as $t) {
+                        ServiceStatementIbuHamilPeriksa::where('trisemester_id', $t->id)->delete();
+                        $t->delete();
+                    }
+                } else {
+                    foreach($a->years as $y) {
+                        ServiceStatementAnakMonthlyCheckup::where('year_id', $y->id)->delete();
+                        $y->delete();
+                    }
+                }
+
+                ServiceStatementAnakImmunization::where('kia_anak_id', $a->id);
+            }
+
+            $user->kia_ibu->delete();
+            $user->delete();
+            //done
+        } catch (\Exception $e) {}
     }
 }

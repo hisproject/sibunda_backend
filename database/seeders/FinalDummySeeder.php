@@ -9,8 +9,10 @@ use App\Models\CovidQuestionnaire;
 use App\Models\KiaIdentitasAnak;
 use App\Models\KiaIdentitasAyah;
 use App\Models\KiaIdentitasIbu;
+use App\Models\PerkembanganQuestionnaire;
 use App\Models\ServiceStatementAnakMonthlyCheckup;
 use App\Models\ServiceStatementIbuHamilPeriksa;
+use App\Models\ServiceStatementMonthlyPerkembangan;
 use App\Models\User;
 use App\Utils\Constants;
 use Carbon\Carbon;
@@ -31,7 +33,9 @@ class FinalDummySeeder extends Seeder
     public function run()
     {
         //
-
+        $exists = User::where('email', 'gita@gmail.com')->first();
+        if(!empty($exists))
+            $this->truncateUserData($exists->id);
         $this->seed_user_data();
         $this->seed_form();
         $this->seed_covid_data();
@@ -44,6 +48,7 @@ class FinalDummySeeder extends Seeder
             'password' => Hash::make('password'),
             'user_group_id' => Constants::USER_GROUP_BUNDA
         ]);
+        $user->init_notification();
 
         $bundaData = KiaIdentitasIbu::create([
             'nama' => 'Gita Savitra',
@@ -154,6 +159,9 @@ class FinalDummySeeder extends Seeder
                 $trisemester = 3;
             }
 
+            if($d['week'] > 35)
+                break;
+
             $trisemester_id = 1;
             foreach($anak->trisemesters as $t) {
                 if($trisemester == $t->trisemester) {
@@ -168,10 +176,13 @@ class FinalDummySeeder extends Seeder
                 $newData = new ServiceStatementIbuHamilPeriksa();
                 $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
-                $newData->bb = $d['bb'];
-                $newData->tfu = $d['tfu'];
-                $newData->djj = $d['data'];
+                $newData->bb = $d['bb'] ?? 0;
+                $newData->tfu = $d['tfu'] ?? 0;
+                $newData->djj = $d['data'] ?? 0;
                 $newData->map = $d['mom_pulse'];
+                $newData->sistolik = 90;
+                $newData->diastolik = 60;
+                $newData->gerakan_bayi = rand(7, 15);
                 $newData->trisemester_id = $trisemester_id;
                 $newData->save();
                 echo 'data found' . PHP_EOL;
@@ -194,11 +205,12 @@ class FinalDummySeeder extends Seeder
                 $year = 3;
             } else if($d['month'] >= 37 && $d['month']<= 48) {
                 $year = 4;
-            } else if($d['month'] >= 49 && $d['month']<= 60) {
+            } else
+                break;/* else if($d['month'] >= 49 && $d['month']<= 60) {
                 $year = 5;
             } else if($d['month'] >= 61) {
                 $year = 6;
-            }
+            }*/
 
             $year_id = 1;
             foreach($anak->years as $y) {
@@ -223,6 +235,27 @@ class FinalDummySeeder extends Seeder
                 $newData->imt = $d['imt'];
                 $newData->year_id = $year_id;
                 $newData->save();
+
+                // pertanyaan perkembangan
+                $questions = PerkembanganQuestionnaire::where('month_start', '<=', $d['month'])
+                    ->where('month_until', '>=', $d['month'])
+                    ->orderBy('no')->get();
+
+                $yesCount = rand(5, 10);
+
+                foreach($questions as $q) {
+                    if($yesCount > 0) {
+                        $yes = rand(0, 1);
+                        if($yes)
+                            $yesCount --;
+                    }
+                    ServiceStatementMonthlyPerkembangan::create([
+                        'monthly_report_id' => $newData->id,
+                        'questionnaire_id' => $q->id,
+                        'ans' => $yes
+                    ]);
+                }
+
                 echo 'data found ' . PHP_EOL;
             } else
                 echo 'data not found' . PHP_EOL;

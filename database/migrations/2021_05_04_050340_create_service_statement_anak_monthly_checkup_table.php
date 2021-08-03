@@ -28,6 +28,7 @@ class CreateServiceStatementAnakMonthlyCheckupTable extends Migration
             $table->double('imt');
             $table->unique(['year_id', 'month']);
             $table->timestamps();
+            $table->foreign('year_id')->references('id')->on('service_statement_anak_years');
         });
     }
 

@@ -135,7 +135,7 @@ class FinalDummySeeder extends Seeder
         $anak = User::where('email', 'gita@gmail.com')->first()->kia_ibu->kia_anak;
 
         foreach($anak as $a) {
-            if($a->is_hamil) {
+            if($a->is_janin) {
                 $this->seed_kehamilan_data($a);
             } else if($a->jenis_kelamin == 'L') {
                 $this->seed_bayiku_data($a, 'dumm_bayi.csv');

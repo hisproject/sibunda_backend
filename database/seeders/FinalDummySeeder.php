@@ -15,6 +15,7 @@ use App\Models\ServiceStatementIbuHamilPeriksa;
 use App\Models\ServiceStatementMonthlyPerkembangan;
 use App\Models\User;
 use App\Utils\Constants;
+use App\Utils\Traits\Util;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
@@ -25,6 +26,7 @@ use League\Csv\Reader;
 class FinalDummySeeder extends Seeder
 {
     use GlobalDataHelper;
+    use Util;
     /**
      * Run the database seeds.
      *
@@ -176,10 +178,10 @@ class FinalDummySeeder extends Seeder
                 $newData = new ServiceStatementIbuHamilPeriksa();
                 $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
-                $newData->bb = $d['bb'] ?? 0.0;
-                $newData->tfu = $d['tfu'] ?? 0.0;
-                $newData->djj = $d['data'] ?? 0.0;
-                $newData->map = $d['mom_pulse'] ?? 0.0;
+                $newData->bb = $this->nullableVal($d['bb']) ?? 0.0;
+                $newData->tfu = $this->nullableVal($d['tfu']) ?? 0.0;
+                $newData->djj = $this->nullableVal($d['data']) ?? 0.0;
+                $newData->map = $this->nullableVal($d['mom_pulse']) ?? 0.0;
                 $newData->sistolik = 90;
                 $newData->diastolik = 60;
                 $newData->gerakan_bayi = rand(7, 15);
@@ -229,10 +231,10 @@ class FinalDummySeeder extends Seeder
                 $newData->location = 'RS Utama';
                 $newData->pemeriksa = 'Dokter Amir';
                 $newData->age = $d['month'] * 30;
-                $newData->bb = $d['bb'] ?? 0.0;
-                $newData->tb = $d['pb'] ?? 0.0;
-                $newData->lingkar_kepala = $d['lingkar_kepala'] ?? 0.0;
-                $newData->imt = $d['imt'] ?? 0.0;
+                $newData->bb = $this->nullableVal($d['bb']) ?? 0.0;
+                $newData->tb = $this->nullableVal($d['pb']) ?? 0.0;
+                $newData->lingkar_kepala = $this->nullableVal($d['lingkar_kepala']) ?? 0.0;
+                $newData->imt = $this->nullableVal($d['imt']) ?? 0.0;
                 $newData->year_id = $year_id;
                 $newData->save();
 

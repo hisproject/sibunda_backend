@@ -244,6 +244,10 @@ class KehamilankuController extends Controller
                 'top_threshold' => (int) $tfuParam->top_threshold,
             ];
 
+            while($currDataIndex < $currDataLen &&
+                    $tfuParam->week > $insertedData[$currDataIndex]->week)
+                $currDataIndex ++;
+
             if($currDataIndex < $currDataLen &&
                     $tfuParam->week == $insertedData[$currDataIndex]->week)
                 $data['input'] = (double) $insertedData[$currDataIndex ++]->tfu;
@@ -286,6 +290,10 @@ class KehamilankuController extends Controller
                 'top_threshold' => (int) $djjParam->top_threshold,
             ];
 
+            while($currDataIndex < $currDataLen &&
+                $djjParam->week > $insertedData[$currDataIndex]->week)
+                $currDataIndex ++;
+
             if($currDataIndex < $currDataLen &&
                     $djjParam->week == $insertedData[$currDataIndex]->week)
                 $data['input'] = (double) $insertedData[$currDataIndex ++]->djj;
@@ -326,6 +334,10 @@ class KehamilankuController extends Controller
                 'week' => $mapParam->week,
                 'top_threshold' => (int) $mapParam->top_threshold
             ];
+
+            while($currDataIndex < $currDataLen &&
+                $mapParam->week > $insertedData[$currDataIndex]->week)
+                $currDataIndex ++;
 
             if($currDataIndex < $currDataLen &&
                     $mapParam->week == $insertedData[$currDataIndex]->week)
@@ -369,6 +381,10 @@ class KehamilankuController extends Controller
                 'bottom_over_threshold' => (int) $weightParam->bottom_over_threshold,
                 'bottom_normal_threshold' => (int) $weightParam->bottom_normal_threshold
             ];
+
+            while($currDataIndex < $currDataLen &&
+                $weightParam->week > $insertedData[$currDataIndex]->week)
+                $currDataIndex ++;
 
             if($currDataIndex < $currDataLen &&
                     $weightParam->week == $insertedData[$currDataIndex]->week)

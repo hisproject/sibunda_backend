@@ -178,6 +178,7 @@ class FinalDummySeeder extends Seeder
                 $newData = new ServiceStatementIbuHamilPeriksa();
                 $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
+                $newData->tanggal_periksa_kembali = $date->addWeek();
                 $newData->tempat_periksa = "Klinik Damai";
                 $newData->nama_pemeriksa = "dr Amir";
                 $newData->keluhan_bunda = "Tidak ada";

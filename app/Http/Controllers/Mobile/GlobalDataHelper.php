@@ -118,7 +118,7 @@ trait GlobalDataHelper
         } catch (\Exception $e) {}
         return [
             'type' => 5,
-            'desc' => 'N/A',
+            'desc' => null,
             'is_normal' => false,
         ];
     }

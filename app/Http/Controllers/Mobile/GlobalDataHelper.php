@@ -375,7 +375,7 @@ trait GlobalDataHelper
                 $dataBbUmur['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_bb_umur.png';
                 $dataPbUmur['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_pb_umur.png';
                 $dataBbPb['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_bb_pb.png';
-                $dataLingkarKepala['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisi_lingkar_kepala.png';
+                $dataLingkarKepala['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_lingkar_kepala.png';
                 $dataImt['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_imt.png';
 
                 array_push($res, $dataBbUmur);

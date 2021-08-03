@@ -236,10 +236,6 @@ class FinalDummySeeder extends Seeder
             if(!empty($d['bb']) && !empty($d['pb']) && !empty($d['lingkar_kepala']) && !empty($d['imt'])) {
                 $newData = new ServiceStatementAnakMonthlyCheckup();
                 $newData->month = $d['month'];
-                $newData->tempat_periksa = "Klinik Damai";
-                $newData->nama_pemeriksa = "dr Amir";
-                $newData->keluhan_bunda = "-";
-                $newData->jenis_kelamin = "L";
                 $newData->date = $date;
                 $newData->location = 'RS Utama';
                 $newData->pemeriksa = 'Dokter Amir';

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FinalDummySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FinalDummySeeder.php" afterDir="false" />
-    </list>
+    <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,7 +296,7 @@
       <workItem from="1627811062181" duration="4056000" />
       <workItem from="1627891887874" duration="683000" />
       <workItem from="1627917802924" duration="7073000" />
-      <workItem from="1628007116988" duration="7667000" />
+      <workItem from="1628007116988" duration="7980000" />
     </task>
     <servers />
   </component>

@@ -188,6 +188,8 @@ class FinalDummySeeder extends Seeder
                 $newData->tfu = $this->nullableVal($d['tfu']) ?? 0.0;
                 $newData->djj = $this->nullableVal($d['djj']) ?? 0.0;
                 $newData->map = $this->nullableVal($d['mom_pulse']) ?? 0.0;
+                $newData->kenaikan_bb = $this->nullableVal($d['kenaikan_bb']) ?? 0.0;
+                $newData->tb = $this->nullableVal($d['tb']) ?? 0.0;
                 $newData->sistolik = 90;
                 $newData->diastolik = 60;
                 $newData->gerakan_bayi = rand(7, 15);

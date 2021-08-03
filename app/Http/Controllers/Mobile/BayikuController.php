@@ -405,7 +405,7 @@ class BayikuController extends Controller
             }
 
             $desc = null;
-            try {
+           // try {
                 $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
                 $age = $this->getChildAge($kiaAnak->tanggal_lahir);
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
@@ -417,7 +417,7 @@ class BayikuController extends Controller
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Berat badan bayi dan kenaikannya normal ya Bun menurut usia bayi.',
                     'Bunda, berat badan bayi dan kenaikannya tidak normal ya Bun');
-            } catch (\Exception $e) {}
+            //} catch (\Exception $e) {}
 
             $resData['data'] = $res;
             $resData['desc'] = $desc;

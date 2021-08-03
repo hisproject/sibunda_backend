@@ -176,10 +176,10 @@ class FinalDummySeeder extends Seeder
                 $newData = new ServiceStatementIbuHamilPeriksa();
                 $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
-                $newData->bb = $d['bb'] ?? 0;
-                $newData->tfu = $d['tfu'] ?? 0;
-                $newData->djj = $d['data'] ?? 0;
-                $newData->map = $d['mom_pulse'];
+                $newData->bb = $d['bb'] ?? 0.0;
+                $newData->tfu = $d['tfu'] ?? 0.0;
+                $newData->djj = $d['data'] ?? 0.0;
+                $newData->map = $d['mom_pulse'] ?? 0.0;
                 $newData->sistolik = 90;
                 $newData->diastolik = 60;
                 $newData->gerakan_bayi = rand(7, 15);
@@ -229,10 +229,10 @@ class FinalDummySeeder extends Seeder
                 $newData->location = 'RS Utama';
                 $newData->pemeriksa = 'Dokter Amir';
                 $newData->age = $d['month'] * 30;
-                $newData->bb = $d['bb'];
-                $newData->tb = $d['pb'];
-                $newData->lingkar_kepala = $d['lingkar_kepala'];
-                $newData->imt = $d['imt'];
+                $newData->bb = $d['bb'] ?? 0.0;
+                $newData->tb = $d['pb'] ?? 0.0;
+                $newData->lingkar_kepala = $d['lingkar_kepala'] ?? 0.0;
+                $newData->imt = $d['imt'] ?? 0.0;
                 $newData->year_id = $year_id;
                 $newData->save();
 

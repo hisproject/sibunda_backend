@@ -31,7 +31,7 @@ class KehamilankuController extends Controller
 
     public function getOverview() {
         $kiaIbu = Auth::user()->kia_ibu;
-        $janin = KiaIdentitasAnak::select('id', 'nama', 'anak_ke')->with('trisemesters')
+        $janin = KiaIdentitasAnak::select('id', 'nama', 'anak_ke', 'hpl')->with('trisemesters')
                             ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', true)->get();
         foreach($janin as $j) {
             $j->week = $this->getPregnancyAgeInWeek($j->hpl);

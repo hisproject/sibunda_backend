@@ -126,7 +126,7 @@ class FinalDummySeeder extends Seeder
 
         $janin = new KiaIdentitasAnak();
         $janin->nama = 'Janin 1';
-        $janin->hpl = '2020-09-01';
+        $janin->hpl = Carbon::now()->addWeeks(40);
         $janin->kia_ibu_id = $bundaData->id;
         $janin->is_lahir = false;
         $janin->save();

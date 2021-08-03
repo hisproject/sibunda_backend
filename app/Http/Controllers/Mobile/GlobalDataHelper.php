@@ -66,7 +66,7 @@ trait GlobalDataHelper
 
     public function getPregnancyAgeInWeek($hpl) {
         $nowDate = Carbon::now();
-        $hplDate = Carbon::parse($hpl);
+        $hplDate = Carbon::createFromformat('Y-m-d', $hpl);
         $week = 40 - $hplDate->diffInWeeks($nowDate);
         if($week < 1)
             $week = 1;

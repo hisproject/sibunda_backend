@@ -80,7 +80,7 @@ class FinalDummySeeder extends Seeder
             'faskes_rujukan' => 'RS Utama',
             'gol_darah' => 'O',
             'tempat_lahir' => 1101,
-            'tanggal_lahir' => '2002-01-01',
+            'tanggal_lahir' => '1989-01-01',
             'pendidikan' => 'S1 Hukum',
             'pekerjaan' => 'Hakim',
             'alamat_rumah' => 'Peru',

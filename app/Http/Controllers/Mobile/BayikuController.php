@@ -30,18 +30,18 @@ class BayikuController extends Controller
     use GlobalDataHelper;
     //
     public function getOverview() {
-        try {
+      //  try {
             $kiaIbu = Auth::user()->kia_ibu;
-            $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke', 'nik')->with('years')
+            $anak = KiaIdentitasAnak::select('id', 'nama', 'anak_ke', 'nik', 'tanggal_lahir')->with('years')
                 ->where('kia_ibu_id', $kiaIbu->id)->where('is_janin', false)->get();
             foreach ($anak as $a) {
                 $a->age = $this->getChildAgeDesc($a->tanggal_lahir ?? null);
             }
 
             return Constants::successResponseWithNewValue('data', $anak);
-        } catch(\Exception $e) {
+       /* } catch(\Exception $e) {
             return Constants::errorResponse($e->getMessage());
-        }
+        }*/
     }
 
     public function createMonthlyReport(Request $request) {

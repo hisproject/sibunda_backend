@@ -33,7 +33,7 @@ trait GlobalDataHelper
     public function getChildAge($bornDateStr, $inMonth = false) {
         try {
             $nowDate = Carbon::now();
-            $bornDate = Carbon::parse($bornDateStr);
+            $bornDate = Carbon::createFromformat('Y-m-d', $bornDateStr);
 
             if($inMonth)
                 return $bornDate->diffInWeeks($nowDate);
@@ -51,12 +51,12 @@ trait GlobalDataHelper
 
             if($days > 30) {
                 if(($days % 30) > 7) {
-                    return ($days / 30) . ' Bulan lebih ' . (($days % 30) / 7) . ' Minggu ' .
+                    return (int)($days / 30) . ' Bulan lebih ' . (int)(($days % 30) / 7) . ' Minggu ' .
                         (($days % 30) % 7) . ' Hari';
                 } else
-                    return ($days / 30) . ' Bulan lebih ' . ($days % 30) . ' Hari';
+                    return (int)($days / 30) . ' Bulan lebih ' . ($days % 30) . ' Hari';
             } else if($days > 7) {
-                return ($days / 7) . ' Minggu lebih ' . ($days % 7) . ' Hari';
+                return (int)($days / 7) . ' Minggu lebih ' . ($days % 7) . ' Hari';
             } else
                 return $days  . ' Hari';
         } catch (\Exception $e) {}

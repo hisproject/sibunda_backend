@@ -178,6 +178,11 @@ class FinalDummySeeder extends Seeder
                 $newData = new ServiceStatementIbuHamilPeriksa();
                 $newData->week = $d['week'];
                 $newData->tanggal_periksa = $date;
+                $newData->tempat_periksa = "Klinik Damai";
+                $newData->nama_pemeriksa = "dr Amir";
+                $newData->keluhan_bunda = "Tidak ada";
+                $newData->jenis_kelamin = 'L';
+                $newData->hpl = $anak->hpl;
                 $newData->bb = $this->nullableVal($d['bb']) ?? 0.0;
                 $newData->tfu = $this->nullableVal($d['tfu']) ?? 0.0;
                 $newData->djj = $this->nullableVal($d['djj']) ?? 0.0;
@@ -185,6 +190,10 @@ class FinalDummySeeder extends Seeder
                 $newData->sistolik = 90;
                 $newData->diastolik = 60;
                 $newData->gerakan_bayi = rand(7, 15);
+                $newData->resep_obat = "-";
+                $newData->alergi_obat = "-";
+                $newData->riwayat_penyakit = "-";
+                $newData->catatan_khusus = "-";
                 $newData->trisemester_id = $trisemester_id;
                 $newData->save();
                 echo 'data found' . PHP_EOL;
@@ -227,6 +236,10 @@ class FinalDummySeeder extends Seeder
             if(!empty($d['bb']) && !empty($d['pb']) && !empty($d['lingkar_kepala']) && !empty($d['imt'])) {
                 $newData = new ServiceStatementAnakMonthlyCheckup();
                 $newData->month = $d['month'];
+                $newData->tempat_periksa = "Klinik Damai";
+                $newData->nama_pemeriksa = "dr Amir";
+                $newData->keluhan_bunda = "-";
+                $newData->jenis_kelamin = "L";
                 $newData->date = $date;
                 $newData->location = 'RS Utama';
                 $newData->pemeriksa = 'Dokter Amir';

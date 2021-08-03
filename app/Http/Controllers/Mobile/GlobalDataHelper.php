@@ -372,11 +372,11 @@ trait GlobalDataHelper
                     'Selamat Bunda! Indeks massa tubuh bayi normal ya Bun',
                     'Bunda, indeks massa tubuh bayi tidak normal ya Bun');
 
-                $dataBbUmur['img_url'] = 'https:://sibunda.amirmb.com/res/img/anaku/analisi_bb_umur.png';
-                $dataPbUmur['img_url'] = 'https:://sibunda.amirmb.com/res/img/anaku/analisi_pb_umur.png';
-                $dataBbPb['img_url'] = 'https:://sibunda.amirmb.com/res/img/anaku/analisi_bb_pb.png';
-                $dataLingkarKepala['img_url'] = 'https:://sibunda.amirmb.com/res/img/anaku/analisi_lingkar_kepala.png';
-                $dataImt['img_url'] = 'https:://sibunda.amirmb.com/res/img/anaku/analisi_imt.png';
+                $dataBbUmur['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisi_bb_umur.png';
+                $dataPbUmur['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisi_pb_umur.png';
+                $dataBbPb['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisi_bb_pb.png';
+                $dataLingkarKepala['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisi_lingkar_kepala.png';
+                $dataImt['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisi_imt.png';
 
                 array_push($res, $dataBbUmur);
                 array_push($res, $dataPbUmur);

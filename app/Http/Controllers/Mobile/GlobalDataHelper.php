@@ -201,7 +201,7 @@ trait GlobalDataHelper
                'is_normal' => false
            ];
 
-        $isNormal = $data->$prop >= $bottomThreshold && $data->prop <= $topThreshold;
+        $isNormal = $data->$prop >= $bottomThreshold && $data->$prop <= $topThreshold;
 
         return [
             'desc' => ($isNormal ? $normalDesc : $abnormalDesc),

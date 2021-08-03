@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42415c7a-d1da-4bb4-ba89-cf4960e0658a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Mobile/KehamilankuController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -305,7 +304,7 @@
       <workItem from="1627811062181" duration="4056000" />
       <workItem from="1627891887874" duration="683000" />
       <workItem from="1627917802924" duration="7073000" />
-      <workItem from="1628007116988" duration="9945000" />
+      <workItem from="1628007116988" duration="10268000" />
     </task>
     <servers />
   </component>

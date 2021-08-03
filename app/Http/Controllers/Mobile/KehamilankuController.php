@@ -45,14 +45,34 @@ class KehamilankuController extends Controller
                 ],
                 [
                     'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_2.png',
-                    'food_category' => 'Nasi atau Makanan Pokok',
-                    'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
+                    'food_category' => 'Protein Hewani',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 4 porsi protein hewani ya, dengan 1 porsi = 50 gr atau 1 potong sedang ikan, dan 1 porsi = 100 gr atau 1 butir telur ayam',
                 ],
                 [
                     'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_3.png',
-                    'food_category' => 'Nasi atau Makanan Pokok',
-                    'food_dose' => 'Bunda, 1 hari minimal harus makan 5 porsi nasi ya, dengan 1 porsi = 100 gr atau 3/4 gelas nasi',
-                ]
+                    'food_category' => 'Protein Nabati',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 4 porsi protein nabati ya, dengan 1 porsi = 50 gr atau 1 potong sedang tempe, dan 1 porsi = 100 gr atau 2 potong sedang tahu',
+                ],
+                [
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_4.png',
+                    'food_category' => 'Sayur - sayuran',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 4 porsi sayur ya, dengan 1 porsi = 100 gr atau 1 mangkuk tanpa kuah',
+                ],
+                [
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_5.png',
+                    'food_category' => 'Buah - buahan',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 4 porsi buah ya, dengan 1 porsi = 100 gr atau 1 potong sedang pisang, dan 1 porsi = 100-190 gr atau 1 potong besar pepaya',
+                ],
+                [
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_6.png',
+                    'food_category' => 'Minyak / Lemak',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 4 porsi protein nabati ya, dengan 1 porsi = 50 gr atau 1 potong sedang tempe, dan 1 porsi = 100 gr atau 2 potong sedang tahu',
+                ],
+                [
+                    'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/rekomendasi_7.png',
+                    'food_category' => 'Gula',
+                    'food_dose' => 'Bunda, 1 hari minimal harus makan 2 porsi gula ya, dengan 1 porsi = 10 gr atau 1 sendok makan bersumber dari kue-kue manis, minum teh manis dan lain-lainnya',
+                ],
             ];
         }
 

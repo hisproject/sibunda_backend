@@ -190,16 +190,13 @@ trait GlobalDataHelper
         return DB::select($q);
     }
 
-    public function getPregnancyGraphDesc($prop, $week, $kiaAnakId, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
-        $data = DB::selectOne('select c.' . $prop . ' from service_statement_ibu_hamil_periksa c
-                join service_statement_ibu_hamil t on t.id = c.trisemester_id
-                where t.kia_anak_id = ' . $kiaAnakId . ' order by c.week desc');
-
-        if(empty($data))
-           return [
-               'desc' => null,
-               'is_normal' => false
-           ];
+    public function getPregnancyGraphDesc($prop, $data, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
+        if(empty($data)) {
+            return [
+                'desc' => null,
+                'is_normal' => false
+            ];
+        }
 
         $isNormal = $data->$prop >= $bottomThreshold && $data->$prop <= $topThreshold;
 
@@ -220,7 +217,7 @@ trait GlobalDataHelper
     public function getBayiAnakGraphDesc($prop, $month, $kiaAnakId, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
         $data = DB::selectOne('select c.' . $prop . ' from service_statement_anak_monthly_checkup c
                 join service_statement_anak_years t on t.id = c.year_id
-                where t.kia_anak_id = ' . $kiaAnakId . ' order by c.month desc');
+                where c.month = ' . $month . ' and t.kia_anak_id = ' . $kiaAnakId . ' order by c.month desc');
 
         if(empty($data))
             return [

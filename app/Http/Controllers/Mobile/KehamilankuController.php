@@ -279,10 +279,10 @@ class KehamilankuController extends Controller
 
         $tfuDesc = null;
         try {
-            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $form = ServiceStatementIbuHamilPeriksa::orderBy('week', 'desc')->first();
+            $age = $form->week;
             $paramByAge = TfuGrowthParam::where('week', $age)->first();
-            $tfuDesc = $this->getPregnancyGraphDesc('tfu', $age, $kiaAnakId,
+            $tfuDesc = $this->getPregnancyGraphDesc('tfu', $form,
                 $paramByAge->bottom_threshold,
                 $paramByAge->top_threshold,
                 'Selamat Bunda! TFU Bunda normal ya, Bun',
@@ -325,10 +325,10 @@ class KehamilankuController extends Controller
 
         $djjDesc = null;
         try {
-            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $form = ServiceStatementIbuHamilPeriksa::orderBy('week', 'desc')->first();
+            $age = $form->week;
             $paramByAge = DjjGrowthParam::where('week', $age)->first();
-            $djjDesc = $this->getPregnancyGraphDesc('djj', $age, $kiaAnakId,
+            $djjDesc = $this->getPregnancyGraphDesc('djj', $form,
                 $paramByAge->bottom_threshold,
                 $paramByAge->top_threshold,
                 'Selamat Bunda! Denyut Jantung Janin Bunda normal ya, Bun',
@@ -370,10 +370,10 @@ class KehamilankuController extends Controller
 
         $mapDesc = null;
         try {
-            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $form = ServiceStatementIbuHamilPeriksa::orderBy('week', 'desc')->first();
+            $age = $form->week;
             $paramByAge = MomPulseGrowthParam::where('week', $age)->first();
-            $mapDesc = $this->getPregnancyGraphDesc('map', $age, $kiaAnakId,
+            $mapDesc = $this->getPregnancyGraphDesc('map', $form,
                 -1,
                 $paramByAge->top_threshold,
                 'Selamat Bunda! MAP Bunda normal ya, Bun',
@@ -417,10 +417,10 @@ class KehamilankuController extends Controller
 
         $weightDesc = null;
         try {
-            $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-            $age = $this->getPregnancyAgeInWeek($kiaAnak->hpl);
+            $form = ServiceStatementIbuHamilPeriksa::orderBy('week', 'desc')->first();
+            $age = $form->week;
             $paramByAge = WeightGrowthParam::where('week', $age)->first();
-            $weightDesc = $this->getPregnancyGraphDesc('bb', $age, $kiaAnakId,
+            $weightDesc = $this->getPregnancyGraphDesc('bb', $form,
                 $paramByAge->bottom_normal_threshold,
                 $paramByAge->bottom_over_threshold - 0.1,
                 'Selamat Bunda! Berat badan Bunda normal ya, Bun',

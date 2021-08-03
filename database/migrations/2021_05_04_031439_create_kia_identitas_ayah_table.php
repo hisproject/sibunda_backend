@@ -16,6 +16,7 @@ class CreateKiaIdentitasAyahTable extends Migration
         Schema::create('kia_identitas_ayah', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->text('img_url')->nullable();
             $table->string('nik');
             $table->string('pembiayaan')->nullable();
             $table->string('no_jkn')->nullable();

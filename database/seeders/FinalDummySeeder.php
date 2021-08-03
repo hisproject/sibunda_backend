@@ -47,6 +47,7 @@ class FinalDummySeeder extends Seeder
         $user = User::create([
             'name' => 'Gita Savitra Deva',
             'email' => 'gita@gmail.com',
+            'img' => 'https://cdn0-production-images-kly.akamaized.net/2lCN2IHOucR23-xxbX3dKF-_ob4=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1623940/original/078187600_1497434832-1.JPG',
             'password' => Hash::make('password'),
             'user_group_id' => Constants::USER_GROUP_BUNDA
         ]);
@@ -54,6 +55,7 @@ class FinalDummySeeder extends Seeder
 
         $bundaData = KiaIdentitasIbu::create([
             'nama' => 'Gita Savitra',
+            'img_url' => 'https://cdn0-production-images-kly.akamaized.net/2lCN2IHOucR23-xxbX3dKF-_ob4=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1623940/original/078187600_1497434832-1.JPG',
             'nik' => '3571040504030001',
             'pembiayaan' => 'Bank Syariah',
             'no_jkn' => '0001260979209',
@@ -73,6 +75,7 @@ class FinalDummySeeder extends Seeder
         $bundaData->init_fundamental_data();
         KiaIdentitasAyah::create([
             'nama' => 'Putra Negara',
+            'img_url' => 'https://cdn0-production-images-kly.akamaized.net/2lCN2IHOucR23-xxbX3dKF-_ob4=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1623940/original/078187600_1497434832-1.JPG',
             'nik' => '3571040504020001',
             'pembiayaan' => 'Bank Syariah',
             'no_jkn' => '0001260979208',
@@ -90,6 +93,7 @@ class FinalDummySeeder extends Seeder
 
         $anakData = new KiaIdentitasAnak();
         $anakData->nama = 'Putra';
+        $anakData->img_url = 'https://cdn0-production-images-kly.akamaized.net/2lCN2IHOucR23-xxbX3dKF-_ob4=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1623940/original/078187600_1497434832-1.JPG';
         $anakData->anak_ke = 1;
         $anakData->no_akte_kelahiran = '3578-LU-28112012-0018';
         $anakData->nik = '3571040504020001';
@@ -108,6 +112,7 @@ class FinalDummySeeder extends Seeder
 
         $anakData = new KiaIdentitasAnak();
         $anakData->nama = 'Putri';
+        $anakData->img_url = 'https://cdn0-production-images-kly.akamaized.net/2lCN2IHOucR23-xxbX3dKF-_ob4=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1623940/original/078187600_1497434832-1.JPG';
         $anakData->anak_ke = 2;
         $anakData->no_akte_kelahiran = '3578-LU-28112012-0020';
         $anakData->nik = '2239838837';
@@ -125,6 +130,7 @@ class FinalDummySeeder extends Seeder
         $anakData->init_fundamental_data();
 
         $janin = new KiaIdentitasAnak();
+        $janin->img_url = 'https://cdn0-production-images-kly.akamaized.net/2lCN2IHOucR23-xxbX3dKF-_ob4=/640x640/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1623940/original/078187600_1497434832-1.JPG';
         $janin->nama = 'Janin 1';
         $janin->hpl = Carbon::now()->addWeeks(40);
         $janin->kia_ibu_id = $bundaData->id;

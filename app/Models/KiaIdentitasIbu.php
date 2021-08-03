@@ -12,6 +12,7 @@ class KiaIdentitasIbu extends Model
     protected $table = 'kia_identitas_ibu';
     protected $fillable = [
         'nama',
+        'img_url',
         'nik',
         'pembiayaan',
         'no_jkn',

@@ -17,6 +17,7 @@ class CreateKiaIdentitasAnakTable extends Migration
         Schema::create('kia_identitas_anak', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->nullable();
+            $table->text('img_url')->nullable();
             $table->unsignedSmallInteger('anak_ke')->nullable();
             $table->string('no_akte_kelahiran')->nullable();
             $table->string('nik')->nullable();

@@ -12,6 +12,7 @@ class KiaIdentitasAyah extends Model
     protected $table = 'kia_identitas_ayah';
     protected $fillable = [
         'nama',
+        'img_url',
         'nik',
         'pembiayaan',
         'no_jkn',

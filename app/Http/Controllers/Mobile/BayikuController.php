@@ -405,19 +405,18 @@ class BayikuController extends Controller
             }
 
             $desc = null;
-           // try {
-                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+            try {
+                $form = ServiceStatementAnakMonthlyCheckup::orderBy('month', 'desc')->first();
+                $age = $form->month;
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
                 $desc = $this->getBayiAnakGraphDesc(
                     'bb',
-                    $age,
-                    $kiaAnakId,
+                    $form,
                     $paramByAge->minus_2_sd ?? -1,
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Berat badan bayi dan kenaikannya normal ya Bun menurut usia bayi.',
                     'Bunda, berat badan bayi dan kenaikannya tidak normal ya Bun');
-            //} catch (\Exception $e) {}
+            } catch (\Exception $e) {}
 
             $resData['data'] = $res;
             $resData['desc'] = $desc;
@@ -465,13 +464,12 @@ class BayikuController extends Controller
 
             $desc = null;
             try {
-                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $form = ServiceStatementAnakMonthlyCheckup::orderBy('month', 'desc')->first();
+                $age = $form->month;
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
                 $desc = $this->getBayiAnakGraphDesc(
                     'bb',
-                    $age,
-                    $kiaAnakId,
+                    $form,
                     $paramByAge->minus_2_sd ?? -1,
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Berat badan bayi normal ya Bun menurut usia bayi.',
@@ -524,13 +522,12 @@ class BayikuController extends Controller
 
             $desc = null;
             try {
-                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $form = ServiceStatementAnakMonthlyCheckup::orderBy('month', 'desc')->first();
+                $age = $form->month;
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
                 $desc = $this->getBayiAnakGraphDesc(
                     'tb',
-                    $age,
-                    $kiaAnakId,
+                    $form,
                     $paramByAge->minus_2_sd ?? -1,
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Panjang badan atau tinggi badan normal ya Bun menurut usia bayi.',
@@ -595,13 +592,12 @@ class BayikuController extends Controller
 
             $desc = null;
             try {
-                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $form = ServiceStatementAnakMonthlyCheckup::orderBy('month', 'desc')->first();
+                $age = $form->month;
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
                 $desc = $this->getBayiAnakGraphDesc(
                     'tb',
-                    $age,
-                    $kiaAnakId,
+                    $form,
                     $paramByAge->minus_2_sd ?? -1,
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Panjang badan atau tinggi badan normal ya Bun menurut usia bayi.',
@@ -654,13 +650,12 @@ class BayikuController extends Controller
 
             $desc = null;
             try {
-                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $form = ServiceStatementAnakMonthlyCheckup::orderBy('month', 'desc')->first();
+                $age = $form->month;
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
                 $desc = $this->getBayiAnakGraphDesc(
                     'lingkar_kepala',
-                    $age,
-                    $kiaAnakId,
+                    $form,
                     $paramByAge->minus_2_sd ?? -1,
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Ukuran lingkar kepala bayi normal ya Bun menurut usia bayi.',
@@ -713,13 +708,12 @@ class BayikuController extends Controller
 
             $desc = null;
             try {
-                $kiaAnak = KiaIdentitasAnak::find($kiaAnakId);
-                $age = $this->getChildAge($kiaAnak->tanggal_lahir);
+                $form = ServiceStatementAnakMonthlyCheckup::orderBy('month', 'desc')->first();
+                $age = $form->month;
                 $paramByAge = AnakParamKms::where('month', $age)->where('is_laki', $isLaki)->first();
                 $desc = $this->getBayiAnakGraphDesc(
                     'imt',
-                    $age,
-                    $kiaAnakId,
+                    $form,
                     $paramByAge->minus_2_sd ?? -1,
                     $paramByAge->plus_1_sd ?? -1,
                     'Selamat Bunda! Indeks Masa Tubuh bayi normal ya Bun menurut usia bayi.',

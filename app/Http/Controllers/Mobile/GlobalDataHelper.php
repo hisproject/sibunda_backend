@@ -214,11 +214,7 @@ trait GlobalDataHelper
         return DB::select($q);
     }
 
-    public function getBayiAnakGraphDesc($prop, $month, $kiaAnakId, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
-        $data = DB::selectOne('select c.' . $prop . ' from service_statement_anak_monthly_checkup c
-                join service_statement_anak_years t on t.id = c.year_id
-                where c.month = ' . $month . ' and t.kia_anak_id = ' . $kiaAnakId . ' order by c.month desc');
-
+    public function getBayiAnakGraphDesc($prop, $data, $bottomThreshold, $topThreshold, $normalDesc, $abnormalDesc) {
         if(empty($data))
             return [
                 'desc' => null,

@@ -15,21 +15,22 @@ class NotificationTemplateSeeder extends Seeder
     public function run()
     {
         //
+        $host = getenv('APP_URL');
         $templates = [
             [
                 'Selamat Datang di SiBunda!',
                 'Satu aplikasi untuk semua tahap kehamilan dan kesehatan bayi bunda, mulai dari usia 0 - 6 tahun',
-                'https://sibunda.amirmb.com/res/img/home/notif_1.png',
+                $host . '/res/img/home/notif_1.png',
             ],
             [
                 'Bunda, Pastikan Kehamilan Bunda Sehat Ya',
                 'Jangan lupa untuk periksa rutin ya, serta selalu isikan data perkembangan bunda dan calon buah hati di aplikasi ya.',
-                'https://sibunda.amirmb.com/res/img/home/message_1.png'
+                $host . '/res/img/home/message_1.png'
             ],
             [
                 'Pengingat Pemeriksaan Bunda',
                 'Bunda, karena usia kehamilan lebih dari 40 minggu dan bayi belum lahir, harap lakukan pemeriksaan tiap 3 hari sekali ya Bun',
-                'https://sibunda.amirmb.com/res/img/home/notif_2.png',
+                $host . '/res/img/home/notif_2.png',
             ]
         ];
 

@@ -38,7 +38,8 @@ class OauthClientsSeeder extends Seeder
 
 
         DB::statement('DELETE FROM oauth_clients');
-        DB::statement('ALTER SEQUENCE oauth_clients_id_seq RESTART 1');
+        // enable this if, you're using Postgres
+        // DB::statement('ALTER SEQUENCE oauth_clients_id_seq RESTART 1');
 
         foreach($clients as $client) {
             DB::select('INSERT INTO

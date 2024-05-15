@@ -30,6 +30,11 @@ use Illuminate\Support\Facades\DB;
 
 trait GlobalDataHelper
 {
+    public function getResourceUrl($path) {
+        $host = getenv('APP_URL');
+        return sprintf("%s/%s", $host, $path);
+    }
+
     public function getChildAge($bornDateStr, $inMonth = false) {
         try {
             $nowDate = Carbon::now();
@@ -293,11 +298,11 @@ trait GlobalDataHelper
                 $dataDjj = $this->getDjjDesc($formData->djj, $djjGrowthParam->top_threshold ?? 0, $djjGrowthParam->bottom_threshold ?? 0);
                 $dataBabyMovement = $this->getBabyMovementDesc($formData->gerakan_bayi, $babyMovementGrowthParam->bottom_threshold ?? 0);
 
-                $dataBmi['img_url'] = 'https://sibunda.amirmb.com/res/img/kehamilanku/analisis_bb.png';
-                $dataMomPulse['img_url'] = 'https://sibunda.amirmb.com/res/img/kehamilanku/analisis_denyut_nadi.png';
-                $dataTfu['img_url'] = 'https://sibunda.amirmb.com/res/img/kehamilanku/analisis_tfu.png';
-                $dataDjj['img_url'] = 'https://sibunda.amirmb.com/res/img/kehamilanku/analisis_djj.png';
-                $dataBabyMovement['img_url'] = 'https://sibunda.amirmb.com/res/img/kehamilanku/analisis_gerakan.png';
+                $dataBmi['img_url'] = $this->getResourceUrl('/res/img/kehamilanku/analisis_bb.png');
+                $dataMomPulse['img_url'] = $this->getResourceUrl('/res/img/kehamilanku/analisis_denyut_nadi.png');
+                $dataTfu['img_url'] = $this->getResourceUrl('/res/img/kehamilanku/analisis_tfu.png');
+                $dataDjj['img_url'] = $this->getResourceUrl('/res/img/kehamilanku/analisis_djj.png');
+                $dataBabyMovement['img_url'] = $this->getResourceUrl('/res/img/kehamilanku/analisis_gerakan.png');
 
                 array_push($res, $dataBmi);
                 array_push($res, $dataMomPulse);
@@ -370,11 +375,11 @@ trait GlobalDataHelper
                     'Selamat Bunda! Indeks massa tubuh bayi normal ya Bun',
                     'Bunda, indeks massa tubuh bayi tidak normal ya Bun');
 
-                $dataBbUmur['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_bb_umur.png';
-                $dataPbUmur['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_pb_umur.png';
-                $dataBbPb['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_bb_pb.png';
-                $dataLingkarKepala['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_lingkar_kepala.png';
-                $dataImt['img_url'] = 'https://sibunda.amirmb.com/res/img/anaku/analisis_imt.png';
+                $dataBbUmur['img_url'] = $this->getResourceUrl('/res/img/anaku/analisis_bb_umur.png');
+                $dataPbUmur['img_url'] = $this->getResourceUrl('/res/img/anaku/analisis_pb_umur.png');
+                $dataBbPb['img_url'] = $this->getResourceUrl('/res/img/anaku/analisis_bb_pb.png');
+                $dataLingkarKepala['img_url'] = $this->getResourceUrl('/res/img/anaku/analisis_lingkar_kepala.png');
+                $dataImt['img_url'] = $this->getResourceUrl('/res/img/anaku/analisis_imt.png');
 
                 array_push($res, $dataBbUmur);
                 array_push($res, $dataPbUmur);

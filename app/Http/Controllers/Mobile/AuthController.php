@@ -44,7 +44,7 @@ class AuthController extends Controller
                 'user successfully logged in');
         }
 
-        return Constants::errorResponse();
+        return Constants::errorResponse($response->getContent());
     }
 
     public function logout(Authenticatable $user) {

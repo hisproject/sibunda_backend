@@ -17,7 +17,8 @@ class CovidQuestionnaireSeeder extends Seeder
     {
         //
         CovidQuestionnaire::query()->truncate();
-        DB::statement('ALTER SEQUENCE covid_questionnaire_id_seq RESTART 1');
+        // enable this if, you're using Postgres
+        // DB::statement('ALTER SEQUENCE covid_questionnaire_id_seq RESTART 1');
         $questions = [
             'Apakah bayi mengalami demam atau ada riwayat demam?',
             'Apakah bayi mengalami Gejala Gangguan pernapasan: Batuk/Pilek/Nyeri Tenggorokan, dll?',

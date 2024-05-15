@@ -18,20 +18,21 @@ class TipDanInfoSeeder extends Seeder
     public function run()
     {
         //
+        $host = getenv('APP_URL');
         $tips_categories = ['Kehamilan'];
         $kesehatan_keluarga = [
             [
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/kesehatan_keluarga_1.png',
+                'img_url' => $host . '/res/img/home/kesehatan_keluarga_1.png',
                 'desc' => 'Selamat Berat Badan Bunda Normal'
             ],
             [
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/kesehatan_keluarga_2.png',
+                'img_url' => $host . '/res/img/home/kesehatan_keluarga_2.png',
                 'desc' => 'Gerakan Anak Bunda Kurang Nih Bun!'
             ],
         ];
         $tips_dan_info = [
             [
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/tips_1.png',
+                'img_url' => $host . '/res/img/home/tips_1.png',
                 'desc' => 'Nih Bun 5 Makanan Rekomendasi untuk Bunda Hamil Trimester 2',
                 'date' => Carbon::now(),
                 'content' => 'Setiap trimester dalam kehamilan adalah fase yang penting bagi tumbuh kembang calon buah hati. Memasuki trimester kedua, ibu hamil akan merasa lebih nyaman dibanding trimester sebelumnya, karena rasa mual akibat morning sickness sudah berkurang. Oleh karena itu, saatnya bagi ibu hamil untuk memaksimalkan konsumsi makanan yang disarankan.
@@ -40,7 +41,7 @@ class TipDanInfoSeeder extends Seeder
                 'tips_category_id' => 1
             ],
             [
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/tips_2.png',
+                'img_url' => $host . '/res/img/home/tips_2.png',
                 'desc' => 'Perkembangan Janin Usia 9 Minggu Kehamilan, Yuk Bun Ketahui Selengkapnya!',
                 'date' => Carbon::now(),
                 'content' => 'Setiap trimester dalam kehamilan adalah fase yang penting bagi tumbuh kembang calon buah hati. Memasuki trimester kedua, ibu hamil akan merasa lebih nyaman dibanding trimester sebelumnya, karena rasa mual akibat morning sickness sudah berkurang. Oleh karena itu, saatnya bagi ibu hamil untuk memaksimalkan konsumsi makanan yang disarankan.
@@ -49,7 +50,7 @@ class TipDanInfoSeeder extends Seeder
                 'tips_category_id' => 1
             ],
             [
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/tips_3.png',
+                'img_url' => $host . '/res/img/home/tips_3.png',
                 'desc' => 'Yuk Bun Ketahui Pola Asuh Bayi Baru Lahir Sampai Usia 1,5 Tahun',
                 'date' => Carbon::now(),
                 'content' => 'Setiap trimester dalam kehamilan adalah fase yang penting bagi tumbuh kembang calon buah hati. Memasuki trimester kedua, ibu hamil akan merasa lebih nyaman dibanding trimester sebelumnya, karena rasa mual akibat morning sickness sudah berkurang. Oleh karena itu, saatnya bagi ibu hamil untuk memaksimalkan konsumsi makanan yang disarankan.
@@ -58,7 +59,7 @@ class TipDanInfoSeeder extends Seeder
                 'tips_category_id' => 1
             ],
             [
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/tips_4.png',
+                'img_url' => $host . '/res/img/home/tips_4.png',
                 'desc' => 'Bagaimana Cara Memberikan ASI ke Bayi Baru Lahir 0-28 Hari (Neonatus)?',
                 'date' => Carbon::now(),
                 'content' => 'Setiap trimester dalam kehamilan adalah fase yang penting bagi tumbuh kembang calon buah hati. Memasuki trimester kedua, ibu hamil akan merasa lebih nyaman dibanding trimester sebelumnya, karena rasa mual akibat morning sickness sudah berkurang. Oleh karena itu, saatnya bagi ibu hamil untuk memaksimalkan konsumsi makanan yang disarankan.

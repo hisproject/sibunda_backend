@@ -18,7 +18,9 @@ class CreateServiceStatementMonthlyPerkembanganTable extends Migration
             $table->unsignedBigInteger('monthly_report_id');
             $table->unsignedBigInteger('questionnaire_id');
             $table->boolean('ans');
-            $table->unique(['monthly_report_id', 'questionnaire_id']);
+            $table->unique(
+                ['monthly_report_id', 'questionnaire_id'], 
+                'ss_monthly_perkembangan_report_id_questionnaire_id_unique');
             $table->timestamps();
             $table->foreign('monthly_report_id')->references('id')->on('service_statement_anak_monthly_checkup');
             $table->foreign('questionnaire_id')->references('id')->on('perkembangan_questionnaire');

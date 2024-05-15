@@ -23,7 +23,8 @@ class PerkembanganQuestionnaireSeeder extends Seeder
 
         PerkembanganQuestionnaire::query()->truncate();
 
-        DB::statement('ALTER SEQUENCE perkembangan_questionnaire_id_seq RESTART 1');
+        // enable this if, you're using Postgres
+        // DB::statement('ALTER SEQUENCE perkembangan_questionnaire_id_seq RESTART 1');
 
         foreach($data as $d) {
             $newData = PerkembanganQuestionnaire::create([
@@ -34,7 +35,8 @@ class PerkembanganQuestionnaireSeeder extends Seeder
             ]);
 
             if(!empty($d['img'])) {
-                $newData->img_url = 'https://sibunda.amirmb.com' . $d['img'];
+                $host = getenv('APP_URL');
+                $newData->img_url = $host . $d['img'];
                 $newData->save();
             }
         }

@@ -52,12 +52,13 @@ class User extends Authenticatable
     }
 
     public function init_notification() {
+        $host = getenv('APP_URL');
         $notifications = [
             [
                 'is_message' => false,
                 'title' => 'Selamat Datang di SiBunda',
                 'desc' => 'Satu aplikasi untuk semua tahap kehamilan dan kesehatan bayi bunda, mulai dari usia 0 - 6 tahun',
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/notif_1.png',
+                'img_url' => $host . '/res/img/home/notif_1.png',
                 'url' => 'https://google.com',
                 'datetime' => Carbon::now(),
             ],
@@ -65,7 +66,7 @@ class User extends Authenticatable
                 'is_message' => true,
                 'title' => 'Bunda, Pastikan Kehamilan Bunda Sehat Ya',
                 'desc' => 'Jangan lupa untuk periksa rutin ya, serta selalu isikan data perkembangan bunda dan calon buah hati di aplikasi ya.',
-                'img_url' => 'https://sibunda.amirmb.com/res/img/home/message_1.png',
+                'img_url' => $host . '/res/img/home/message_1.png',
                 'url' => 'https://google.com',
                 'datetime' => Carbon::now()
             ],

@@ -18,7 +18,8 @@ class AnakParamPbUsiaSeeder extends Seeder
     {
         //
         AnakParamPbUsia::query()->truncate();
-        DB::statement('ALTER SEQUENCE anak_param_pb_usia_id_seq RESTART 1');
+        // enable this if, you're using Postgres
+        // DB::statement('ALTER SEQUENCE anak_param_pb_usia_id_seq RESTART 1');
 
         $data = Reader::createFromPath(database_path('seeders/csv/anak_param_pb_usia.csv'), 'r');
         $data->setDelimiter(',');

@@ -116,9 +116,9 @@ class CovidController extends Controller
 
             if(!$request->is_ibu) {
                 $covidForm->kia_anak_id = $request->anak_id;
-                $covidForm->img_url = 'https://sibunda.amirmb.com/res/img/covid/result_anak.png';
+                $covidForm->img_url = $this->getResourceUrl('/res/img/covid/result_anak.png');
             } else
-                $covidForm->img_url = 'https://sibunda.amirmb.com/res/img/covid/result_ibu.png';
+                $covidForm->img_url = $this->getResourceUrl('/res/img/covid/result_ibu.png');
 
             $covidForm->save();
 

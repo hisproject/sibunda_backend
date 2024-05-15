@@ -20,7 +20,8 @@ class NotificationSeeder extends Seeder
     {
         //
         Notification::query()->truncate();
-        DB::statement('ALTER SEQUENCE notifications_id_seq RESTART 1');
+        // enable this if, you're using Postgres
+        // DB::statement('ALTER SEQUENCE notifications_id_seq RESTART 1');
 
         $users = User::where('user_group_id', Constants::USER_GROUP_BUNDA)->get();
 

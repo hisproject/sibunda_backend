@@ -369,11 +369,12 @@ class FinalDummySeeder extends Seeder
             $covidForm->result_is_normal = true;
         }
 
+        $host = getenv('APP_URL');
         if(!$q->is_ibu) {
             $covidForm->kia_anak_id = $anakId;
-            $covidForm->img_url = 'https://sibunda.amirmb.com/res/img/covid/result_anak.png';
+            $covidForm->img_url = $host . '/res/img/covid/result_anak.png';
         } else
-            $covidForm->img_url = 'https://sibunda.amirmb.com/res/img/covid/result_ibu.png';
+            $covidForm->img_url = $host . '/res/img/covid/result_ibu.png';
 
         $covidForm->save();
     }

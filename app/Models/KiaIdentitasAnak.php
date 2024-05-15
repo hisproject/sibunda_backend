@@ -49,21 +49,23 @@ class KiaIdentitasAnak extends Model
 
     // for janin
     private function init_trisemester_data() {
+        $host = getenv('APP_URL');
         for($i = 1; $i <= 3; $i ++)
             ServiceStatementIbuHamil::create([
                 'trisemester' => $i,
                 'kia_anak_id' => $this->id,
-                'img_url' => 'https://sibunda.amirmb.com/res/img/kehamilanku/trisemester_' . $i . '.png'
+                'img_url' => $host . '/res/img/kehamilanku/trisemester_' . $i . '.png'
             ]);
     }
 
     // for bayi - anak
     private function init_years_data() {
+        $host = getenv('APP_URL');
         for($i = 1; $i <= 6; $i ++) {
             ServiceStatementAnakYear::create([
                 'year' => $i,
                 'kia_anak_id' => $this->id,
-                'img_url' => 'https://sibunda.amirmb.com/res/img/anaku/year_' . $i . '.png'
+                'img_url' => $host . '/res/img/anaku/year_' . $i . '.png'
             ]);
         }
     }

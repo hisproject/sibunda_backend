@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:13
+    container_name: sibunda-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sibunda
+      POSTGRES_USER: sibunda
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - sibunda_postgres_data:/var/lib/postgresql/data
+    networks:
+      - sibunda-network
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sibunda-app
+    container_name: sibunda-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    depends_on:
+      - postgres
+    networks:
+      - sibunda-network
+    # for the first time
+    # command: sh -c "/var/www/wait-for-db.sh postgres -- composer install && php artisan key:generate && php artisan migrate --force && php artisan db:seed --force && php-fpm"
+    command: sh -c "/var/www/wait-for-db.sh postgres -- php-fpm"
+
+  webserver:
+    image: nginx:alpine
+    container_name: sibunda-nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - sibunda-network
+
+networks:
+  sibunda-network:
+    driver: bridge
+
+volumes:
+  sibunda_postgres_data:
